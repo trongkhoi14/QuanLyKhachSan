@@ -119,7 +119,7 @@
             this.txbTenDangNhap.Name = "txbTenDangNhap";
             this.txbTenDangNhap.Size = new System.Drawing.Size(417, 22);
             this.txbTenDangNhap.TabIndex = 0;
-            this.txbTenDangNhap.Text = "MYADMIN";
+            this.txbTenDangNhap.Text = "HOTELADMIN";
             // 
             // label5
             // 

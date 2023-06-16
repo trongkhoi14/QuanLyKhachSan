@@ -35,6 +35,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,16 +48,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="GUI\BuongPhongGUI\BuongPhongGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BuongPhongGUI\BuongPhongGUI.Designer.cs">
+      <DependentUpon>BuongPhongGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\DangNhapGUI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\DangNhapGUI.Designer.cs">
       <DependentUpon>DangNhapGUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\KhachHangGUI\KhachHangGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhachHangGUI\KhachHangGUI.Designer.cs">
+      <DependentUpon>KhachHangGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LeTanGUI\LeTanGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LeTanGUI\LeTanGUI.Designer.cs">
+      <DependentUpon>LeTanGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\BuongPhongGUI\BuongPhongGUI.resx">
+      <DependentUpon>BuongPhongGUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\DangNhapGUI.resx">
       <DependentUpon>DangNhapGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhachHangGUI\KhachHangGUI.resx">
+      <DependentUpon>KhachHangGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LeTanGUI\LeTanGUI.resx">
+      <DependentUpon>LeTanGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -81,11 +111,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BUS\" />
-    <Folder Include="DAO\" />
     <Folder Include="DTO\" />
-    <Folder Include="GUI\BuongPhongGUI\" />
-    <Folder Include="GUI\KhachHangGUI\" />
-    <Folder Include="GUI\LeTanGUI\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

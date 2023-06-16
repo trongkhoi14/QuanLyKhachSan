@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyKhachSan.GUI.LeTanGUI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,11 @@ namespace QuanLyKhachSan
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-
+            
+            LeTanGUI LeTanGUI = new LeTanGUI();
+            this.Hide();
+            LeTanGUI.ShowDialog();
+            this.Show();
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
