@@ -11,6 +11,7 @@ namespace QuanLyKhachSan.DAO
 {
     class DataProvider
     {
+                
         private static DataProvider instance;
 
         private string connectionSTR = "";
@@ -23,9 +24,9 @@ namespace QuanLyKhachSan.DAO
             private set => instance = value;
         }
         private DataProvider() { }
-
-        // Phương thức SetConnectionString để thiết lập chuỗi kết nối từ các lớp khác:
+        
         [Obsolete]
+        // Thiết lập chuỗi kết nối:
         public void SetConnectionString(string connectionString)
         {
             // Set lại connection string
@@ -38,7 +39,7 @@ namespace QuanLyKhachSan.DAO
             try
             {
                 // Truy vấn để lấy dữ liệu từ bảng NHANVIEN
-                string query = "SELECT * FROM MYADMIN.VIEW_CS1_NHANVIEN";
+                string query = "SELECT * FROM MYADMIN.NHANVIEN";
                 OracleDataAdapter adapter = new OracleDataAdapter(query, connection);
                 DataTable data = new DataTable();
                 adapter.Fill(data);
@@ -63,9 +64,9 @@ namespace QuanLyKhachSan.DAO
 
             connection.Close();
         }
-
-        // Cái này dùng cho truy vấn trả về dạng table
+                
         [Obsolete]
+        // Dùng cho SELECT (trả về dạng bảng)
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();
@@ -107,9 +108,9 @@ namespace QuanLyKhachSan.DAO
             }
             return data;
         }
-
-        // Cái này dùng cho insert, update, delete --> nó trả về số dòng thực thi thành công 
+                
         [Obsolete]
+        // Dùng cho INSERT, UPDATE, DELETE (trả về số dòng thực thi thành công) 
         public int ExecuteNonQuery(string query, object[] parameter = null)
         {
             int data = 0;
