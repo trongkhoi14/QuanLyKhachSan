@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace QuanLyKhachSan.BUS
 {
@@ -36,10 +37,17 @@ namespace QuanLyKhachSan.BUS
             //Kiểm tra kết nối
             return DataProvider.Instance.TestConnection();
         }
-        public string LayVaiTro(string TenDangNhap, string MatKhau)
-        {
 
-            return "LeTan";
+        [Obsolete]
+        public string LayVaiTro(string tenDangNhap, string matKhau)
+        {
+            DataTable NhanVien = NhanVienDAO.Instance.LayNhanVien(tenDangNhap);
+            if(NhanVien.Rows.Count>0)
+            {
+                return NhanVien.Rows[0]["VAITRO"].ToString();
+                
+            }    
+            return "";
         }
 
         #endregion

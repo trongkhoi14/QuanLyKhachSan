@@ -1,4 +1,6 @@
 ﻿using QuanLyKhachSan.BUS;
+using QuanLyKhachSan.GUI.BuongPhongGUI;
+using QuanLyKhachSan.GUI.KhachHangGUI;
 using QuanLyKhachSan.GUI.LeTanGUI;
 using System;
 using System.Collections.Generic;
@@ -29,20 +31,25 @@ namespace QuanLyKhachSan
                 string vaiTro = TaiKhoanBUS.Instance.LayVaiTro(tenDangNhap, matKhau);
                 switch (vaiTro)
                 {
-                    case "LeTan":
-                        LeTanGUI LeTanGUI = new LeTanGUI();
+                    case "Le tan":
+                        LeTanGUI lt = new LeTanGUI();
                         this.Hide();
-                        LeTanGUI.ShowDialog();
+                        lt.ShowDialog();
                         this.Show();
                         break;
-                    case "KhachHang":
-                        
-                        break;
-                    case "BuongPhong":
-                        
-                        break;
-                    default:
 
+                    case "Buong phong":
+                        BuongPhongGUI bp = new BuongPhongGUI();
+                        this.Hide();
+                        bp.ShowDialog();
+                        this.Show();
+                        break;
+
+                    default:
+                        KhachHangGUI kh = new KhachHangGUI();
+                        this.Hide();
+                        kh.ShowDialog();
+                        this.Show();
                         break;
                 }
             }
