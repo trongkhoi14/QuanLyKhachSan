@@ -18,7 +18,8 @@ namespace QuanLyKhachSan
         {
             InitializeComponent();
         }
-
+        #region event
+        [Obsolete]
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             string tenDangNhap = txbTenDangNhap.Text;
@@ -28,7 +29,7 @@ namespace QuanLyKhachSan
                 string vaiTro = TaiKhoanBUS.Instance.LayVaiTro(tenDangNhap, matKhau);
                 switch (vaiTro)
                 {
-                    case "Letan":
+                    case "LeTan":
                         LeTanGUI LeTanGUI = new LeTanGUI();
                         this.Hide();
                         LeTanGUI.ShowDialog();
@@ -65,6 +66,7 @@ namespace QuanLyKhachSan
                 e.Cancel = true;
             }
         }
-    
+        #endregion
+
     }
 }

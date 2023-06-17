@@ -31,5 +31,18 @@ namespace QuanLyKhachSan.DAO
 
             return true;
         }
+        public bool KiemTraKetNoi(string tenDangNhap, string matKhau)
+        {
+            try
+            {
+                string connectionSTR = @"DATA SOURCE=localhost:1521/xe; USER ID=" + tenDangNhap + ";PASSWORD=" + matKhau;
+                DataProvider.Instance.SetConnectionString(connectionSTR);
+            }
+            catch(Exception)
+            {
+
+            }
+            return true;
+        }
     }
 }

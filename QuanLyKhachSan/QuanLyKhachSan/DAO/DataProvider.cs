@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace QuanLyKhachSan.DAO
 {
-    class DataProvider
+    public class DataProvider
     {
                 
         private static DataProvider instance;
@@ -25,7 +25,7 @@ namespace QuanLyKhachSan.DAO
         }
         private DataProvider() { }
         
-        [Obsolete]
+        
         // Thiết lập chuỗi kết nối:
         public void SetConnectionString(string connectionString)
         {
@@ -34,37 +34,32 @@ namespace QuanLyKhachSan.DAO
 
             // Kiểm tra thử xem chuỗi này kết nối được không
             OracleConnection connection = new OracleConnection(connectionSTR);
-
             connection.Open();
-            try
-            {
-                // Truy vấn để lấy dữ liệu từ bảng NHANVIEN
-                string query = "SELECT * FROM MYADMIN.NHANVIEN";
-                OracleDataAdapter adapter = new OracleDataAdapter(query, connection);
-                DataTable data = new DataTable();
-                adapter.Fill(data);
-
-                // Kiểm tra xem có dữ liệu và cột role tồn tại không
-                if (data.Rows.Count > 0 && data.Columns.Contains("VAITRO"))
-                {
-                    // Gán giá trị của cột role vào thuộc tính role của lớp DataProvider
-                    role = data.Rows[0]["VAITRO"].ToString();
-                }
-                else
-                {
-                    // Xử lý khi không tìm thấy dữ liệu hoặc cột role
-                    role = "admin"; // hoặc gán giá trị mặc định khác
-
-                }
-            }
-            catch (Exception)
-            {
-                role = "";
-            }
-
             connection.Close();
         }
+
+        [Obsolete]
+        // Kiểm tra thử xem chuỗi connectionSTR kết nối được không
+        public bool TestConnection(string connectionString)
+        {
+            // Thiết lập chuỗi kết nối
+            connectionSTR = connectionString;
+
+            OracleConnection connection = new OracleConnection(connectionString);
+            // Kiểm tra kết nối
+            
+            //try
+            //{
+            //    connection.Open();
                 
+            //    connection.Close();
+            //}
+            //catch (Exception)
+            //{
+            //    return false;
+            //}
+            return true;
+        }
         [Obsolete]
         // Dùng cho SELECT (trả về dạng bảng)
         public DataTable ExecuteQuery(string query, object[] parameter = null)
