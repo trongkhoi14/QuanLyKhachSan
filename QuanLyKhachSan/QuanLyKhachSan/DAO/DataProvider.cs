@@ -26,40 +26,31 @@ namespace QuanLyKhachSan.DAO
         private DataProvider() { }
         
         
-        // Thiết lập chuỗi kết nối:
+        // Thiết lập chuỗi kết nối
         public void SetConnectionString(string connectionString)
         {
             // Set lại connection string
             connectionSTR = connectionString;
-
-            // Kiểm tra thử xem chuỗi này kết nối được không
-            OracleConnection connection = new OracleConnection(connectionSTR);
-            connection.Open();
-            connection.Close();
         }
 
         [Obsolete]
-        // Kiểm tra thử xem chuỗi connectionSTR kết nối được không
-        public bool TestConnection(string connectionString)
+        // Kiểm tra kết nối
+        public bool TestConnection()
         {
-            // Thiết lập chuỗi kết nối
-            connectionSTR = connectionString;
-
-            OracleConnection connection = new OracleConnection(connectionString);
+            OracleConnection connection = new OracleConnection(connectionSTR);
             // Kiểm tra kết nối
-            
-            //try
-            //{
-            //    connection.Open();
-                
-            //    connection.Close();
-            //}
-            //catch (Exception)
-            //{
-            //    return false;
-            //}
+            try
+            {
+                connection.Open();
+                connection.Close();
+            }
+            catch (Exception)
+            {
+                return false;
+            }
             return true;
         }
+
         [Obsolete]
         // Dùng cho SELECT (trả về dạng bảng)
         public DataTable ExecuteQuery(string query, object[] parameter = null)

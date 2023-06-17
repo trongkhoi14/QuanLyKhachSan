@@ -1,5 +1,6 @@
 ﻿using QuanLyKhachSan.DAO;
 using System;
+using System.Data.OracleClient;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,32 +19,29 @@ namespace QuanLyKhachSan.BUS
         private TaiKhoanBUS() { }
 
         #region method
-       
+
+        [Obsolete]
         public bool KiemTraThongTinDangNhap(string tenDangNhap, string matKhau)
         {
             if(tenDangNhap == "" || matKhau == "")
             {
                 return false;
             }
-            try
-            {
-                string connectionSTR = @"DATA SOURCE=localhost:1521/xe; USER ID=" + tenDangNhap + ";PASSWORD=" + matKhau;
 
-                // Thiết lập lại chuỗi kết nối
-                DataProvider.Instance.SetConnectionString(connectionSTR);
-            }
-            catch (Exception ex)
-            {
-                return false;
-            }
+            string connectionSTR = @"DATA SOURCE=localhost:1521/xe; USER ID=" + tenDangNhap + ";PASSWORD=" + matKhau;
 
-            return true;
+            //Thiết lập chuỗi kết nối
+            DataProvider.Instance.SetConnectionString(connectionSTR);
+
+            //Kiểm tra kết nối
+            return DataProvider.Instance.TestConnection();
         }
         public string LayVaiTro(string TenDangNhap, string MatKhau)
         {
 
             return "LeTan";
         }
+
         #endregion
     }
 }
