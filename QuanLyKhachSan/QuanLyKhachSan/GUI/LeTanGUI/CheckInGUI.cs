@@ -10,24 +10,19 @@ using System.Windows.Forms;
 
 namespace QuanLyKhachSan.GUI.LeTanGUI
 {
-    public partial class LeTanGUI : Form
+    public partial class CheckInGUI : Form
     {
-        public LeTanGUI()
+        public CheckInGUI()
         {
             InitializeComponent();
         }
 
-        private void checkinToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnDangKyThongTinLuuTru_Click(object sender, EventArgs e)
         {
-            CheckInGUI c = new CheckInGUI();
+            DKThongTinLuuTruGUI dk = new DKThongTinLuuTruGUI();
             this.Hide();
-            c.ShowDialog();
+            dk.ShowDialog();
             this.Show();
-        }
-
-        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

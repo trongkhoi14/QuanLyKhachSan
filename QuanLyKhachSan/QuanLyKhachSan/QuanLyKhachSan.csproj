@@ -93,6 +93,18 @@
     <Compile Include="GUI\KhachHangGUI\KhachHangGUI.Designer.cs">
       <DependentUpon>KhachHangGUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\LeTanGUI\CheckInGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LeTanGUI\CheckInGUI.Designer.cs">
+      <DependentUpon>CheckInGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LeTanGUI\DKThongTinLuuTruGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LeTanGUI\DKThongTinLuuTruGUI.Designer.cs">
+      <DependentUpon>DKThongTinLuuTruGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\LeTanGUI\LeTanGUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +121,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhachHangGUI\KhachHangGUI.resx">
       <DependentUpon>KhachHangGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LeTanGUI\CheckInGUI.resx">
+      <DependentUpon>CheckInGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LeTanGUI\DKThongTinLuuTruGUI.resx">
+      <DependentUpon>DKThongTinLuuTruGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\LeTanGUI\LeTanGUI.resx">
       <DependentUpon>LeTanGUI.cs</DependentUpon>
