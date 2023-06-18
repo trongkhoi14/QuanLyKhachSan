@@ -70,10 +70,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\CTPhieuNhanPhongBUS.cs" />
+    <Compile Include="BUS\DichVuBUS.cs" />
+    <Compile Include="BUS\KhachHangBUS.cs" />
+    <Compile Include="BUS\PhieuDatPhongBUS.cs" />
+    <Compile Include="BUS\PhieuNhanPhongBUS.cs" />
+    <Compile Include="BUS\PhongBUS.cs" />
     <Compile Include="BUS\TaiKhoanBUS.cs" />
+    <Compile Include="DAO\CTPhieuNhanPhongDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\DichVuDAO.cs" />
     <Compile Include="DAO\KhachHangDAO.cs" />
     <Compile Include="DAO\NhanVienDAO.cs" />
+    <Compile Include="DAO\PhieuDatPhongDAO.cs" />
+    <Compile Include="DAO\PhieuNhanPhongDAO.cs" />
+    <Compile Include="DAO\PhongDAO.cs" />
     <Compile Include="DAO\TaiKhoanDAO.cs" />
     <Compile Include="GUI\BuongPhongGUI\BuongPhongGUI.cs">
       <SubType>Form</SubType>

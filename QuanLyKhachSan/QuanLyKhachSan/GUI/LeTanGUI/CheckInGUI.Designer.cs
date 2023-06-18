@@ -471,6 +471,7 @@
             this.txbMaPDP.Name = "txbMaPDP";
             this.txbMaPDP.Size = new System.Drawing.Size(321, 22);
             this.txbMaPDP.TabIndex = 4;
+            this.txbMaPDP.TextChanged += new System.EventHandler(this.txbMaPDP_TextChanged);
             // 
             // label12
             // 

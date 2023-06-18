@@ -1,5 +1,7 @@
-﻿using System;
+﻿using QuanLyKhachSan.DAO;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,5 +17,11 @@ namespace QuanLyKhachSan.BUS
             set => instance = value;
         }
         private PhieuDatPhongBUS() { }
+
+        [Obsolete]
+        public DataTable LayDanhSachPDP()
+        {
+            return PhieuDatPhongDAO.Instance.LayDanhSach();
+        }    
     }
 }
