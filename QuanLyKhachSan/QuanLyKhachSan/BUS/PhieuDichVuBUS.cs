@@ -8,20 +8,20 @@ using System.Threading.Tasks;
 
 namespace QuanLyKhachSan.BUS
 {
-    public class DichVuBUS
+    public class PhieuDichVuBUS
     {
-        private static DichVuBUS instance;
-        public static DichVuBUS Instance
+        private static PhieuDichVuBUS instance;
+        public static PhieuDichVuBUS Instance
         {
-            get { if (instance == null) instance = new DichVuBUS(); return instance; }
+            get { if (instance == null) instance = new PhieuDichVuBUS(); return instance; }
             set => instance = value;
         }
-        private DichVuBUS() { }
+        private PhieuDichVuBUS() { }
 
         [Obsolete]
         public DataTable LayDSDichVuTheoPDP(string MaPDP)
         {
-            return DichVuDAO.Instance.LayDSTheoPDP(MaPDP);
+            return PhieuDichVuDAO.Instance.LayPhieuDichVuTheoPDP(MaPDP);
         }
     }
 }

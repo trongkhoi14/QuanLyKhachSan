@@ -14,7 +14,7 @@ namespace QuanLyKhachSan.GUI.LeTanGUI
     public partial class CheckInGUI : Form
     {
         BindingSource dsPhieuDatPhong = new BindingSource();
-
+        
         [Obsolete]
         public CheckInGUI()
         {
@@ -29,6 +29,7 @@ namespace QuanLyKhachSan.GUI.LeTanGUI
         {
             DanhSachPDP();
             DanhSachPhong();
+            DanhSachDichVu();
         }
         [Obsolete]
         void DanhSachPDP()
@@ -41,7 +42,11 @@ namespace QuanLyKhachSan.GUI.LeTanGUI
             txbNgayDen.DataBindings.Add(new Binding("Text", dtgvDanhSachDP.DataSource, "NGAYDEN", true, DataSourceUpdateMode.Never));
             txbSoDem.DataBindings.Add(new Binding("Text", dtgvDanhSachDP.DataSource, "SODEMLUUTRU", true, DataSourceUpdateMode.Never));
             txbSoNguoi.DataBindings.Add(new Binding("Text", dtgvDanhSachDP.DataSource, "SONGUOI", true, DataSourceUpdateMode.Never));
-            
+            txbHoTen.DataBindings.Add(new Binding("Text", dtgvDanhSachDP.DataSource, "TENKH", true, DataSourceUpdateMode.Never)); 
+            txbNgaySinh.DataBindings.Add(new Binding("Text", dtgvDanhSachDP.DataSource, "NGAYSINH", true, DataSourceUpdateMode.Never)); 
+            txbDiaChi.DataBindings.Add(new Binding("Text", dtgvDanhSachDP.DataSource, "DIACHI", true, DataSourceUpdateMode.Never)); 
+            txbSDT.DataBindings.Add(new Binding("Text", dtgvDanhSachDP.DataSource, "SODT", true, DataSourceUpdateMode.Never));
+
         }
 
         [Obsolete]
@@ -49,6 +54,14 @@ namespace QuanLyKhachSan.GUI.LeTanGUI
         {
             string maPDP = txbMaPDP.Text;
             dtgvPhong.DataSource = PhongBUS.Instance.LayDSPhongTheoPDP(maPDP); 
+        }
+
+        [Obsolete]
+        void DanhSachDichVu()
+        {
+            string maPDP = txbMaPDP.Text;
+            dtgvDichVu.DataSource = PhieuDichVuBUS.Instance.LayDSDichVuTheoPDP(maPDP);
+
         }
         #endregion
 
@@ -65,6 +78,7 @@ namespace QuanLyKhachSan.GUI.LeTanGUI
         private void txbMaPDP_TextChanged(object sender, EventArgs e)
         {
             DanhSachPhong();
+            DanhSachDichVu();
         }
         #endregion
 

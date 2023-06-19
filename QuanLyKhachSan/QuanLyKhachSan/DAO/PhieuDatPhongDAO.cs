@@ -20,7 +20,9 @@ namespace QuanLyKhachSan.DAO
         [Obsolete]
         public DataTable LayDanhSach()
         {
-            string query = string.Format("SELECT * FROM HOTELADMIN.PHIEUDATPHONG");
+            string query = string.Format("SELECT P.MAPDP, K.TENKH, K.NGAYSINH, K.DIACHI, K.EMAIL, K.SODT, K.SOFAX, P.NGAYDEN, P.SODEMLUUTRU, P.SONGUOI, P.TINHTRANG AS THANHTOAN " +
+                                         "FROM HOTELADMIN.PHIEUDATPHONG P " +
+                                         "JOIN HOTELADMIN.KHACHHANG K ON K.MAKH = P.MAKH");
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
