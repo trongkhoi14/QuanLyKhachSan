@@ -12,9 +12,19 @@ namespace QuanLyKhachSan.GUI.LeTanGUI
 {
     public partial class DKThongTinLuuTruGUI : Form
     {
-        public DKThongTinLuuTruGUI()
+        private string maPDP;
+        public string MaPDP
+        {
+            get { return maPDP; }
+            set { maPDP = value; }
+        }
+
+        public DKThongTinLuuTruGUI(string mapdp)
         {
             InitializeComponent();
+            this.maPDP = mapdp;
+            txbHoTen.Text = this.maPDP;
         }
+
     }
 }

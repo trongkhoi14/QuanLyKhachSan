@@ -68,7 +68,7 @@ namespace QuanLyKhachSan.GUI.LeTanGUI
         #region event
         private void btnDangKyThongTinLuuTru_Click(object sender, EventArgs e)
         {
-            DKThongTinLuuTruGUI dk = new DKThongTinLuuTruGUI();
+            DKThongTinLuuTruGUI dk = new DKThongTinLuuTruGUI(txbMaPDP.Text);
             this.Hide();
             dk.ShowDialog();
             this.Show();
