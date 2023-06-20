@@ -19,9 +19,9 @@ namespace QuanLyKhachSan.BUS
         private PhieuDatPhongBUS() { }
 
         [Obsolete]
-        public DataTable LayDanhSachPDP()
+        public DataTable LTLayDanhSachPDP()
         {
-            return PhieuDatPhongDAO.Instance.LayDanhSach();
+            return PhieuDatPhongDAO.Instance.LTLayDanhSach();
         }    
     }
 }

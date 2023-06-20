@@ -87,7 +87,7 @@
             this.txbSoFax.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbSoFax.Name = "txbSoFax";
             this.txbSoFax.Size = new System.Drawing.Size(321, 22);
-            this.txbSoFax.TabIndex = 4;
+            this.txbSoFax.TabIndex = 6;
             // 
             // txbEmail
             // 
@@ -95,7 +95,7 @@
             this.txbEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.Size = new System.Drawing.Size(321, 22);
-            this.txbEmail.TabIndex = 4;
+            this.txbEmail.TabIndex = 5;
             // 
             // label5
             // 
@@ -147,7 +147,7 @@
             this.txbDiaChi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbDiaChi.Name = "txbDiaChi";
             this.txbDiaChi.Size = new System.Drawing.Size(321, 22);
-            this.txbDiaChi.TabIndex = 4;
+            this.txbDiaChi.TabIndex = 3;
             // 
             // label3
             // 
@@ -173,7 +173,7 @@
             this.txbNgaySinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbNgaySinh.Name = "txbNgaySinh";
             this.txbNgaySinh.Size = new System.Drawing.Size(321, 22);
-            this.txbNgaySinh.TabIndex = 4;
+            this.txbNgaySinh.TabIndex = 2;
             // 
             // label2
             // 
@@ -235,7 +235,7 @@
             this.txbHoTen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbHoTen.Name = "txbHoTen";
             this.txbHoTen.Size = new System.Drawing.Size(321, 22);
-            this.txbHoTen.TabIndex = 4;
+            this.txbHoTen.TabIndex = 1;
             // 
             // label12
             // 

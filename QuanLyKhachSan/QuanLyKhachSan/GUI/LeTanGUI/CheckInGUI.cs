@@ -36,7 +36,7 @@ namespace QuanLyKhachSan.GUI.LeTanGUI
         {
             dtgvDanhSachDP.DataSource = dsPhieuDatPhong;
             //Lấy danh sách
-            dsPhieuDatPhong.DataSource = PhieuDatPhongBUS.Instance.LayDanhSachPDP();
+            dsPhieuDatPhong.DataSource = PhieuDatPhongBUS.Instance.LTLayDanhSachPDP();
             //Ràng buộc với textbox
             txbMaPDP.DataBindings.Add(new Binding("Text", dtgvDanhSachDP.DataSource, "MAPDP", true, DataSourceUpdateMode.Never));
             txbNgayDen.DataBindings.Add(new Binding("Text", dtgvDanhSachDP.DataSource, "NGAYDEN", true, DataSourceUpdateMode.Never));
@@ -53,14 +53,14 @@ namespace QuanLyKhachSan.GUI.LeTanGUI
         void DanhSachPhong()
         {
             string maPDP = txbMaPDP.Text;
-            dtgvPhong.DataSource = PhongBUS.Instance.LayDSPhongTheoPDP(maPDP); 
+            dtgvPhong.DataSource = PhongBUS.Instance.LTLayDSPhongTheoPDP(maPDP); 
         }
 
         [Obsolete]
         void DanhSachDichVu()
         {
             string maPDP = txbMaPDP.Text;
-            dtgvDichVu.DataSource = PhieuDichVuBUS.Instance.LayDSDichVuTheoPDP(maPDP);
+            dtgvDichVu.DataSource = PhieuDichVuBUS.Instance.LTLayDSDichVuTheoPDP(maPDP);
 
         }
         #endregion

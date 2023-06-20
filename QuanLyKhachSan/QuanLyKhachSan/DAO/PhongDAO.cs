@@ -18,7 +18,7 @@ namespace QuanLyKhachSan.DAO
         private PhongDAO() { }
 
         [Obsolete]
-        public DataTable LayDSTheoPDP(string MaPDP)
+        public DataTable LTLayDSTheoPDP(string MaPDP)
         {
             string query = string.Format("SELECT P.MAPHONG, P.TRANGTHAI, L.HANGPHONG, L.GIAMOTDEM " +
                                          "FROM HOTELADMIN.PHONG P " +

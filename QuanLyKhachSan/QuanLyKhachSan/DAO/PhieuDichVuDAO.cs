@@ -18,7 +18,7 @@ namespace QuanLyKhachSan.DAO
         private PhieuDichVuDAO() { }
 
         [Obsolete]
-        public DataTable LayPhieuDichVuTheoPDP(string MaPDP)
+        public DataTable LTLayPhieuDichVuTheoPDP(string MaPDP)
         {
             string query = string.Format("SELECT D.TENDV, C.SOLUONG, C.LICHSUDUNG, C.GHICHU, D.DONVITINH, D.GIADV " +
                                          "FROM HOTELADMIN.PHIEUDICHVU P " +

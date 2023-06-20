@@ -19,9 +19,9 @@ namespace QuanLyKhachSan.BUS
         private PhongBUS() { }
 
         [Obsolete]
-        public DataTable LayDSPhongTheoPDP(string MaPDP)
+        public DataTable LTLayDSPhongTheoPDP(string MaPDP)
         {
-            return PhongDAO.Instance.LayDSTheoPDP(MaPDP);
+            return PhongDAO.Instance.LTLayDSTheoPDP(MaPDP);
         }
     }
 }

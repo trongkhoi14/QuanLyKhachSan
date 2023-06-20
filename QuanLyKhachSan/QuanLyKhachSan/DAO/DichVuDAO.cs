@@ -18,7 +18,7 @@ namespace QuanLyKhachSan.DAO
         private DichVuDAO() { }
 
         [Obsolete]
-        public DataTable LayDSTheoPDP(string MaPDP)
+        public DataTable LTLayDSTheoPDP(string MaPDP)
         {
             string query = string.Format("SELECT * FROM HOTELADMIN.PHIEUDATPHONG");
             return DataProvider.Instance.ExecuteQuery(query);

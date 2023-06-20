@@ -18,7 +18,7 @@ namespace QuanLyKhachSan.DAO
         private PhieuDatPhongDAO() { }
 
         [Obsolete]
-        public DataTable LayDanhSach()
+        public DataTable LTLayDanhSach()
         {
             string query = string.Format("SELECT P.MAPDP, K.TENKH, K.NGAYSINH, K.DIACHI, K.EMAIL, K.SODT, K.SOFAX, P.NGAYDEN, P.SODEMLUUTRU, P.SONGUOI, P.TINHTRANG AS THANHTOAN " +
                                          "FROM HOTELADMIN.PHIEUDATPHONG P " +

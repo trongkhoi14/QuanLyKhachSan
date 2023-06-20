@@ -19,9 +19,9 @@ namespace QuanLyKhachSan.BUS
         private DichVuBUS() { }
 
         [Obsolete]
-        public DataTable LayDSDichVuTheoPDP(string MaPDP)
+        public DataTable LTLayDSDichVuTheoPDP(string MaPDP)
         {
-            return DichVuDAO.Instance.LayDSTheoPDP(MaPDP);
+            return DichVuDAO.Instance.LTLayDSTheoPDP(MaPDP);
         }
     }
 }
