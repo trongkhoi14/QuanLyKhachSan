@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyKhachSan.BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace QuanLyKhachSan.GUI.BuongPhongGUI
         public BuongPhongGUI()
         {
             InitializeComponent();
+        }
+
+        private void HoanThanhBtn_Click(object sender, EventArgs e)
+        {
+            PhieuDanhGiaTinhTrangPhongBUS pdgttp = new PhieuDanhGiaTinhTrangPhongBUS();
+
+            pdgttp.MAPDG = "";
         }
     }
 }
