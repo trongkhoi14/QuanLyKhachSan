@@ -29,11 +29,11 @@ namespace QuanLyKhachSan.BUS
         public PhieuDatPhongBUS() { }
 
         [Obsolete]
-        public DataTable LayDanhSachPDP()
+        public DataTable KHLayDanhSachPDP()
         {
-            return PhieuDatPhongDAO.Instance.LayDanhSach();
+            return PhieuDatPhongDAO.Instance.KHLayDanhSach();
         }
-        public bool KiemTraThongTinPDP(PhieuDatPhongBUS pdp)
+        public bool KHKiemTraThongTinPDP(PhieuDatPhongBUS pdp)
         {
             string patternNUMBER = @"^-?\d+$";
 
@@ -59,12 +59,12 @@ namespace QuanLyKhachSan.BUS
         }
 
         [Obsolete]
-        public DataTable LayMaPDPGanNhat()
+        public DataTable KHLayMaPDPGanNhat()
         {
-            return PhieuDatPhongDAO.Instance.LayMaPDPMoiNhat();
+            return PhieuDatPhongDAO.Instance.KHLayMaPDPMoiNhat();
         }
         //Tạo mã phiếu đặt phòng
-        public string CurrentMaPDP(string mapdp)
+        public string KHCurrentMaPDP(string mapdp)
         {
             string prefix = mapdp.Substring(0, 3); 
             int number = int.Parse(mapdp.Substring(3)); 
@@ -74,9 +74,9 @@ namespace QuanLyKhachSan.BUS
         }
 
         [Obsolete]
-        public void ThemPDP(PhieuDatPhongBUS pdp)
+        public void KHThemPDP(PhieuDatPhongBUS pdp)
         {
-            PhieuDatPhongDAO.Instance.ThemPhieuDatPhong(pdp);
+            PhieuDatPhongDAO.Instance.KHThemPhieuDatPhong(pdp);
         }
     }
 }

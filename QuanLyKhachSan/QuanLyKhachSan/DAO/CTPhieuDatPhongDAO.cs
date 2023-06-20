@@ -17,7 +17,7 @@ namespace QuanLyKhachSan.DAO
         private CTPhieuDatPhongDAO() { }
 
         [Obsolete]
-        public bool ThemCTPhieuDatPhong(string MAPDP, string MAPHONG)
+        public bool KHThemCTPhieuDatPhong(string MAPDP, string MAPHONG)
         {
             string query = string.Format($"insert into HOTELADMIN.ct_phieudatphong values('{MAPDP}','{MAPHONG}')");
             DataProvider.Instance.ExecuteNonQuery(query);

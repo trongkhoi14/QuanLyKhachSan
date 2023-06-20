@@ -19,7 +19,7 @@ namespace QuanLyKhachSan.DAO
         private PhieuDatPhongDAO() { }
 
         [Obsolete]
-        public DataTable LayDanhSach()
+        public DataTable KHLayDanhSach()
         {
             string query = string.Format("select p.maphong, lp.loaigiuong,lp.succhua, lp.giamotdem " +
                                         "from HOTELADMIN.phong p join HOTELADMIN.loaiphong lp " +
@@ -29,7 +29,7 @@ namespace QuanLyKhachSan.DAO
         }
 
         [Obsolete]
-        public void ThemPhieuDatPhong(PhieuDatPhongBUS pdp)
+        public void KHThemPhieuDatPhong(PhieuDatPhongBUS pdp)
         {
             string query = string.Format($"INSERT INTO HOTELADMIN.phieudatphong(MAPDP, TINHTRANG, NGAYLAP, NGAYDEN, SODEMLUUTRU, SONGUOI, MANV, MAKH) " +
                $"VALUES ('{pdp.MAPDP}', 'Chua coc', TO_DATE('{pdp.NGAYLAP.ToString("dd/MM/yyyy")}', 'DD/MM/YYYY'), " +
@@ -37,7 +37,7 @@ namespace QuanLyKhachSan.DAO
             DataProvider.Instance.ExecuteNonQuery(query);
         }
         [Obsolete]
-        public DataTable LayMaPDPMoiNhat()
+        public DataTable KHLayMaPDPMoiNhat()
         {
             string query = string.Format("select mapdp " +
                                         "from HOTELADMIN.phieudatphong " +

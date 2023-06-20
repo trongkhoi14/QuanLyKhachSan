@@ -35,7 +35,7 @@ namespace QuanLyKhachSan.GUI.LeTanGUI
         {
             dtgvDanhSachDP.DataSource = dsPhieuDatPhong;
             //Lấy danh sách
-            dsPhieuDatPhong.DataSource = PhieuDatPhongBUS.Instance.LayDanhSachPDP();
+            dsPhieuDatPhong.DataSource = PhieuDatPhongBUS.Instance.KHLayDanhSachPDP();
             //Ràng buộc với textbox
             txbMaPDP.DataBindings.Add(new Binding("Text", dtgvDanhSachDP.DataSource, "MAPDP", true, DataSourceUpdateMode.Never));
             txbNgayDen.DataBindings.Add(new Binding("Text", dtgvDanhSachDP.DataSource, "NGAYDEN", true, DataSourceUpdateMode.Never));

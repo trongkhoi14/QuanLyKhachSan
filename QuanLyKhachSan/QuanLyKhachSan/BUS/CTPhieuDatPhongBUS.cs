@@ -18,9 +18,9 @@ namespace QuanLyKhachSan.BUS
         private CTPhieuDatPhongBUS() { }
 
         [Obsolete]
-        public void ThemCtPDP(string MAPDP, string MAPHONG)
+        public void KHThemCtPDP(string MAPDP, string MAPHONG)
         {
-            CTPhieuDatPhongDAO.Instance.ThemCTPhieuDatPhong(MAPDP, MAPHONG);
+            CTPhieuDatPhongDAO.Instance.KHThemCTPhieuDatPhong(MAPDP, MAPHONG);
         }
     }
 }

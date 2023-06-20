@@ -23,7 +23,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
         [Obsolete]
         private void fPhieuDatPhong_Load(object sender, EventArgs e)
         {
-            DsPhongDataGridView.DataSource = PhieuDatPhongBUS.Instance.LayDanhSachPDP();
+            DsPhongDataGridView.DataSource = PhieuDatPhongBUS.Instance.KHLayDanhSachPDP();
             var checkBoxColumn = new DataGridViewCheckBoxColumn();
             checkBoxColumn.DefaultCellStyle.NullValue = false;
             DsPhongDataGridView.Columns.Add(checkBoxColumn);
@@ -40,10 +40,10 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
         {
             PhieuDatPhongBUS pdp = new PhieuDatPhongBUS();
 
-            var temp = PhieuDatPhongBUS.Instance.LayMaPDPGanNhat();
+            var temp = PhieuDatPhongBUS.Instance.KHLayMaPDPGanNhat();
             string tempPDP = (string)temp.Rows[0][0];
 
-            pdp.MAPDP = PhieuDatPhongBUS.Instance.CurrentMaPDP(tempPDP);
+            pdp.MAPDP = PhieuDatPhongBUS.Instance.KHCurrentMaPDP(tempPDP);
             pdp.NGAYDEN = NgaydenTimePicker.Value;
             pdp.NGAYLAP = DateTime.Today;
             pdp.SODEMLUUTRU = SoDemLuuTruTBox.Text;
@@ -58,13 +58,13 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             }
 
             //Các thông tin hợp lệ
-            if (PhieuDatPhongBUS.Instance.KiemTraThongTinPDP(pdp))
+            if (PhieuDatPhongBUS.Instance.KHKiemTraThongTinPDP(pdp))
             {
                 MessageBox.Show("Đặt phòng thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 NotiLabel.Text = null;
 
                 //Lưu phiếu đặt phòng
-                PhieuDatPhongBUS.Instance.ThemPDP(pdp);
+                PhieuDatPhongBUS.Instance.KHThemPDP(pdp);
 
                 //Lấy ds các mã phòng đã chọn
                 List<string> MaPhongChecked = new List<string>();
@@ -80,7 +80,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
                 //Lưu chi tiết phiếu đặt phòng
                 for(int i=0; i<MaPhongChecked.Count(); i++)
                 {
-                    CTPhieuDatPhongBUS.Instance.ThemCtPDP(pdp.MAPDP, MaPhongChecked[i]);
+                    CTPhieuDatPhongBUS.Instance.KHThemCtPDP(pdp.MAPDP, MaPhongChecked[i]);
                 }
                 //Quay về màn hình chính
                 KhachHangGUI khg = new KhachHangGUI();
