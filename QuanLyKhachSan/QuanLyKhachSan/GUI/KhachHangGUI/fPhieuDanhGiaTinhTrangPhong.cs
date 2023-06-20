@@ -10,19 +10,11 @@ using System.Windows.Forms;
 
 namespace QuanLyKhachSan.GUI.KhachHangGUI
 {
-    public partial class KhachHangGUI : Form
+    public partial class fPhieuDanhGiaTinhTrangPhong : Form
     {
-        public KhachHangGUI()
+        public fPhieuDanhGiaTinhTrangPhong()
         {
             InitializeComponent();
-        }
-
-        private void DatPhongBtn_Click(object sender, EventArgs e)
-        {
-            fPhieuDatPhong pdp = new fPhieuDatPhong();
-            this.Hide();
-            pdp.ShowDialog();
-            this.Show();
         }
     }
 }

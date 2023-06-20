@@ -15,6 +15,5 @@ namespace QuanLyKhachSan.DAO
             set => instance = value;
         }
         private KhachHangDAO() { }
-
     }
 }

@@ -28,13 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.DatPhongBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // DatPhongBtn
+            // 
+            this.DatPhongBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.DatPhongBtn.Location = new System.Drawing.Point(12, 12);
+            this.DatPhongBtn.Name = "DatPhongBtn";
+            this.DatPhongBtn.Size = new System.Drawing.Size(111, 33);
+            this.DatPhongBtn.TabIndex = 0;
+            this.DatPhongBtn.Text = "Đặt phòng";
+            this.DatPhongBtn.UseVisualStyleBackColor = false;
+            this.DatPhongBtn.Click += new System.EventHandler(this.DatPhongBtn_Click);
             // 
             // KhachHangGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(839, 478);
+            this.Controls.Add(this.DatPhongBtn);
             this.Name = "KhachHangGUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KhachHangGUI";
@@ -43,5 +56,7 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Button DatPhongBtn;
     }
 }

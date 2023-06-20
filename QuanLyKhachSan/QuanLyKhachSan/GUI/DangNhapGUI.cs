@@ -26,7 +26,9 @@ namespace QuanLyKhachSan
         {
             string tenDangNhap = txbTenDangNhap.Text;
             string matKhau = txbMatKhau.Text;
-            if(TaiKhoanBUS.Instance.KiemTraThongTinDangNhap(tenDangNhap, matKhau))
+
+            PhieuDatPhongBUS.MAKH = tenDangNhap;
+            if (TaiKhoanBUS.Instance.KiemTraThongTinDangNhap(tenDangNhap, matKhau))
             {
                 string vaiTro = TaiKhoanBUS.Instance.LayVaiTro(tenDangNhap, matKhau);
                 switch (vaiTro)

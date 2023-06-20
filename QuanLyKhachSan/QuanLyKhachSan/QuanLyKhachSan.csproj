@@ -70,6 +70,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\CTPhieuDatPhongBUS.cs" />
     <Compile Include="BUS\CTPhieuNhanPhongBUS.cs" />
     <Compile Include="BUS\DichVuBUS.cs" />
     <Compile Include="BUS\KhachHangBUS.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="BUS\PhieuNhanPhongBUS.cs" />
     <Compile Include="BUS\PhongBUS.cs" />
     <Compile Include="BUS\TaiKhoanBUS.cs" />
+    <Compile Include="DAO\CTPhieuDatPhongDAO.cs" />
     <Compile Include="DAO\CTPhieuNhanPhongDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\DichVuDAO.cs" />
@@ -97,6 +99,18 @@
     </Compile>
     <Compile Include="GUI\DangNhapGUI.Designer.cs">
       <DependentUpon>DangNhapGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhachHangGUI\fPhieuDanhGiaTinhTrangPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhachHangGUI\fPhieuDanhGiaTinhTrangPhong.Designer.cs">
+      <DependentUpon>fPhieuDanhGiaTinhTrangPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhachHangGUI\fPhieuDatPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhachHangGUI\fPhieuDatPhong.Designer.cs">
+      <DependentUpon>fPhieuDatPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\KhachHangGUI\KhachHangGUI.cs">
       <SubType>Form</SubType>
@@ -129,6 +143,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\DangNhapGUI.resx">
       <DependentUpon>DangNhapGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhachHangGUI\fPhieuDanhGiaTinhTrangPhong.resx">
+      <DependentUpon>fPhieuDanhGiaTinhTrangPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhachHangGUI\fPhieuDatPhong.resx">
+      <DependentUpon>fPhieuDatPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhachHangGUI\KhachHangGUI.resx">
       <DependentUpon>KhachHangGUI.cs</DependentUpon>
