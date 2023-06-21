@@ -77,5 +77,16 @@ namespace QuanLyKhachSan.BUS
         {
             PhieuDatPhongDAO.Instance.KHThemPhieuDatPhong(pdp);
         }
+        [Obsolete]
+        public DataTable KHLayPhieuDatPhong()
+        {
+            return PhieuDatPhongDAO.Instance.KHRetrieveBookedPDP();
+        }
+        [Obsolete]
+        public DataTable KHLayThongTinPhongDaDat()
+        {
+            DataTable a = PhieuDatPhongDAO.Instance.KhRetrieveRoomType();
+            return PhieuDatPhongDAO.Instance.KhRetrieveRoomType();
+        }
     }
 }

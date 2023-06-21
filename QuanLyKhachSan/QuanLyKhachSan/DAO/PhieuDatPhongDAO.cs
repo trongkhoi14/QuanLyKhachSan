@@ -42,5 +42,32 @@ namespace QuanLyKhachSan.DAO
             string query = string.Format("select count(*) from HOTELADMIN.phieudatphong");
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        [Obsolete]
+        public DataTable KHRetrieveBookedPDP()
+        {
+            string query = string.Format(
+            $"select p.mapdp, p.tinhtrang, p.ngaylap, p.ngayden, p.sodemluutru, p.songuoi, ct.maphong " +
+            $"from HOTELADMIN.phieudatphong p join HOTELADMIN.ct_phieudatphong ct " +
+                $"on p.mapdp = ct.mapdp " +
+            $"where makh='{PhieuDatPhongBUS.MAKH}' " +
+            $"order by p.mapdp");
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        [Obsolete]
+        public DataTable KhRetrieveRoomType()
+        {
+            string query = string.Format(
+                "select pdp.mapdp, lp.hangphong, lp.loaigiuong, lp.mota, lp.succhua, lp.giamotdem " +
+                "from HOTELADMIN.phieudatphong pdp " +
+                "join HOTELADMIN.ct_phieudatphong ct " +
+                  "on pdp.mapdp = ct.mapdp " +
+                "join HOTELADMIN.phong p " +
+                  "on ct.maphong=p.maphong " +
+                "join HOTELADMIN.loaiphong lp " +
+                  "on p.loaiphong=lp.malp " +
+                $"where pdp.makh='{PhieuDatPhongBUS.MAKH}' " +
+                $" order by pdp.mapdp");
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }

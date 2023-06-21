@@ -114,15 +114,12 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
                     }
 
 
-                    foreach (DataGridViewRow row in DsPhongDataGridView.Rows)
-                    {
-                        if (row.Cells[checkedColumnIndex].Value != null && (bool)row.Cells[checkedColumnIndex].Value == true)
-                        {
-                            row.Cells[checkedColumnIndex].Value = false;
-                            DsPhongDataGridView.RefreshEdit();
-                        }
-                    }
+                    DsPhongDataGridView.DataSource = PhieuDatPhongBUS.Instance.KHLayDanhSachPDP();
                     SoDemLuuTruTBox.Text = "";
+                    if (doanCheckBox.Checked)
+                    {
+                        doanCheckBox.Checked = false;
+                    }
                 }
                 //Có thông tin chưa hợp lệ
                 else

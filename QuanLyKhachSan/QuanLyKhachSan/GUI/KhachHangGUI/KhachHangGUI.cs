@@ -31,7 +31,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
         }
         private void DatPhongBtn_Click(object sender, EventArgs e)
         {
-            fPhieuDatPhong pdp = new fPhieuDatPhong();
+            var pdp = new fPhieuDatPhong();
             active_form(pdp);
         }
 
@@ -42,7 +42,8 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
 
         private void ThongTinPhongDaDatBtn_Click(object sender, EventArgs e)
         {
-
+            var pdp = new fThongTinDatPhong();
+            active_form(pdp);
         }
     }
 }
