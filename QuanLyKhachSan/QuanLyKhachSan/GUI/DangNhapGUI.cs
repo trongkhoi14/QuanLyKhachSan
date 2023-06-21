@@ -28,6 +28,8 @@ namespace QuanLyKhachSan
             string matKhau = txbMatKhau.Text;
 
             PhieuDatPhongBUS.MAKH = tenDangNhap;
+            PDGTinhTrangPhongBUS.MANV = tenDangNhap;
+
             if (TaiKhoanBUS.Instance.KiemTraThongTinDangNhap(tenDangNhap, matKhau))
             {
                 string vaiTro = TaiKhoanBUS.Instance.LayVaiTro(tenDangNhap, matKhau);

@@ -71,7 +71,6 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
                 NotiLabel.Text = null;
                 await Task.Delay(300);
                 NotiLabel.Text = "Vui lòng điền đầy đủ thông tin";
-
             }
             else if (check == 1)
             {
@@ -83,7 +82,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             {
                 NotiLabel.Text = null;
                 await Task.Delay(300);
-                NotiLabel.Text = $"Ngày đến phải sau ngày hiện tại: {DateTime.Now.Date.ToString("dd/MM/yyyy")}" ;
+                NotiLabel.Text = $"Ngày đến phải là hoặc sau ngày hiện tại: {DateTime.Now.Date.ToString("dd/MM/yyyy")}" ;
             }
             else if (check == 3)
             {

@@ -21,7 +21,7 @@ namespace QuanLyKhachSan.BUS
         [Obsolete]
         public DataTable LayDSPhongTheoPDP(string MaPDP)
         {
-            return PhongDAO.Instance.LayDSTheoPDP(MaPDP);
+            return PhongDAO.Instance.KHLayDSTheoPDP(MaPDP);
         }
     }
 }
