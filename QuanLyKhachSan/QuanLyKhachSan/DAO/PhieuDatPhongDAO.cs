@@ -39,9 +39,7 @@ namespace QuanLyKhachSan.DAO
         [Obsolete]
         public DataTable KHLayMaPDPMoiNhat()
         {
-            string query = string.Format("select mapdp " +
-                                        "from HOTELADMIN.phieudatphong " +
-                                        "where ngaylap = ((SELECT MAX(ngaylap) FROM HOTELADMIN.phieudatphong))");
+            string query = string.Format("select count(*) from HOTELADMIN.phieudatphong");
             return DataProvider.Instance.ExecuteQuery(query);
         }
     }

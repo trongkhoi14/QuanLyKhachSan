@@ -44,6 +44,7 @@ namespace QuanLyKhachSan.BUS
                 return false;
             }
 
+            //kiểm tra có thông tin nào trống không
             foreach (PropertyInfo prop in pdp.GetType().GetProperties())
             {
                 if (prop.PropertyType == typeof(string))
@@ -55,24 +56,22 @@ namespace QuanLyKhachSan.BUS
                     }
                 }
             }
+            //kiểm tra ngày đến
+            if (pdp.NGAYDEN < DateTime.Today)
+            {
+                return false;
+            }
+
             return true;
         }
 
         [Obsolete]
-        public DataTable KHLayMaPDPGanNhat()
+        public string KHLayMaPDP()
         {
-            return PhieuDatPhongDAO.Instance.KHLayMaPDPMoiNhat();
+            var dt = PhieuDatPhongDAO.Instance.KHLayMaPDPMoiNhat();
+            int count = Convert.ToInt32(dt.Rows[0][0]);
+            return $"PDP0{count+1}";
         }
-        //Tạo mã phiếu đặt phòng
-        public string KHCurrentMaPDP(string mapdp)
-        {
-            string prefix = mapdp.Substring(0, 3); 
-            int number = int.Parse(mapdp.Substring(3)); 
-            number++; 
-            string output = $"{prefix}{number:000}"; 
-            return output;
-        }
-
         [Obsolete]
         public void KHThemPDP(PhieuDatPhongBUS pdp)
         {

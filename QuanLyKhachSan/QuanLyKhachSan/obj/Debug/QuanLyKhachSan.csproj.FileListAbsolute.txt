@@ -29,5 +29,5 @@ D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanL
 D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.CoreCompileInputs.cache
 D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.exe
 D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.pdb
-D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fPhieuDanhGiaTinhTrangPhong.resources
 D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fPhieuDatPhong.resources
+D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fDoiMatKhau.resources

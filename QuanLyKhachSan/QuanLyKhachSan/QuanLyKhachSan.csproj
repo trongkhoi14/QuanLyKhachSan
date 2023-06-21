@@ -74,7 +74,6 @@
     <Compile Include="BUS\CTPhieuNhanPhongBUS.cs" />
     <Compile Include="BUS\DichVuBUS.cs" />
     <Compile Include="BUS\KhachHangBUS.cs" />
-    <Compile Include="BUS\PhieuDanhGiaTinhTrangPhongBUS.cs" />
     <Compile Include="BUS\PhieuDatPhongBUS.cs" />
     <Compile Include="BUS\PhieuNhanPhongBUS.cs" />
     <Compile Include="BUS\PhongBUS.cs" />
@@ -85,7 +84,6 @@
     <Compile Include="DAO\DichVuDAO.cs" />
     <Compile Include="DAO\KhachHangDAO.cs" />
     <Compile Include="DAO\NhanVienDAO.cs" />
-    <Compile Include="DAO\PhieuDanhGiaTinhTrangPhongDAO.cs" />
     <Compile Include="DAO\PhieuDatPhongDAO.cs" />
     <Compile Include="DAO\PhieuNhanPhongDAO.cs" />
     <Compile Include="DAO\PhongDAO.cs" />
@@ -102,11 +100,11 @@
     <Compile Include="GUI\DangNhapGUI.Designer.cs">
       <DependentUpon>DangNhapGUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\KhachHangGUI\fPhieuDanhGiaTinhTrangPhong.cs">
+    <Compile Include="GUI\KhachHangGUI\fDoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\KhachHangGUI\fPhieuDanhGiaTinhTrangPhong.Designer.cs">
-      <DependentUpon>fPhieuDanhGiaTinhTrangPhong.cs</DependentUpon>
+    <Compile Include="GUI\KhachHangGUI\fDoiMatKhau.Designer.cs">
+      <DependentUpon>fDoiMatKhau.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\KhachHangGUI\fPhieuDatPhong.cs">
       <SubType>Form</SubType>
@@ -146,8 +144,8 @@
     <EmbeddedResource Include="GUI\DangNhapGUI.resx">
       <DependentUpon>DangNhapGUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\KhachHangGUI\fPhieuDanhGiaTinhTrangPhong.resx">
-      <DependentUpon>fPhieuDanhGiaTinhTrangPhong.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\KhachHangGUI\fDoiMatKhau.resx">
+      <DependentUpon>fDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhachHangGUI\fPhieuDatPhong.resx">
       <DependentUpon>fPhieuDatPhong.cs</DependentUpon>

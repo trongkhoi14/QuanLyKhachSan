@@ -1,5 +1,4 @@
-﻿using QuanLyKhachSan.BUS;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyKhachSan.GUI.BuongPhongGUI
+namespace QuanLyKhachSan.GUI.KhachHangGUI
 {
-    public partial class BuongPhongGUI : Form
+    public partial class fDoiMatKhau : Form
     {
-        public BuongPhongGUI()
+        public fDoiMatKhau()
         {
             InitializeComponent();
         }

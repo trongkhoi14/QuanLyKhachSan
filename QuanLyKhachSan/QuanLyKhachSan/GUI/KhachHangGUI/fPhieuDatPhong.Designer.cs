@@ -1,4 +1,6 @@
-﻿namespace QuanLyKhachSan.GUI.KhachHangGUI
+﻿using System.Windows.Forms;
+
+namespace QuanLyKhachSan.GUI.KhachHangGUI
 {
     partial class fPhieuDatPhong
     {
@@ -46,19 +48,20 @@
             // HoanThanhBtn
             // 
             this.HoanThanhBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.HoanThanhBtn.Location = new System.Drawing.Point(973, 483);
+            this.HoanThanhBtn.Location = new System.Drawing.Point(895, 483);
             this.HoanThanhBtn.Name = "HoanThanhBtn";
             this.HoanThanhBtn.Size = new System.Drawing.Size(107, 29);
             this.HoanThanhBtn.TabIndex = 90;
             this.HoanThanhBtn.Text = "Hoàn thành";
             this.HoanThanhBtn.UseVisualStyleBackColor = false;
             this.HoanThanhBtn.Click += new System.EventHandler(this.HoanThanhBtn_Click);
+
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(398, 80);
+            this.label12.Location = new System.Drawing.Point(352, 83);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(166, 25);
             this.label12.TabIndex = 89;
@@ -79,7 +82,7 @@
             // 
             this.NgaydenTimePicker.Location = new System.Drawing.Point(128, 111);
             this.NgaydenTimePicker.Name = "NgaydenTimePicker";
-            this.NgaydenTimePicker.Size = new System.Drawing.Size(202, 22);
+            this.NgaydenTimePicker.Size = new System.Drawing.Size(183, 22);
             this.NgaydenTimePicker.TabIndex = 87;
             // 
             // SoNgTrongDoanTBox
@@ -141,19 +144,20 @@
             this.DsPhongDataGridView.AllowUserToDeleteRows = false;
             this.DsPhongDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.DsPhongDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DsPhongDataGridView.Location = new System.Drawing.Point(403, 111);
+            this.DsPhongDataGridView.Location = new System.Drawing.Point(357, 111);
             this.DsPhongDataGridView.Name = "DsPhongDataGridView";
             this.DsPhongDataGridView.RowHeadersWidth = 51;
             this.DsPhongDataGridView.RowTemplate.Height = 24;
             this.DsPhongDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DsPhongDataGridView.Size = new System.Drawing.Size(677, 348);
+            this.DsPhongDataGridView.Size = new System.Drawing.Size(645, 348);
             this.DsPhongDataGridView.TabIndex = 91;
+            this.DsPhongDataGridView.DataBindingComplete += DsPhongDataGridView_DataBindingComplete;
             // 
             // NotiLabel
             // 
             this.NotiLabel.AutoSize = true;
             this.NotiLabel.ForeColor = System.Drawing.Color.Red;
-            this.NotiLabel.Location = new System.Drawing.Point(400, 496);
+            this.NotiLabel.Location = new System.Drawing.Point(354, 489);
             this.NotiLabel.Name = "NotiLabel";
             this.NotiLabel.Size = new System.Drawing.Size(31, 16);
             this.NotiLabel.TabIndex = 92;
@@ -163,7 +167,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1103, 541);
+            this.ClientSize = new System.Drawing.Size(1034, 537);
             this.Controls.Add(this.NotiLabel);
             this.Controls.Add(this.DsPhongDataGridView);
             this.Controls.Add(this.HoanThanhBtn);

@@ -16,13 +16,33 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
         {
             InitializeComponent();
         }
-
+        private void active_form(Form f)
+        {
+            panel.Controls.Clear();
+            f.TopLevel = false;
+            f.FormBorderStyle = FormBorderStyle.None;
+            f.Height = 500;
+            f.Width = 950;
+            f.Dock = DockStyle.Fill;
+            panel.Controls.Add(f);
+            panel.Tag = f;
+            f.BringToFront();
+            f.Show();
+        }
         private void DatPhongBtn_Click(object sender, EventArgs e)
         {
             fPhieuDatPhong pdp = new fPhieuDatPhong();
-            this.Hide();
-            pdp.ShowDialog();
-            this.Show();
+            active_form(pdp);
+        }
+
+        private void DoiMatKhauBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ThongTinPhongDaDatBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
