@@ -69,9 +69,9 @@
             // 
             // panel
             // 
-            this.panel.Location = new System.Drawing.Point(12, 70);
+            this.panel.Location = new System.Drawing.Point(12, 51);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(1053, 523);
+            this.panel.Size = new System.Drawing.Size(1053, 542);
             this.panel.TabIndex = 3;
             // 
             // KhachHangGUI

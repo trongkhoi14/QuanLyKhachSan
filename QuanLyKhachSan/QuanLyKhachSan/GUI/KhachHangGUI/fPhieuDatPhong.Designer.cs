@@ -42,6 +42,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             this.label6 = new System.Windows.Forms.Label();
             this.DsPhongDataGridView = new System.Windows.Forms.DataGridView();
             this.NotiLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DsPhongDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,7 +56,6 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             this.HoanThanhBtn.Text = "Hoàn thành";
             this.HoanThanhBtn.UseVisualStyleBackColor = false;
             this.HoanThanhBtn.Click += new System.EventHandler(this.HoanThanhBtn_Click);
-
             // 
             // label12
             // 
@@ -63,9 +63,9 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(352, 83);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(166, 25);
+            this.label12.Size = new System.Drawing.Size(270, 25);
             this.label12.TabIndex = 89;
-            this.label12.Text = "Danh sách phòng\r\n";
+            this.label12.Text = "Hãy chọn các phòng dưới đây";
             // 
             // label11
             // 
@@ -149,9 +149,8 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             this.DsPhongDataGridView.RowHeadersWidth = 51;
             this.DsPhongDataGridView.RowTemplate.Height = 24;
             this.DsPhongDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DsPhongDataGridView.Size = new System.Drawing.Size(645, 348);
+            this.DsPhongDataGridView.Size = new System.Drawing.Size(645, 315);
             this.DsPhongDataGridView.TabIndex = 91;
-            this.DsPhongDataGridView.DataBindingComplete += DsPhongDataGridView_DataBindingComplete;
             // 
             // NotiLabel
             // 
@@ -163,11 +162,23 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             this.NotiLabel.TabIndex = 92;
             this.NotiLabel.Text = "Noti";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.MistyRose;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(28, 272);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(247, 16);
+            this.label1.TabIndex = 93;
+            this.label1.Text = "Lưu ý: số người trong đoàn phải lớn hơn 1";
+            // 
             // fPhieuDatPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1034, 537);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.NotiLabel);
             this.Controls.Add(this.DsPhongDataGridView);
             this.Controls.Add(this.HoanThanhBtn);
@@ -202,5 +213,6 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView DsPhongDataGridView;
         private System.Windows.Forms.Label NotiLabel;
+        private Label label1;
     }
 }

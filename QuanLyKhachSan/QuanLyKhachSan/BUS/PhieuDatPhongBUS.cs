@@ -7,6 +7,7 @@ using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace QuanLyKhachSan.BUS
 {
@@ -33,17 +34,8 @@ namespace QuanLyKhachSan.BUS
         {
             return PhieuDatPhongDAO.Instance.KHLayDanhSach();
         }
-        public bool KHKiemTraThongTinPDP(PhieuDatPhongBUS pdp)
+        public int KHKiemTraThongTinPDP(PhieuDatPhongBUS pdp, DataGridView dsPhong, bool isCheckDoan)
         {
-            string patternNUMBER = @"^-?\d+$";
-
-            //số điện thoại, số fax, số người, hoặc số đêm lưu trú không hợp lệ
-            if (!Regex.IsMatch(pdp.SONGUOI, patternNUMBER) || 
-                !Regex.IsMatch(pdp.SODEMLUUTRU, patternNUMBER))
-            {
-                return false;
-            }
-
             //kiểm tra có thông tin nào trống không
             foreach (PropertyInfo prop in pdp.GetType().GetProperties())
             {
@@ -52,17 +44,53 @@ namespace QuanLyKhachSan.BUS
                     string value = (string)prop.GetValue(pdp);
                     if (string.IsNullOrEmpty(value))
                     {
-                        return false;
+                        return 0;
                     }
                 }
             }
+
+            string patternNUMBER = "^[0-9]+$";
+
+            //số người trong đoàn, hoặc số đêm lưu trú không hợp lệ
+            if (!Regex.IsMatch(pdp.SONGUOI, patternNUMBER) ||
+                !Regex.IsMatch(pdp.SODEMLUUTRU, patternNUMBER))
+            {
+                return 1;
+            }
+
+            
             //kiểm tra ngày đến
             if (pdp.NGAYDEN < DateTime.Today)
             {
-                return false;
+                return 2;
             }
 
-            return true;
+            //kiểm tra xem có chọn phòng nào chưa
+            int checkedColumnIndex = dsPhong.Columns["Select"].Index;
+            bool hasCheckedBox = false;
+            foreach (DataGridViewRow row in dsPhong.Rows)
+            {
+                if (row.Cells[checkedColumnIndex] != null && row.Cells[checkedColumnIndex].Value != null)
+                {
+                    bool isChecked = (bool)row.Cells[checkedColumnIndex].Value;
+                    if (isChecked)
+                    {
+                        hasCheckedBox = true;
+                        break;
+                    }
+                }
+            }
+            if (!hasCheckedBox)
+            {
+                return 3;
+            }
+            //kiểm tra số người trong đoàn lớn hơn 1
+            if (isCheckDoan && int.Parse(pdp.SONGUOI) < 2)
+            {
+                return 4;
+            }
+
+            return 5;
         }
 
         [Obsolete]

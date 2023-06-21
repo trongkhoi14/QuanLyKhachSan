@@ -35,6 +35,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             label10.Visible = false;
             SoNgTrongDoanTBox.Visible = false;
             NotiLabel.Text = null;
+            label1.Visible = false;
         }
         private void DsPhongDataGridView_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
@@ -63,70 +64,70 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
                 pdp.SONGUOI = "1";
             }
 
-            //kiểm tra xem có chọn phòng nào chưa
-            int checkedColumnIndex = DsPhongDataGridView.Columns["Select"].Index;
-            bool hasCheckedBox = false;
-            foreach (DataGridViewRow row in DsPhongDataGridView.Rows){
-                if (row.Cells[checkedColumnIndex] != null && row.Cells[checkedColumnIndex].Value != null)
-                {
-                    bool isChecked = (bool)row.Cells[checkedColumnIndex].Value;
-                    if (isChecked)
-                    {
-                        hasCheckedBox = true;
-                        break;
-                    }
-                }
-            }
 
-            if (!hasCheckedBox)
+            int check = PhieuDatPhongBUS.Instance.KHKiemTraThongTinPDP(pdp, DsPhongDataGridView, doanCheckBox.Checked);
+            if (check == 0)
             {
                 NotiLabel.Text = null;
                 await Task.Delay(300);
-                NotiLabel.Text = "Thông tin chưa hợp lệ";
-            }
+                NotiLabel.Text = "Vui lòng điền đầy đủ thông tin";
 
+            }
+            else if (check == 1)
+            {
+                NotiLabel.Text = null;
+                await Task.Delay(300);
+                NotiLabel.Text = "Số người trong đoàn hoặc số đêm lưu trú phải là số nguyên dương";
+            }
+            else if (check == 2)
+            {
+                NotiLabel.Text = null;
+                await Task.Delay(300);
+                NotiLabel.Text = $"Ngày đến phải sau ngày hiện tại: {DateTime.Now.Date.ToString("dd/MM/yyyy")}" ;
+            }
+            else if (check == 3)
+            {
+                NotiLabel.Text = null;
+                await Task.Delay(300);
+                NotiLabel.Text = "Vui long chọn 1 trong các phòng trên";
+            }
+            else if (check == 4)
+            {
+                NotiLabel.Text = null;
+                await Task.Delay(300);
+                NotiLabel.Text = "Số người trong đoàn phải lớn hơn 1";
+            }
             else
             {
-                //Các thông tin hợp lệ
-                if (PhieuDatPhongBUS.Instance.KHKiemTraThongTinPDP(pdp))
+                MessageBox.Show("Đặt phòng thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                NotiLabel.Text = null;
+
+                //Lưu phiếu đặt phòng
+                PhieuDatPhongBUS.Instance.KHThemPDP(pdp);
+
+                //Lấy ds các mã phòng đã chọn
+                List<string> MaPhongChecked = new List<string>();
+                foreach (DataGridViewRow row in DsPhongDataGridView.Rows)
                 {
-                    MessageBox.Show("Đặt phòng thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    NotiLabel.Text = null;
+                    DataGridViewCheckBoxCell checkBoxCell = row.Cells["Select"] as DataGridViewCheckBoxCell;
 
-                    //Lưu phiếu đặt phòng
-                    PhieuDatPhongBUS.Instance.KHThemPDP(pdp);
-
-                    //Lấy ds các mã phòng đã chọn
-                    List<string> MaPhongChecked = new List<string>();
-                    foreach (DataGridViewRow row in DsPhongDataGridView.Rows)
+                    if (Convert.ToBoolean(checkBoxCell.Value) == true)
                     {
-                        DataGridViewCheckBoxCell checkBoxCell = row.Cells["Select"] as DataGridViewCheckBoxCell;
-
-                        if (Convert.ToBoolean(checkBoxCell.Value) == true)
-                        {
-                            MaPhongChecked.Add(row.Cells["MAPHONG"].Value.ToString());
-                        }
-                    }
-                    //Lưu chi tiết phiếu đặt phòng
-                    for (int i = 0; i < MaPhongChecked.Count(); i++)
-                    {
-                        CTPhieuDatPhongBUS.Instance.KHThemCtPDP(pdp.MAPDP, MaPhongChecked[i]);
-                    }
-
-
-                    DsPhongDataGridView.DataSource = PhieuDatPhongBUS.Instance.KHLayDanhSachPDP();
-                    SoDemLuuTruTBox.Text = "";
-                    if (doanCheckBox.Checked)
-                    {
-                        doanCheckBox.Checked = false;
+                        MaPhongChecked.Add(row.Cells["MAPHONG"].Value.ToString());
                     }
                 }
-                //Có thông tin chưa hợp lệ
-                else
+                //Lưu chi tiết phiếu đặt phòng
+                for (int i = 0; i < MaPhongChecked.Count(); i++)
                 {
-                    NotiLabel.Text = null;
-                    await Task.Delay(300);
-                    NotiLabel.Text = "Thông tin chưa hợp lệ";
+                    CTPhieuDatPhongBUS.Instance.KHThemCtPDP(pdp.MAPDP, MaPhongChecked[i]);
+                }
+
+
+                DsPhongDataGridView.DataSource = PhieuDatPhongBUS.Instance.KHLayDanhSachPDP();
+                SoDemLuuTruTBox.Text = "";
+                if (doanCheckBox.Checked)
+                {
+                    doanCheckBox.Checked = false;
                 }
             }
         }
@@ -136,11 +137,13 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             if(label10.Visible == false) {
                 label10.Visible = true;
                 SoNgTrongDoanTBox.Visible = true;
+                label1.Visible = true;
             }
             else
             {
                 label10.Visible = false;
                 SoNgTrongDoanTBox.Visible = false;
+                label1.Visible = false;
             }
         }
     }
