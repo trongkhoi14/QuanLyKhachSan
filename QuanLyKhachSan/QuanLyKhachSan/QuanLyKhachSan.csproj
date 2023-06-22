@@ -70,19 +70,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\CTPhieuDatPhongBUS.cs" />
     <Compile Include="BUS\CTPhieuNhanPhongBUS.cs" />
     <Compile Include="BUS\DichVuBUS.cs" />
     <Compile Include="BUS\KhachHangBUS.cs" />
+    <Compile Include="BUS\PDGTinhTrangPhongBUS.cs" />
     <Compile Include="BUS\PhieuDatPhongBUS.cs" />
     <Compile Include="BUS\PhieuDichVuBUS.cs" />
     <Compile Include="BUS\PhieuNhanPhongBUS.cs" />
     <Compile Include="BUS\PhongBUS.cs" />
     <Compile Include="BUS\TaiKhoanBUS.cs" />
+    <Compile Include="DAO\CTPhieuDatPhongDAO.cs" />
     <Compile Include="DAO\CTPhieuNhanPhongDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\DichVuDAO.cs" />
     <Compile Include="DAO\KhachHangDAO.cs" />
     <Compile Include="DAO\NhanVienDAO.cs" />
+    <Compile Include="DAO\PDGTinhTrangPhongDAO.cs" />
     <Compile Include="DAO\PhieuDatPhongDAO.cs" />
     <Compile Include="DAO\PhieuDichVuDAO.cs" />
     <Compile Include="DAO\PhieuNhanPhongDAO.cs" />
@@ -99,6 +103,24 @@
     </Compile>
     <Compile Include="GUI\DangNhapGUI.Designer.cs">
       <DependentUpon>DangNhapGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhachHangGUI\fDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhachHangGUI\fDoiMatKhau.Designer.cs">
+      <DependentUpon>fDoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhachHangGUI\fPhieuDatPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhachHangGUI\fPhieuDatPhong.Designer.cs">
+      <DependentUpon>fPhieuDatPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhachHangGUI\fThongTinDatPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhachHangGUI\fThongTinDatPhong.Designer.cs">
+      <DependentUpon>fThongTinDatPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\KhachHangGUI\KhachHangGUI.cs">
       <SubType>Form</SubType>
@@ -131,6 +153,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\DangNhapGUI.resx">
       <DependentUpon>DangNhapGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhachHangGUI\fDoiMatKhau.resx">
+      <DependentUpon>fDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhachHangGUI\fPhieuDatPhong.resx">
+      <DependentUpon>fPhieuDatPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhachHangGUI\fThongTinDatPhong.resx">
+      <DependentUpon>fThongTinDatPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhachHangGUI\KhachHangGUI.resx">
       <DependentUpon>KhachHangGUI.cs</DependentUpon>

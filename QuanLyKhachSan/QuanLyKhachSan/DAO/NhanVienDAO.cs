@@ -22,7 +22,7 @@ namespace QuanLyKhachSan.DAO
         [Obsolete]
         public DataTable LayNhanVien(string MaNV)
         {
-            string query = string.Format("SELECT * FROM HOTELADMIN.NHANVIEN WHERE MANV = '{0}'", MaNV);
+            string query = string.Format($"SELECT * FROM HOTELADMIN.NHANVIEN WHERE MANV = '{MaNV}'");
             return DataProvider.Instance.ExecuteQuery(query);
         }
     }

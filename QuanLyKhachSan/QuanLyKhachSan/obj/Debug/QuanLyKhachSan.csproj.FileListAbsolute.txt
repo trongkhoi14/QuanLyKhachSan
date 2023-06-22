@@ -13,3 +13,22 @@ C:\Users\PC\OneDrive - VNU-HCMUS\Documents\LuongTrongKhoi\Term6_HCMUS\Phân tíc
 C:\Users\PC\OneDrive - VNU-HCMUS\Documents\LuongTrongKhoi\Term6_HCMUS\Phân tích thiết kế hệ thống thông tin\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.LeTanGUI.LeTanGUI.resources
 C:\Users\PC\OneDrive - VNU-HCMUS\Documents\LuongTrongKhoi\Term6_HCMUS\Phân tích thiết kế hệ thống thông tin\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.LeTanGUI.CheckInGUI.resources
 C:\Users\PC\OneDrive - VNU-HCMUS\Documents\LuongTrongKhoi\Term6_HCMUS\Phân tích thiết kế hệ thống thông tin\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.LeTanGUI.DKThongTinLuuTruGUI.resources
+D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe.config
+D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe
+D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.pdb
+D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.AssemblyReference.cache
+D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.SuggestedBindingRedirects.cache
+D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.BuongPhongGUI.BuongPhongGUI.resources
+D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.DangNhapGUI.resources
+D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.KhachHangGUI.resources
+D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.LeTanGUI.CheckInGUI.resources
+D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.LeTanGUI.DKThongTinLuuTruGUI.resources
+D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.LeTanGUI.LeTanGUI.resources
+D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.Properties.Resources.resources
+D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.GenerateResource.cache
+D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.CoreCompileInputs.cache
+D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.exe
+D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.pdb
+D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fPhieuDatPhong.resources
+D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fDoiMatKhau.resources
+D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fThongTinDatPhong.resources
