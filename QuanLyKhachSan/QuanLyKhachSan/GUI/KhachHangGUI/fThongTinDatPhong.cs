@@ -23,7 +23,6 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
         {
             ThongTinDatPhongDataGridView.DataSource = PhieuDatPhongBUS.Instance.KHLayPhieuDatPhong();
             LoaiPhongDaDatDataGridView.DataSource = PhieuDatPhongBUS.Instance.KHLayThongTinPhongDaDat();
-            int debug = 0;
         }
 
     }

@@ -20,7 +20,6 @@ namespace QuanLyKhachSan.BUS
         public string SONGUOI { get; set; }
         public static string MAKH { get; set; }
         
-
         private static PhieuDatPhongBUS instance;
         public static PhieuDatPhongBUS Instance
         {
@@ -33,12 +32,16 @@ namespace QuanLyKhachSan.BUS
         public DataTable LTLayDanhSachPDP()
         {
             return PhieuDatPhongDAO.Instance.LTLayDanhSach();
-        }    
+        }
+
+        [Obsolete]
         public DataTable KHLayDanhSachPDP()
         {
             return PhieuDatPhongDAO.Instance.KHLayDanhSach();
         }
-        public int KHKiemTraThongTinPDP(PhieuDatPhongBUS pdp, DataGridView dsPhong, bool isCheckDoan)
+
+        [Obsolete]
+        public int KHKiemTraThongTinPDP(PhieuDatPhongBUS pdp, DataGridView dsPhong, bool isCheckDoan, ComboBox thanhtoan)
         {
             //kiểm tra có thông tin nào trống không
             foreach (PropertyInfo prop in pdp.GetType().GetProperties())
@@ -51,6 +54,11 @@ namespace QuanLyKhachSan.BUS
                         return 0;
                     }
                 }
+            }
+            //kiểm tra xem có chọn phương thức thanh toán chưa
+            if(thanhtoan.SelectedIndex == -1)
+            {
+                return 6;
             }
 
             string patternNUMBER = "^[0-9]+$";
@@ -93,6 +101,13 @@ namespace QuanLyKhachSan.BUS
             {
                 return 4;
             }
+            //Hai lần đặt phòng phải cách nhau ít nhất 5 ngày
+            var latestDate = Convert.ToDateTime(PhieuDatPhongDAO.Instance.KHRetrieveNGAYLAP(PhieuDatPhongBUS.MAKH).Rows[0][0]);
+            TimeSpan twoDateInterval = pdp.NGAYLAP - latestDate;
+            if (twoDateInterval.Days<5)
+            {
+                return 7;
+            }
 
             return 5;
         }
@@ -119,6 +134,15 @@ namespace QuanLyKhachSan.BUS
         {
             DataTable a = PhieuDatPhongDAO.Instance.KhRetrieveRoomType();
             return PhieuDatPhongDAO.Instance.KhRetrieveRoomType();
+        }
+
+        [Obsolete]
+        public string KHLayMaPDPGanNhat(string maKH)
+        {
+            var temp = PhieuDatPhongDAO.Instance.KHRetrieveLatestMAPDP(maKH);
+            string output = (temp.Rows[0][0]).ToString();
+
+            return output;
         }
     }
 }

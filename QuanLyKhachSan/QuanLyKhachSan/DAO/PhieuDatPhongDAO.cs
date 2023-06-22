@@ -17,7 +17,6 @@ namespace QuanLyKhachSan.DAO
             set => instance = value;
         }
         private PhieuDatPhongDAO() { }
-
         [Obsolete]
         public DataTable LTLayDanhSach()
         {
@@ -26,17 +25,17 @@ namespace QuanLyKhachSan.DAO
                                          "JOIN HOTELADMIN.KHACHHANG K ON K.MAKH = P.MAKH");
             return DataProvider.Instance.ExecuteQuery(query);
         }
-
+        //Lấy danh sách phòng trống để khách hàng đặt
         [Obsolete]
         public DataTable KHLayDanhSach()
         {
             string query = string.Format("select p.maphong, lp.loaigiuong,lp.succhua, lp.giamotdem " +
                                         "from HOTELADMIN.phong p join HOTELADMIN.loaiphong lp " +
                                             "on p.loaiphong=lp.malp " +
-                                        "where p.maphong not in (select maphong from HOTELADMIN.ct_phieudatphong)");
+                                        "where p.maphong not in (select maphong from HOTELADMIN.ct_phieudatphong) " +
+                                        " and p.trangthai='O duoc'");
             return DataProvider.Instance.ExecuteQuery(query);
         }
-
         [Obsolete]
         public void KHThemPhieuDatPhong(PhieuDatPhongBUS pdp)
         {
@@ -51,6 +50,7 @@ namespace QuanLyKhachSan.DAO
             string query = string.Format("select count(*) from HOTELADMIN.phieudatphong");
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        //Lấy danh sách phiếu đặt phòng đã đặt của khách hàng
         [Obsolete]
         public DataTable KHRetrieveBookedPDP()
         {
@@ -63,6 +63,7 @@ namespace QuanLyKhachSan.DAO
             return DataProvider.Instance.ExecuteQuery(query);
         }
         [Obsolete]
+        //Lấy loại phòng mà khách hàng đã đặt
         public DataTable KhRetrieveRoomType()
         {
             string query = string.Format(
@@ -76,6 +77,41 @@ namespace QuanLyKhachSan.DAO
                   "on p.loaiphong=lp.malp " +
                 $"where pdp.makh='{PhieuDatPhongBUS.MAKH}' " +
                 $" order by pdp.mapdp");
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        //Lấy số đêm lưu trú của 1 phiếu đặt phòng
+        [Obsolete]
+        public DataTable KHRetrieveSODEMLUUTRU(string maPDP)
+        {
+            string query = string.Format($"select sodemluutru from HOTELADMIN.phieudatphong where mapdp='{maPDP}'");
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        //Lấy giá thuê một đêm của phòng mà khách hàng đã đặt
+        [Obsolete]
+        public DataTable KHRetrieveRentalFee(string maPDP)
+        {
+            string query = string.Format($"select lp.giamotdem " +
+                                        $"from HOTELADMIN.ct_phieudatphong ct " +
+                                        $"join HOTELADMIN.phong p on ct.maphong = p.maphong " +
+                                        $"join HOTELADMIN.loaiphong lp on p.loaiphong = lp.malp " +
+                                        $"where ct.mapdp='{maPDP}'");
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        //Lấy ngày lập phiếu đặt phòng gần nhất của khách hàng
+        [Obsolete]
+        public DataTable KHRetrieveNGAYLAP(string maKH)
+        {
+            string query = string.Format($"select max(ngaylap) from HOTELADMIN.phieudatphong where makh='{maKH}'");
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        //Lấy mã phiếu đặt phòng gần nhất của khách hàng
+        [Obsolete]
+        public DataTable KHRetrieveLatestMAPDP(string maKH)
+        {
+            string query = string.Format($"select mapdp from HOTELADMIN.phieudatphong " +
+                                        $"where makh='{maKH}' and ngaylap = (select max(ngaylap) " +
+                                                                           $"from HOTELADMIN.phieudatphong " +
+                                                                           $"where makh='{maKH}')");
             return DataProvider.Instance.ExecuteQuery(query);
         }
     }

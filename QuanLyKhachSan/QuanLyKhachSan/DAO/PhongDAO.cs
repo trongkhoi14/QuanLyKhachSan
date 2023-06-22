@@ -27,6 +27,8 @@ namespace QuanLyKhachSan.DAO
                                          "WHERE C.MAPDP = '{0}'", MaPDP);
             return DataProvider.Instance.ExecuteQuery(query);
         }
+
+        [Obsolete]
         public DataTable KHLayDSTheoPDP(string MaPDP)
         {
             string query = string.Format("SELECT P.MAPHONG, P.TRANGTHAI, L.HANGPHONG, L.GIAMOTDEM " +

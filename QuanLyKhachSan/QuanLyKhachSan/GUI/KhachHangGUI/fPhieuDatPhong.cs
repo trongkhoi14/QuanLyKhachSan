@@ -52,6 +52,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
         [Obsolete]
         private async void HoanThanhBtn_Click(object sender, EventArgs e)
         {
+            //tạo phiếu đặt phòng
             PhieuDatPhongBUS pdp = new PhieuDatPhongBUS();
 
             pdp.MAPDP = PhieuDatPhongBUS.Instance.KHLayMaPDP();
@@ -65,7 +66,8 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             }
 
 
-            int check = PhieuDatPhongBUS.Instance.KHKiemTraThongTinPDP(pdp, DsPhongDataGridView, doanCheckBox.Checked);
+
+            int check = PhieuDatPhongBUS.Instance.KHKiemTraThongTinPDP(pdp, DsPhongDataGridView, doanCheckBox.Checked, PhuongThucThanhToanComboBox);
             if (check == 0)
             {
                 NotiLabel.Text = null;
@@ -96,11 +98,34 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
                 await Task.Delay(300);
                 NotiLabel.Text = "Số người trong đoàn phải lớn hơn 1";
             }
+            else if (check == 6)
+            {
+                NotiLabel.Text = null;
+                await Task.Delay(300);
+                NotiLabel.Text = "Vui lòng chọn 1 phương thức thanh toán";
+            }
+            else if (check == 7)
+            {
+                NotiLabel.Text = null;
+                await Task.Delay(300);
+                NotiLabel.Text = "Hai lần đặt phòng gần nhất phải cách nhau ít nhất 5 ngày";
+            }
             else
             {
-                MessageBox.Show("Đặt phòng thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Đặt phòng thành công\n vui lòng xem hướng dẫn thanh toán", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 NotiLabel.Text = null;
-
+                //if (PhuongThucThanhToanComboBox.SelectedIndex == 0)
+                //{
+                //    MessageBox.Show($"Vui lòng thanh toán tiền cọc cho lễ tân vào ngày đến", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //}
+                //else if(PhuongThucThanhToanComboBox.SelectedIndex == 1)
+                //{
+                //    MessageBox.Show($"Vui lòng mang theo thẻ tín dụng để thanh toán tiền cọc cho lễ tân", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //}
+                //else
+                //{
+                //    MessageBox.Show($"Vui lòng xem hướng dẫn thanh toán", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //}
                 //Lưu phiếu đặt phòng
                 PhieuDatPhongBUS.Instance.KHThemPDP(pdp);
 
@@ -121,13 +146,42 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
                     CTPhieuDatPhongBUS.Instance.KHThemCtPDP(pdp.MAPDP, MaPhongChecked[i]);
                 }
 
+                //tạo hóa đơn
+                var hoadon = new HoaDonBUS();
+                hoadon.MAHD = HoaDonBUS.Instance.KHGetInvoiceCode();
+                hoadon.MAPDP = pdp.MAPDP;
+                hoadon.NGAYCAPNHAT = DateTime.Today;
+                hoadon.TRANGTHAI = "Chua thanh toan";
+                HoaDonBUS.TIENPHONG = HoaDonBUS.Instance.KHCountRentalFee(hoadon.MAPDP);
+                hoadon.TIENCOC = 0;
+                hoadon.TIENDV = 0;
+                hoadon.PHUTHU = 0;
+                hoadon.TIENNHAN = 0;
+                hoadon.TIENHOAN = 0;
+                if (PhuongThucThanhToanComboBox.SelectedIndex == 0)
+                {
+                    HoaDonBUS.PHUONGTHUCTHANHTOAN = "Tien mat";
+                }
+                else if(PhuongThucThanhToanComboBox.SelectedIndex == 1)
+                {
+                    HoaDonBUS.PHUONGTHUCTHANHTOAN = "The tin dung";
+                }
+                else
+                {
+                    HoaDonBUS.PHUONGTHUCTHANHTOAN = "Chuyen khoan";
+                }
+                //lưu hóa đơn
+                HoaDonBUS.Instance.KHAddInvoice(hoadon);
 
+
+                //set các textbox về null
                 DsPhongDataGridView.DataSource = PhieuDatPhongBUS.Instance.KHLayDanhSachPDP();
                 SoDemLuuTruTBox.Text = "";
                 if (doanCheckBox.Checked)
                 {
                     doanCheckBox.Checked = false;
                 }
+                PhuongThucThanhToanComboBox.SelectedIndex = -1;
             }
         }
 

@@ -45,5 +45,11 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             var pdp = new fThongTinDatPhong();
             active_form(pdp);
         }
+
+        private void ThanhToanBtn_Click(object sender, EventArgs e)
+        {
+            var thanhtoan = new fThanhToan();
+            active_form(thanhtoan);
+        }
     }
 }
