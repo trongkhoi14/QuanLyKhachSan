@@ -49,7 +49,9 @@
             // 
             // DoiMatKhauBtn
             // 
-            this.DoiMatKhauBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.DoiMatKhauBtn.BackColor = System.Drawing.Color.White;
+            this.DoiMatKhauBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.DoiMatKhauBtn.FlatAppearance.BorderSize = 2;
             this.DoiMatKhauBtn.Location = new System.Drawing.Point(129, 12);
             this.DoiMatKhauBtn.Name = "DoiMatKhauBtn";
             this.DoiMatKhauBtn.Size = new System.Drawing.Size(111, 33);
@@ -73,7 +75,7 @@
             // 
             this.panel.Location = new System.Drawing.Point(12, 51);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(1053, 542);
+            this.panel.Size = new System.Drawing.Size(1111, 577);
             this.panel.TabIndex = 3;
             // 
             // ThanhToanBtn
@@ -96,12 +98,13 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Cập nhật thông tin đặt phòng";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // KhachHangGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1077, 613);
+            this.ClientSize = new System.Drawing.Size(1135, 640);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.ThanhToanBtn);
             this.Controls.Add(this.panel);

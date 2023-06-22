@@ -112,7 +112,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             }
             else
             {
-                MessageBox.Show("Đặt phòng thành công\n vui lòng xem hướng dẫn thanh toán", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Đặt phòng thành công\nVui lòng xem hướng dẫn thanh toán", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 NotiLabel.Text = null;
                 //if (PhuongThucThanhToanComboBox.SelectedIndex == 0)
                 //{

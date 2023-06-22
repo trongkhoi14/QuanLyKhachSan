@@ -79,11 +79,28 @@ namespace QuanLyKhachSan.DAO
                 $" order by pdp.mapdp");
             return DataProvider.Instance.ExecuteQuery(query);
         }
-        //Lấy số đêm lưu trú của 1 phiếu đặt phòng
+
         [Obsolete]
-        public DataTable KHRetrieveSODEMLUUTRU(string maPDP)
+        public DataTable KhRetrieveRoomTypeWithMaPDP(string maPDP)
         {
-            string query = string.Format($"select sodemluutru from HOTELADMIN.phieudatphong where mapdp='{maPDP}'");
+            string query = string.Format(
+                "select pdp.mapdp,p.maphong, lp.hangphong, lp.loaigiuong, lp.mota, lp.succhua, lp.giamotdem " +
+                "from HOTELADMIN.phieudatphong pdp " +
+                "join HOTELADMIN.ct_phieudatphong ct " +
+                  "on pdp.mapdp = ct.mapdp " +
+                "join HOTELADMIN.phong p " +
+                  "on ct.maphong=p.maphong " +
+                "join HOTELADMIN.loaiphong lp " +
+                  "on p.loaiphong=lp.malp " +
+                $"where pdp.makh='{PhieuDatPhongBUS.MAKH}' and  pdp.mapdp='{maPDP}'" +
+                $" order by pdp.mapdp");
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        //Lấy phiếu đặt phòng theo mã phiếu đặt phòng
+        [Obsolete]
+        public DataTable KHRetrievePDP(string maPDP)
+        {
+            string query = string.Format($"select * from HOTELADMIN.phieudatphong where mapdp='{maPDP}'");
             return DataProvider.Instance.ExecuteQuery(query);
         }
         //Lấy giá thuê một đêm của phòng mà khách hàng đã đặt
@@ -113,6 +130,17 @@ namespace QuanLyKhachSan.DAO
                                                                            $"from HOTELADMIN.phieudatphong " +
                                                                            $"where makh='{maKH}')");
             return DataProvider.Instance.ExecuteQuery(query);
+        }
+        [Obsolete]//TO_DATE('{pdp.NGAYDEN.ToString("dd/MM/yyyy")}', 'DD/MM/YYYY')
+        public void KHCapNhatPhieuDatPhong(PhieuDatPhongBUS pdp)
+        {
+            string query = string.Format($"update HOTELADMIN.phieudatphong " +
+                                            $"set    " +
+                                            $"sodemluutru={pdp.SODEMLUUTRU},    " +
+                                            $"ngayden = TO_DATE('{pdp.NGAYDEN.ToString("dd/MM/yyyy")}', 'DD/MM/YYYY'),    " +
+                                            $"songuoi= {pdp.SONGUOI} " +
+                                            $"where mapdp='{pdp.MAPDP}'");
+            DataProvider.Instance.ExecuteNonQuery(query);
         }
     }
 }

@@ -16,6 +16,11 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
         public fThongTinDatPhong()
         {
             InitializeComponent();
+            ThongTinDatPhongDataGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            ThongTinDatPhongDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+            LoaiPhongDaDatDataGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            LoaiPhongDaDatDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
 
         [Obsolete]

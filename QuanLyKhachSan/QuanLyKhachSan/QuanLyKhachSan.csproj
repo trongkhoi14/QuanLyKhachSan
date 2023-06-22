@@ -106,6 +106,12 @@
     <Compile Include="GUI\DangNhapGUI.Designer.cs">
       <DependentUpon>DangNhapGUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\KhachHangGUI\fCapNhatPhieuDatPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhachHangGUI\fCapNhatPhieuDatPhong.Designer.cs">
+      <DependentUpon>fCapNhatPhieuDatPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\KhachHangGUI\fDoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,7 @@
     <Compile Include="GUI\KhachHangGUI\fThongTinDatPhong.Designer.cs">
       <DependentUpon>fThongTinDatPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\KhachHangGUI\fXacNhanPDP.cs" />
     <Compile Include="GUI\KhachHangGUI\KhachHangGUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\DangNhapGUI.resx">
       <DependentUpon>DangNhapGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhachHangGUI\fCapNhatPhieuDatPhong.resx">
+      <DependentUpon>fCapNhatPhieuDatPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhachHangGUI\fDoiMatKhau.resx">
       <DependentUpon>fDoiMatKhau.cs</DependentUpon>

@@ -132,10 +132,14 @@ namespace QuanLyKhachSan.BUS
         [Obsolete]
         public DataTable KHLayThongTinPhongDaDat()
         {
-            DataTable a = PhieuDatPhongDAO.Instance.KhRetrieveRoomType();
             return PhieuDatPhongDAO.Instance.KhRetrieveRoomType();
         }
 
+        [Obsolete]
+        public DataTable KHLayThongTinPhongDaDatTheoMaPDP(string maPDP)
+        {
+            return PhieuDatPhongDAO.Instance.KhRetrieveRoomTypeWithMaPDP(maPDP);
+        }
         [Obsolete]
         public string KHLayMaPDPGanNhat(string maKH)
         {
@@ -143,6 +147,56 @@ namespace QuanLyKhachSan.BUS
             string output = (temp.Rows[0][0]).ToString();
 
             return output;
+        }
+
+        [Obsolete]
+        public DataTable KHLayPDP(string maPDP)
+        {
+            return PhieuDatPhongDAO.Instance.KHRetrievePDP(maPDP);
+        }
+
+        [Obsolete]
+        public void KHCapNhatPDP(PhieuDatPhongBUS pdp)
+        {
+            PhieuDatPhongDAO.Instance.KHCapNhatPhieuDatPhong(pdp);
+        }
+        [Obsolete]
+        public int CheckValidNewPDP(PhieuDatPhongBUS newPDP)
+        {
+            var oldPDP = PhieuDatPhongBUS.Instance.KHLayPDP(newPDP.MAPDP);
+
+            //có ô trống
+            if(newPDP.SONGUOI =="" || newPDP.SODEMLUUTRU == "")
+            {
+                return 1;
+            }
+
+            string patternNUMBER = "^[0-9]+$";
+            //số người trong đoàn không hợp lệ
+            if (!Regex.IsMatch(newPDP.SONGUOI, patternNUMBER))
+            {
+                return 2;
+            }
+            //số đêm lưu trú
+            if (!Regex.IsMatch(newPDP.SODEMLUUTRU, patternNUMBER))
+            {
+                return 3;
+            }
+            //kiểm tra ngày đến
+            if (newPDP.NGAYDEN < DateTime.Today)
+            {
+                return 4;
+            }
+
+            //kiểm tra nếu không có thông tin nào thay đổi
+            if (newPDP.SONGUOI == oldPDP.Rows[0]["SONGUOI"]&&
+                newPDP.SODEMLUUTRU == oldPDP.Rows[0]["SODEMLUUTRU"]&&
+                newPDP.NGAYDEN == DateTime.Parse((string)oldPDP.Rows[0]["NGAYDEN"]))
+            {
+                return 5;
+            }
+
+            return 0;
         }
     }
 }

@@ -45,9 +45,9 @@ namespace QuanLyKhachSan.BUS
         public int KHCountRentalFee(string maPDP)
         {
             //lấy phòng ra
-            var pdp = PhieuDatPhongDAO.Instance.KHRetrieveSODEMLUUTRU(maPDP);
+            var pdp = PhieuDatPhongDAO.Instance.KHRetrievePDP(maPDP);
 
-            int soDemLuuTru = Convert.ToInt32(pdp.Rows[0][0]);
+            int soDemLuuTru = Convert.ToInt32(pdp.Rows[0]["SODEMLUUTRU"]);
 
             //lấy số tiền 1 đêm ứng với từng phòng đã đặt
             var giaTienMotDem = PhieuDatPhongDAO.Instance.KHRetrieveRentalFee(maPDP);

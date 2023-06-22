@@ -51,5 +51,11 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             var thanhtoan = new fThanhToan();
             active_form(thanhtoan);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var capnhat = new fCapNhatPhieuDatPhong();
+            active_form(capnhat);
+        }
     }
 }

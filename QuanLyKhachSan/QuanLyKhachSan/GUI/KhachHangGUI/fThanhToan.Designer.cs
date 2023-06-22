@@ -83,9 +83,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(38, 90);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(338, 17);
+            this.label2.Size = new System.Drawing.Size(428, 17);
             this.label2.TabIndex = 93;
-            this.label2.Text = "Khách hàng phải hoàn thành tiền cọc vào ngày đến.";
+            this.label2.Text = "Khách hàng phải hoàn thành tiền cọc bằng tiền mặt vào ngày đến.";
             // 
             // label3
             // 
@@ -133,22 +133,23 @@
             // 
             // ChuYTBox
             // 
+            this.ChuYTBox.BackColor = System.Drawing.Color.Bisque;
             this.ChuYTBox.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChuYTBox.Location = new System.Drawing.Point(28, 366);
+            this.ChuYTBox.Location = new System.Drawing.Point(28, 381);
             this.ChuYTBox.Multiline = true;
             this.ChuYTBox.Name = "ChuYTBox";
             this.ChuYTBox.ReadOnly = true;
-            this.ChuYTBox.Size = new System.Drawing.Size(854, 126);
+            this.ChuYTBox.Size = new System.Drawing.Size(901, 177);
             this.ChuYTBox.TabIndex = 106;
             // 
             // chuyenKhoanTBox
             // 
-            this.chuyenKhoanTBox.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chuyenKhoanTBox.Font = new System.Drawing.Font("Consolas", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chuyenKhoanTBox.Location = new System.Drawing.Point(28, 210);
             this.chuyenKhoanTBox.Multiline = true;
             this.chuyenKhoanTBox.Name = "chuyenKhoanTBox";
             this.chuyenKhoanTBox.ReadOnly = true;
-            this.chuyenKhoanTBox.Size = new System.Drawing.Size(733, 150);
+            this.chuyenKhoanTBox.Size = new System.Drawing.Size(749, 150);
             this.chuyenKhoanTBox.TabIndex = 107;
             // 
             // fThanhToan
@@ -156,7 +157,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(922, 544);
+            this.ClientSize = new System.Drawing.Size(954, 570);
             this.Controls.Add(this.chuyenKhoanTBox);
             this.Controls.Add(this.ChuYTBox);
             this.Controls.Add(this.label7);

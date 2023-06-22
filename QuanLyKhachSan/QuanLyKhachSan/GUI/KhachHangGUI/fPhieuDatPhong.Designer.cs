@@ -51,7 +51,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             // HoanThanhBtn
             // 
             this.HoanThanhBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.HoanThanhBtn.Location = new System.Drawing.Point(895, 483);
+            this.HoanThanhBtn.Location = new System.Drawing.Point(959, 502);
             this.HoanThanhBtn.Name = "HoanThanhBtn";
             this.HoanThanhBtn.Size = new System.Drawing.Size(107, 29);
             this.HoanThanhBtn.TabIndex = 90;
@@ -63,7 +63,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(372, 83);
+            this.label12.Location = new System.Drawing.Point(436, 80);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(270, 25);
             this.label12.TabIndex = 89;
@@ -74,7 +74,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label11.Location = new System.Drawing.Point(235, 18);
+            this.label11.Location = new System.Drawing.Point(393, 9);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(249, 36);
             this.label11.TabIndex = 88;
@@ -144,21 +144,21 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             // 
             this.DsPhongDataGridView.AllowUserToAddRows = false;
             this.DsPhongDataGridView.AllowUserToDeleteRows = false;
-            this.DsPhongDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.DsPhongDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.DsPhongDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DsPhongDataGridView.Location = new System.Drawing.Point(377, 111);
+            this.DsPhongDataGridView.Location = new System.Drawing.Point(441, 111);
             this.DsPhongDataGridView.Name = "DsPhongDataGridView";
             this.DsPhongDataGridView.RowHeadersWidth = 51;
             this.DsPhongDataGridView.RowTemplate.Height = 24;
             this.DsPhongDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DsPhongDataGridView.Size = new System.Drawing.Size(625, 315);
+            this.DsPhongDataGridView.Size = new System.Drawing.Size(625, 367);
             this.DsPhongDataGridView.TabIndex = 91;
             // 
             // NotiLabel
             // 
             this.NotiLabel.AutoSize = true;
             this.NotiLabel.ForeColor = System.Drawing.Color.Red;
-            this.NotiLabel.Location = new System.Drawing.Point(374, 483);
+            this.NotiLabel.Location = new System.Drawing.Point(438, 508);
             this.NotiLabel.Name = "NotiLabel";
             this.NotiLabel.Size = new System.Drawing.Size(31, 16);
             this.NotiLabel.TabIndex = 92;
@@ -200,7 +200,8 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1034, 537);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1093, 549);
             this.Controls.Add(this.PhuongThucThanhToanComboBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

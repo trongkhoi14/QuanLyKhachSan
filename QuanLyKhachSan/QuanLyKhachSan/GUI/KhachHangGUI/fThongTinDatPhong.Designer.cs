@@ -43,7 +43,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             this.ThongTinDatPhongDataGridView.AllowUserToDeleteRows = false;
             this.ThongTinDatPhongDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.ThongTinDatPhongDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
-            this.ThongTinDatPhongDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.ThongTinDatPhongDataGridView.BackgroundColor = System.Drawing.Color.White;
             this.ThongTinDatPhongDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ThongTinDatPhongDataGridView.Location = new System.Drawing.Point(12, 94);
             this.ThongTinDatPhongDataGridView.MultiSelect = false;
@@ -61,7 +61,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             this.LoaiPhongDaDatDataGridView.AllowUserToDeleteRows = false;
             this.LoaiPhongDaDatDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.LoaiPhongDaDatDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
-            this.LoaiPhongDaDatDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.LoaiPhongDaDatDataGridView.BackgroundColor = System.Drawing.Color.White;
             this.LoaiPhongDaDatDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.LoaiPhongDaDatDataGridView.Location = new System.Drawing.Point(12, 313);
             this.LoaiPhongDaDatDataGridView.MultiSelect = false;
@@ -88,6 +88,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1058, 525);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.LoaiPhongDaDatDataGridView);
