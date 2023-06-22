@@ -24,6 +24,10 @@ namespace QuanLyKhachSan.DAO
             string query = string.Format("SELECT P.MAPDP, K.TENKH, K.NGAYSINH, K.DIACHI, K.EMAIL, K.SODT, K.SOFAX, P.NGAYDEN, P.SODEMLUUTRU, P.SONGUOI, P.TINHTRANG AS THANHTOAN " +
                                          "FROM HOTELADMIN.PHIEUDATPHONG P " +
                                          "JOIN HOTELADMIN.KHACHHANG K ON K.MAKH = P.MAKH");
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        [Obsolete]
         public DataTable KHLayDanhSach()
         {
             string query = string.Format("select p.maphong, lp.loaigiuong,lp.succhua, lp.giamotdem " +
