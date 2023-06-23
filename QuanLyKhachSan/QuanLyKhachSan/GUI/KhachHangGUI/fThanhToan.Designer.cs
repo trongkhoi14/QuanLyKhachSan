@@ -80,10 +80,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(38, 90);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(428, 17);
+            this.label2.Size = new System.Drawing.Size(512, 18);
             this.label2.TabIndex = 93;
             this.label2.Text = "Khách hàng phải hoàn thành tiền cọc bằng tiền mặt vào ngày đến.";
             // 
@@ -100,10 +100,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(38, 154);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(507, 17);
+            this.label4.Size = new System.Drawing.Size(608, 18);
             this.label4.TabIndex = 95;
             this.label4.Text = "Khách hàng phải mang theo thẻ tín dụng và hoàn thành tiền cọc vào ngày đến.";
             // 

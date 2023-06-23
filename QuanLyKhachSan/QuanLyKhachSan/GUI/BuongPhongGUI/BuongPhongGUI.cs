@@ -17,6 +17,7 @@ namespace QuanLyKhachSan.GUI.BuongPhongGUI
         {
             InitializeComponent();
             NotiLabel.Text = null;
+
         }
 
         [Obsolete]
@@ -54,6 +55,17 @@ namespace QuanLyKhachSan.GUI.BuongPhongGUI
                 MaPhongTBox.Text = null;
                 MoTaTBox.Text = null;
             }
+        }
+
+        private void BuongPhongGUI_Load(object sender, EventArgs e)
+        {
+            HuongDanTBox.Text = "Nhân viên phải mô tả chính xác tính trạng của:\r\n" +
+                                "+ Giường\r\n" +
+                                "+ Nhà vệ sinh\r\n" +
+                                "+ Sàn\r\n" +
+                                "+ Tường\r\n" +
+                                "+ Tivi\r\n" +
+                                "+ Tủ lạnh";
         }
     }
 }

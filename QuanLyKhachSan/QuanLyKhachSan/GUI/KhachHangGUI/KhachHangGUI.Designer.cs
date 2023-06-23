@@ -56,7 +56,7 @@
             this.DoiMatKhauBtn.Name = "DoiMatKhauBtn";
             this.DoiMatKhauBtn.Size = new System.Drawing.Size(111, 33);
             this.DoiMatKhauBtn.TabIndex = 1;
-            this.DoiMatKhauBtn.Text = "Đổi mật khẩu";
+            this.DoiMatKhauBtn.Text = "Tài khoản";
             this.DoiMatKhauBtn.UseVisualStyleBackColor = false;
             this.DoiMatKhauBtn.Click += new System.EventHandler(this.DoiMatKhauBtn_Click);
             // 

@@ -30,10 +30,11 @@ D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanL
 D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.exe
 D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.pdb
 D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fPhieuDatPhong.resources
-D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fDoiMatKhau.resources
 D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fThongTinDatPhong.resources
 C:\Users\PC\OneDrive - VNU-HCMUS\Documents\LuongTrongKhoi\Term6_HCMUS\Phân tích thiết kế hệ thống thông tin\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fDoiMatKhau.resources
 C:\Users\PC\OneDrive - VNU-HCMUS\Documents\LuongTrongKhoi\Term6_HCMUS\Phân tích thiết kế hệ thống thông tin\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fPhieuDatPhong.resources
 C:\Users\PC\OneDrive - VNU-HCMUS\Documents\LuongTrongKhoi\Term6_HCMUS\Phân tích thiết kế hệ thống thông tin\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fThongTinDatPhong.resources
 D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fThanhToan.resources
 D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fCapNhatPhieuDatPhong.resources
+D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fTaiKhoan.resources
+D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fXacNhanPDP.resources

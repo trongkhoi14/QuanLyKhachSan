@@ -90,7 +90,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             {
                 NotiLabel.Text = null;
                 await Task.Delay(300);
-                NotiLabel.Text = "Vui long chọn 1 trong các phòng trên";
+                NotiLabel.Text = "Vui long chọn ít nhất 1 phòng";
             }
             else if (check == 4)
             {
@@ -112,22 +112,18 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             }
             else
             {
-                MessageBox.Show("Đặt phòng thành công\nVui lòng xem hướng dẫn thanh toán", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                NotiLabel.Text = null;
-                //if (PhuongThucThanhToanComboBox.SelectedIndex == 0)
-                //{
-                //    MessageBox.Show($"Vui lòng thanh toán tiền cọc cho lễ tân vào ngày đến", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //}
-                //else if(PhuongThucThanhToanComboBox.SelectedIndex == 1)
-                //{
-                //    MessageBox.Show($"Vui lòng mang theo thẻ tín dụng để thanh toán tiền cọc cho lễ tân", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //}
-                //else
-                //{
-                //    MessageBox.Show($"Vui lòng xem hướng dẫn thanh toán", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //}
-                //Lưu phiếu đặt phòng
-                PhieuDatPhongBUS.Instance.KHThemPDP(pdp);
+                var ptttoan = "";
+                if (PhuongThucThanhToanComboBox.SelectedIndex == 0) {
+                    ptttoan = "Tien mat";
+                }
+                else if (PhuongThucThanhToanComboBox.SelectedIndex == 1)
+                {
+                    ptttoan = "The tin dung";
+                }
+                else
+                {
+                    ptttoan = "Chuyen khoan";
+                }
 
                 //Lấy ds các mã phòng đã chọn
                 List<string> MaPhongChecked = new List<string>();
@@ -140,6 +136,19 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
                         MaPhongChecked.Add(row.Cells["MAPHONG"].Value.ToString());
                     }
                 }
+
+                //xác nhận lại hóa đơn
+                var xacnhan = new fXacNhanPDP(pdp, ptttoan, MaPhongChecked);
+                this.Hide();
+                xacnhan.ShowDialog();
+                this.Show();
+
+                NotiLabel.Text = null;
+
+                //Lưu phiếu đặt phòng
+                PhieuDatPhongBUS.Instance.KHThemPDP(pdp);
+
+                
                 //Lưu chi tiết phiếu đặt phòng
                 for (int i = 0; i < MaPhongChecked.Count(); i++)
                 {
@@ -158,18 +167,8 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
                 hoadon.PHUTHU = 0;
                 hoadon.TIENNHAN = 0;
                 hoadon.TIENHOAN = 0;
-                if (PhuongThucThanhToanComboBox.SelectedIndex == 0)
-                {
-                    HoaDonBUS.PHUONGTHUCTHANHTOAN = "Tien mat";
-                }
-                else if(PhuongThucThanhToanComboBox.SelectedIndex == 1)
-                {
-                    HoaDonBUS.PHUONGTHUCTHANHTOAN = "The tin dung";
-                }
-                else
-                {
-                    HoaDonBUS.PHUONGTHUCTHANHTOAN = "Chuyen khoan";
-                }
+                HoaDonBUS.PHUONGTHUCTHANHTOAN = ptttoan;
+                
                 //lưu hóa đơn
                 HoaDonBUS.Instance.KHAddInvoice(hoadon);
 

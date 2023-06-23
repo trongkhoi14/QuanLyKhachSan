@@ -1,5 +1,7 @@
-﻿using System;
+﻿using QuanLyKhachSan.BUS;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,5 +17,12 @@ namespace QuanLyKhachSan.DAO
             set => instance = value;
         }
         private KhachHangDAO() { }
+
+        [Obsolete]
+        public DataTable KHGetSelfInformation()
+        {
+            string query = string.Format($"SELECT * FROM HOTELADMIN.khachhang WHERE makh = '{PhieuDatPhongBUS.MAKH}'");
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }

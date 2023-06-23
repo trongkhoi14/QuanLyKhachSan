@@ -112,11 +112,11 @@
     <Compile Include="GUI\KhachHangGUI\fCapNhatPhieuDatPhong.Designer.cs">
       <DependentUpon>fCapNhatPhieuDatPhong.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\KhachHangGUI\fDoiMatKhau.cs">
+    <Compile Include="GUI\KhachHangGUI\fTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\KhachHangGUI\fDoiMatKhau.Designer.cs">
-      <DependentUpon>fDoiMatKhau.cs</DependentUpon>
+    <Compile Include="GUI\KhachHangGUI\fTaiKhoan.Designer.cs">
+      <DependentUpon>fTaiKhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\KhachHangGUI\fPhieuDatPhong.cs">
       <SubType>Form</SubType>
@@ -136,7 +136,12 @@
     <Compile Include="GUI\KhachHangGUI\fThongTinDatPhong.Designer.cs">
       <DependentUpon>fThongTinDatPhong.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\KhachHangGUI\fXacNhanPDP.cs" />
+    <Compile Include="GUI\KhachHangGUI\fXacNhanPDP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhachHangGUI\fXacNhanPDP.Designer.cs">
+      <DependentUpon>fXacNhanPDP.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\KhachHangGUI\KhachHangGUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,8 +177,8 @@
     <EmbeddedResource Include="GUI\KhachHangGUI\fCapNhatPhieuDatPhong.resx">
       <DependentUpon>fCapNhatPhieuDatPhong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\KhachHangGUI\fDoiMatKhau.resx">
-      <DependentUpon>fDoiMatKhau.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\KhachHangGUI\fTaiKhoan.resx">
+      <DependentUpon>fTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhachHangGUI\fPhieuDatPhong.resx">
       <DependentUpon>fPhieuDatPhong.cs</DependentUpon>
@@ -183,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhachHangGUI\fThongTinDatPhong.resx">
       <DependentUpon>fThongTinDatPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhachHangGUI\fXacNhanPDP.resx">
+      <DependentUpon>fXacNhanPDP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhachHangGUI\KhachHangGUI.resx">
       <DependentUpon>KhachHangGUI.cs</DependentUpon>
@@ -220,6 +228,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DTO\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GUI\Images\user.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

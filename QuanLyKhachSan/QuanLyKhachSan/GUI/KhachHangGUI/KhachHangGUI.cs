@@ -37,7 +37,8 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
 
         private void DoiMatKhauBtn_Click(object sender, EventArgs e)
         {
-
+            var tk = new fTaiKhoan();
+            active_form(tk);
         }
 
         private void ThongTinPhongDaDatBtn_Click(object sender, EventArgs e)
