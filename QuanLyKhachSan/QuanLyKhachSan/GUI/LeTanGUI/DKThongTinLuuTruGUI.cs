@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyKhachSan.BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,19 +13,37 @@ namespace QuanLyKhachSan.GUI.LeTanGUI
 {
     public partial class DKThongTinLuuTruGUI : Form
     {
-        private string maPDP;
-        public string MaPDP
+        private string maPNP;
+        public string MaPNP
         {
-            get { return maPDP; }
-            set { maPDP = value; }
+            get { return maPNP; }
+            set { maPNP = value; }
         }
-
+        [Obsolete]
         public DKThongTinLuuTruGUI(string mapdp)
         {
             InitializeComponent();
-            this.maPDP = mapdp;
-            txbHoTen.Text = this.maPDP;
+            PhieuNhanPhongBUS.Instance.LTThemPNP(mapdp);
+            this.maPNP = PhieuNhanPhongBUS.Instance.LTLayMaPNP(mapdp);
+            HienThiDSLuuTru(maPNP);
         }
+        [Obsolete]
+        #region method
+        void HienThiDSLuuTru(string maPNP)
+        {
+            dtgvDanhSachDKLuuTru.DataSource = CTPhieuNhanPhongBUS.Instance.LTLayDSKhachHangNhanPhong(maPNP);
+        }
+        #endregion
+
+        #region event
+
+        private void btnTroLai_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+       
+        #endregion
+
 
     }
 }

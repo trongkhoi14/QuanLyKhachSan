@@ -15,5 +15,10 @@ namespace QuanLyKhachSan.BUS
             set => instance = value;
         }
         private KhachHangBUS() { }
+        public bool LTKiemTraTonTai(string tenkh, string diachi, string ngaysinh)
+        {
+
+            return true;
+        }
     }
 }

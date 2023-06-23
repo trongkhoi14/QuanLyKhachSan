@@ -67,12 +67,17 @@ namespace QuanLyKhachSan.GUI.LeTanGUI
         #endregion
 
         #region event
+        [Obsolete]
         private void btnDangKyThongTinLuuTru_Click(object sender, EventArgs e)
         {
-            DKThongTinLuuTruGUI dk = new DKThongTinLuuTruGUI(txbMaPDP.Text);
-            this.Hide();
-            dk.ShowDialog();
-            this.Show();
+            if (MessageBox.Show("Bạn có chắc chắn muốn đăng ký thông tin lưu trú cho phiếu đặt phòng này", "Thông báo", MessageBoxButtons.OKCancel)
+                == System.Windows.Forms.DialogResult.OK)
+            {
+                DKThongTinLuuTruGUI dk = new DKThongTinLuuTruGUI(txbMaPDP.Text);
+                this.Hide();
+                dk.ShowDialog();
+                this.Show();
+            }
         }
 
         [Obsolete]
@@ -81,6 +86,12 @@ namespace QuanLyKhachSan.GUI.LeTanGUI
             DanhSachPhong();
             DanhSachDichVu();
         }
+        [Obsolete]
+        private void btnTrangChu_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         #endregion
 
 

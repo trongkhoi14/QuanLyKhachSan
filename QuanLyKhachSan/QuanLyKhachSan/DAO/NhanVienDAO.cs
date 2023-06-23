@@ -18,11 +18,11 @@ namespace QuanLyKhachSan.DAO
         }
 
         private NhanVienDAO() { }
-
+        
         [Obsolete]
         public DataTable LayNhanVien(string MaNV)
         {
-            string query = string.Format($"SELECT * FROM HOTELADMIN.NHANVIEN WHERE MANV = '{MaNV}'");
+            string query = string.Format("SELECT * FROM HOTELADMIN.NHANVIEN WHERE MANV = '{0}'", MaNV);
             return DataProvider.Instance.ExecuteQuery(query);
         }
     }

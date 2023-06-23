@@ -18,19 +18,48 @@ namespace QuanLyKhachSan.DAO
 
         public string role = "";
 
+        public string username = "";
+
         public static DataProvider Instance
         {
             get { if (instance == null) instance = new DataProvider(); return DataProvider.instance; }
             private set => instance = value;
         }
         private DataProvider() { }
-        
-        
+
+
         // Thiết lập chuỗi kết nối
+        [Obsolete]
         public void SetConnectionString(string connectionString)
         {
+
             // Set lại connection string
             connectionSTR = connectionString;
+            // TODO
+            try
+            {
+                // Truy vấn để lấy dữ liệu từ bảng NHANVIEN
+                string query = "SELECT * FROM HOTELADMIN.NHANVIEN";
+                OracleDataAdapter adapter = new OracleDataAdapter(query, connectionSTR);
+                DataTable data = new DataTable();
+                adapter.Fill(data);
+
+                // Kiểm tra xem có dữ liệu và cột role tồn tại không
+                if (data.Rows.Count > 0 && data.Columns.Contains("VAITRO"))
+                {
+                    // Gán giá trị của cột role vào thuộc tính role của lớp DataProvider
+                    
+                    username = data.Rows[0]["MANV"].ToString();
+                }
+                else
+                {
+                    //TODO
+                }
+            }
+            catch (Exception)
+            {
+                //TODO
+            }
         }
 
         [Obsolete]
