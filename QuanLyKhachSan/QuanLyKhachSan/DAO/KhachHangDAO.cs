@@ -33,5 +33,6 @@ namespace QuanLyKhachSan.DAO
                                         "AND DIACHI = '{2}'", tenkh, ngaysinh, diachi);
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public DataTable LTThemKhachHang(string makh, string tenkh)
     }
 }
