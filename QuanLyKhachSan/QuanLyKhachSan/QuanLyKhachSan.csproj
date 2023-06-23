@@ -104,6 +104,18 @@
     <Compile Include="GUI\DangNhapGUI.Designer.cs">
       <DependentUpon>DangNhapGUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\KhachHangGUI\fDangKyDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhachHangGUI\fDangKyDichVu.Designer.cs">
+      <DependentUpon>fDangKyDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhachHangGUI\fDangKyTour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhachHangGUI\fDangKyTour.Designer.cs">
+      <DependentUpon>fDangKyTour.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\KhachHangGUI\fDoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +133,18 @@
     </Compile>
     <Compile Include="GUI\KhachHangGUI\fThongTinDatPhong.Designer.cs">
       <DependentUpon>fThongTinDatPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhachHangGUI\fTraCuuDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhachHangGUI\fTraCuuDichVu.Designer.cs">
+      <DependentUpon>fTraCuuDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhachHangGUI\fTraCuuTour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhachHangGUI\fTraCuuTour.Designer.cs">
+      <DependentUpon>fTraCuuTour.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\KhachHangGUI\KhachHangGUI.cs">
       <SubType>Form</SubType>
@@ -154,6 +178,12 @@
     <EmbeddedResource Include="GUI\DangNhapGUI.resx">
       <DependentUpon>DangNhapGUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhachHangGUI\fDangKyDichVu.resx">
+      <DependentUpon>fDangKyDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhachHangGUI\fDangKyTour.resx">
+      <DependentUpon>fDangKyTour.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhachHangGUI\fDoiMatKhau.resx">
       <DependentUpon>fDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,6 +192,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhachHangGUI\fThongTinDatPhong.resx">
       <DependentUpon>fThongTinDatPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhachHangGUI\fTraCuuDichVu.resx">
+      <DependentUpon>fTraCuuDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhachHangGUI\fTraCuuTour.resx">
+      <DependentUpon>fTraCuuTour.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhachHangGUI\KhachHangGUI.resx">
       <DependentUpon>KhachHangGUI.cs</DependentUpon>

@@ -32,6 +32,8 @@
             this.DoiMatKhauBtn = new System.Windows.Forms.Button();
             this.ThongTinPhongDaDatBtn = new System.Windows.Forms.Button();
             this.panel = new System.Windows.Forms.Panel();
+            this.dangKyDVBtn = new System.Windows.Forms.Button();
+            this.dangKyTourBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // DatPhongBtn
@@ -74,11 +76,35 @@
             this.panel.Size = new System.Drawing.Size(1053, 542);
             this.panel.TabIndex = 3;
             // 
+            // dangKyDVBtn
+            // 
+            this.dangKyDVBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dangKyDVBtn.Location = new System.Drawing.Point(364, 12);
+            this.dangKyDVBtn.Name = "dangKyDVBtn";
+            this.dangKyDVBtn.Size = new System.Drawing.Size(133, 33);
+            this.dangKyDVBtn.TabIndex = 4;
+            this.dangKyDVBtn.Text = "Đăng ký dịch vụ";
+            this.dangKyDVBtn.UseVisualStyleBackColor = false;
+            this.dangKyDVBtn.Click += new System.EventHandler(this.dangKyDVBtn_Click);
+            // 
+            // dangKyTourBtn
+            // 
+            this.dangKyTourBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dangKyTourBtn.Location = new System.Drawing.Point(503, 12);
+            this.dangKyTourBtn.Name = "dangKyTourBtn";
+            this.dangKyTourBtn.Size = new System.Drawing.Size(133, 33);
+            this.dangKyTourBtn.TabIndex = 5;
+            this.dangKyTourBtn.Text = "Đăng ký tour";
+            this.dangKyTourBtn.UseVisualStyleBackColor = false;
+            this.dangKyTourBtn.Click += new System.EventHandler(this.dangKyTourBtn_Click);
+            // 
             // KhachHangGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1077, 613);
+            this.Controls.Add(this.dangKyTourBtn);
+            this.Controls.Add(this.dangKyDVBtn);
             this.Controls.Add(this.panel);
             this.Controls.Add(this.ThongTinPhongDaDatBtn);
             this.Controls.Add(this.DoiMatKhauBtn);
@@ -96,5 +122,7 @@
         private System.Windows.Forms.Button DoiMatKhauBtn;
         private System.Windows.Forms.Button ThongTinPhongDaDatBtn;
         private System.Windows.Forms.Panel panel;
+        private System.Windows.Forms.Button dangKyDVBtn;
+        private System.Windows.Forms.Button dangKyTourBtn;
     }
 }

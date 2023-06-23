@@ -45,5 +45,17 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             var pdp = new fThongTinDatPhong();
             active_form(pdp);
         }
+
+        private void dangKyDVBtn_Click(object sender, EventArgs e)
+        {
+            var dkdv = new fDangKyDichVu();
+            active_form(dkdv);  
+        }
+
+        private void dangKyTourBtn_Click(object sender, EventArgs e)
+        {
+            var dkt = new fDangKyTour();
+            active_form(dkt);
+        }
     }
 }
