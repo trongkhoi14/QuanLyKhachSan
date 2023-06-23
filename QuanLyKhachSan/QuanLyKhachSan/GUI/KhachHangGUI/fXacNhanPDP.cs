@@ -13,6 +13,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
 {
     public partial class fXacNhanPDP : Form
     {
+        public int ReturnValue { get; set; }
         public fXacNhanPDP(PhieuDatPhongBUS pdp, string ptttoan, List<string> MaPhongChecked)
         {
             InitializeComponent();
@@ -40,13 +41,14 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
 
         private void XacNhanBtn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Đặt phòng thành công\nVui lòng xem hướng dẫn thanh toán", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.ReturnValue = 1;
             this.Close();
         }
 
-        private void DatlaiBtn_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            this.ReturnValue = 0;
+            this.Close();
         }
     }
 }

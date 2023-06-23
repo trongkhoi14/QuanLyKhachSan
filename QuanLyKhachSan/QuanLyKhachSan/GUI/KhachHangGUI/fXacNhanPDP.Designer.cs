@@ -40,6 +40,7 @@
             this.XacNhanBtn = new System.Windows.Forms.Button();
             this.PhongTBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.DatLaiBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
@@ -133,7 +134,7 @@
             // XacNhanBtn
             // 
             this.XacNhanBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.XacNhanBtn.Location = new System.Drawing.Point(630, 393);
+            this.XacNhanBtn.Location = new System.Drawing.Point(550, 393);
             this.XacNhanBtn.Name = "XacNhanBtn";
             this.XacNhanBtn.Size = new System.Drawing.Size(106, 31);
             this.XacNhanBtn.TabIndex = 106;
@@ -160,12 +161,24 @@
             this.label1.TabIndex = 107;
             this.label1.Text = "Các phòng";
             // 
+            // DatLaiBtn
+            // 
+            this.DatLaiBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DatLaiBtn.Location = new System.Drawing.Point(662, 393);
+            this.DatLaiBtn.Name = "DatLaiBtn";
+            this.DatLaiBtn.Size = new System.Drawing.Size(85, 31);
+            this.DatLaiBtn.TabIndex = 109;
+            this.DatLaiBtn.Text = "Đặt lại";
+            this.DatLaiBtn.UseVisualStyleBackColor = true;
+            this.DatLaiBtn.Click += new System.EventHandler(this.button1_Click);
+            // 
             // fXacNhanPDP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(759, 436);
+            this.Controls.Add(this.DatLaiBtn);
             this.Controls.Add(this.PhongTBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.XacNhanBtn);
@@ -200,5 +213,6 @@
         private System.Windows.Forms.Button XacNhanBtn;
         private System.Windows.Forms.TextBox PhongTBox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button DatLaiBtn;
     }
 }

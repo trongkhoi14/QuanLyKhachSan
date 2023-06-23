@@ -18,6 +18,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
         public fTaiKhoan()
         {
             InitializeComponent();
+            NotiLabel.Text = null;
         }
 
         [Obsolete]
@@ -30,6 +31,50 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             EmailTBox.Text = info.Rows[0]["EMAIL"].ToString();
             SoDtTBox.Text = info.Rows[0]["SODT"].ToString();
             SoFaxTBox.Text = info.Rows[0]["SOFAX"].ToString();
+        }
+
+        private void EditBtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hãy thay đổi thông tin bạn muốn chỉnh sửa", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            HoVaTenTBox.ReadOnly = false;
+            NgaySinhPicker.Enabled = true;
+            DiaChiTBox.ReadOnly = false;
+            EmailTBox.ReadOnly = false;
+            SoDtTBox.ReadOnly = false;
+            SoFaxTBox.ReadOnly = false;
+
+            HoVaTenTBox.Focus();
+            CapNhatBtn.Visible = true;
+            EditBtn.Visible = false;
+
+        }
+
+        [Obsolete]
+        private void CapNhatBtn_Click(object sender, EventArgs e)
+        {
+            var newInfo = new KhachHangBUS();
+            newInfo.TENKH = HoVaTenTBox.Text;
+            newInfo.NGAYSINH = NgaySinhPicker.Value;
+            newInfo.DIACHI = DiaChiTBox.Text;
+            newInfo.EMAIL= EmailTBox.Text;
+            newInfo.SODT=SoDtTBox.Text;
+            newInfo.SOFAX= SoFaxTBox.Text;
+
+            KhachHangBUS.Instance.KhCapNhatThongTin(newInfo);
+
+            MessageBox.Show("Cập nhật thông tin thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            HoVaTenTBox.ReadOnly = true;
+            NgaySinhPicker.Enabled = false;
+            DiaChiTBox.ReadOnly = true;
+            EmailTBox.ReadOnly = true;
+            SoDtTBox.ReadOnly = true;
+            SoFaxTBox.ReadOnly = true;
+
+            EditBtn.Focus();
+
+            CapNhatBtn.Visible = false;
+            EditBtn.Visible = true;
         }
     }
 }

@@ -24,5 +24,19 @@ namespace QuanLyKhachSan.DAO
             string query = string.Format($"SELECT * FROM HOTELADMIN.khachhang WHERE makh = '{PhieuDatPhongBUS.MAKH}'");
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        [Obsolete]
+        public void KHUpdateSelfInformation(KhachHangBUS newInfo)
+        {
+            string query = string.Format($"update HOTELADMIN.khachhang " +
+                                            $"set    " +
+                                            $"tenkh='{newInfo.TENKH}',    " +
+                                            $"ngaysinh = TO_DATE('{newInfo.NGAYSINH.ToString("dd/MM/yyyy")}', 'DD/MM/YYYY'),    " +
+                                            $"diachi= '{newInfo.DIACHI}',  " +
+                                            $"email= '{newInfo.EMAIL}',  " +
+                                            $"sodt= '{newInfo.SODT}',  " +
+                                            $"sofax= '{newInfo.SOFAX}'  " +
+                                            $"where makh='{PhieuDatPhongBUS.MAKH}' ");
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
     }
 }

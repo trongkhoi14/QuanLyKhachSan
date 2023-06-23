@@ -230,7 +230,12 @@
     <Folder Include="DTO\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="GUI\Images\user.png" />
+    <Content Include="GUI\Images\pencil.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GUI\Images\profile.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

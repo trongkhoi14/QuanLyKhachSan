@@ -141,46 +141,56 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
                 var xacnhan = new fXacNhanPDP(pdp, ptttoan, MaPhongChecked);
                 this.Hide();
                 xacnhan.ShowDialog();
+                var choice = xacnhan.ReturnValue;
                 this.Show();
 
-                NotiLabel.Text = null;
-
-                //Lưu phiếu đặt phòng
-                PhieuDatPhongBUS.Instance.KHThemPDP(pdp);
-
-                
-                //Lưu chi tiết phiếu đặt phòng
-                for (int i = 0; i < MaPhongChecked.Count(); i++)
+                //xác nhận
+                if (choice == 1)
                 {
-                    CTPhieuDatPhongBUS.Instance.KHThemCtPDP(pdp.MAPDP, MaPhongChecked[i]);
+                    MessageBox.Show("Đặt phòng thành công\nVui lòng xem hướng dẫn thanh toán", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    NotiLabel.Text = null;
+
+                    //Lưu phiếu đặt phòng
+                    PhieuDatPhongBUS.Instance.KHThemPDP(pdp);
+
+                    //Lưu chi tiết phiếu đặt phòng
+                    for (int i = 0; i < MaPhongChecked.Count(); i++)
+                    {
+                        CTPhieuDatPhongBUS.Instance.KHThemCtPDP(pdp.MAPDP, MaPhongChecked[i]);
+                    }
+
+                    //tạo hóa đơn
+                    var hoadon = new HoaDonBUS();
+                    hoadon.MAHD = HoaDonBUS.Instance.KHGetInvoiceCode();
+                    hoadon.MAPDP = pdp.MAPDP;
+                    hoadon.NGAYCAPNHAT = DateTime.Today;
+                    hoadon.TRANGTHAI = "Chua thanh toan";
+                    HoaDonBUS.TIENPHONG = HoaDonBUS.Instance.KHCountRentalFee(hoadon.MAPDP);
+                    hoadon.TIENCOC = 0;
+                    hoadon.TIENDV = 0;
+                    hoadon.PHUTHU = 0;
+                    hoadon.TIENNHAN = 0;
+                    hoadon.TIENHOAN = 0;
+                    HoaDonBUS.PHUONGTHUCTHANHTOAN = ptttoan;
+
+                    //lưu hóa đơn
+                    HoaDonBUS.Instance.KHAddInvoice(hoadon);
+
+
+                    //set các textbox về null
+                    DsPhongDataGridView.DataSource = PhieuDatPhongBUS.Instance.KHLayDanhSachPDP();
+                    SoDemLuuTruTBox.Text = "";
+                    if (doanCheckBox.Checked)
+                    {
+                        doanCheckBox.Checked = false;
+                    }
+                    PhuongThucThanhToanComboBox.SelectedIndex = -1;
                 }
-
-                //tạo hóa đơn
-                var hoadon = new HoaDonBUS();
-                hoadon.MAHD = HoaDonBUS.Instance.KHGetInvoiceCode();
-                hoadon.MAPDP = pdp.MAPDP;
-                hoadon.NGAYCAPNHAT = DateTime.Today;
-                hoadon.TRANGTHAI = "Chua thanh toan";
-                HoaDonBUS.TIENPHONG = HoaDonBUS.Instance.KHCountRentalFee(hoadon.MAPDP);
-                hoadon.TIENCOC = 0;
-                hoadon.TIENDV = 0;
-                hoadon.PHUTHU = 0;
-                hoadon.TIENNHAN = 0;
-                hoadon.TIENHOAN = 0;
-                HoaDonBUS.PHUONGTHUCTHANHTOAN = ptttoan;
-                
-                //lưu hóa đơn
-                HoaDonBUS.Instance.KHAddInvoice(hoadon);
-
-
-                //set các textbox về null
-                DsPhongDataGridView.DataSource = PhieuDatPhongBUS.Instance.KHLayDanhSachPDP();
-                SoDemLuuTruTBox.Text = "";
-                if (doanCheckBox.Checked)
+                //Đặt lại
+                else
                 {
-                    doanCheckBox.Checked = false;
+
                 }
-                PhuongThucThanhToanComboBox.SelectedIndex = -1;
             }
         }
 
