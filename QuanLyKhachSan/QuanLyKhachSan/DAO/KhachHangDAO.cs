@@ -16,9 +16,22 @@ namespace QuanLyKhachSan.DAO
             set => instance = value;
         }
         private KhachHangDAO() { }
-        public DataTable LayThongTin(string tenkh, string diachi, string ngaysinh)
+
+        [Obsolete]
+        public DataTable LTLayDanhSach()
         {
-            return new DataTable();
+            string query = string.Format("SELECT * FROM HOTELADMIN.KHACHHANG");
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        [Obsolete]
+        public DataTable LTLayKhachHang(string tenkh, string ngaysinh, string diachi)
+        {
+            string query = string.Format("SELECT * FROM HOTELADMIN.KHACHHANG " +
+                                        "WHERE TENKH = '{0}' " +
+                                        "AND NGAYSINH = TO_DATE('{1}', 'DD/MM/YYYY') " +
+                                        "AND DIACHI = '{2}'", tenkh, ngaysinh, diachi);
+            return DataProvider.Instance.ExecuteQuery(query);
         }
     }
 }

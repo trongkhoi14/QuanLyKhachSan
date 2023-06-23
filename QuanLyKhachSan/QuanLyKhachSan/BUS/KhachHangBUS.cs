@@ -1,5 +1,7 @@
-﻿using System;
+﻿using QuanLyKhachSan.DAO;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,9 +17,20 @@ namespace QuanLyKhachSan.BUS
             set => instance = value;
         }
         private KhachHangBUS() { }
-        public bool LTKiemTraTonTai(string tenkh, string diachi, string ngaysinh)
-        {
 
+        [Obsolete]
+        public DataTable LTLayDanhSachKhachHang()
+        {
+            return KhachHangDAO.Instance.LTLayDanhSach();
+        }
+        [Obsolete]
+        public bool KiemTraTonTai(string tenkh, string ngaysinh, string diachi)
+        {
+            DataTable kh = KhachHangDAO.Instance.LTLayKhachHang(tenkh, ngaysinh, diachi);
+            if(kh.Rows.Count == 0)
+            {
+                return false;
+            }
             return true;
         }
     }
