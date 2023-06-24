@@ -40,6 +40,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.ChuYTBox = new System.Windows.Forms.TextBox();
             this.chuyenKhoanTBox = new System.Windows.Forms.TextBox();
+            this.DaThanhToanBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label11
@@ -47,7 +48,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label11.Location = new System.Drawing.Point(245, 9);
+            this.label11.Location = new System.Drawing.Point(304, 9);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(331, 36);
             this.label11.TabIndex = 89;
@@ -139,7 +140,7 @@
             this.ChuYTBox.Multiline = true;
             this.ChuYTBox.Name = "ChuYTBox";
             this.ChuYTBox.ReadOnly = true;
-            this.ChuYTBox.Size = new System.Drawing.Size(901, 177);
+            this.ChuYTBox.Size = new System.Drawing.Size(749, 177);
             this.ChuYTBox.TabIndex = 106;
             // 
             // chuyenKhoanTBox
@@ -152,12 +153,24 @@
             this.chuyenKhoanTBox.Size = new System.Drawing.Size(749, 150);
             this.chuyenKhoanTBox.TabIndex = 107;
             // 
+            // DaThanhToanBtn
+            // 
+            this.DaThanhToanBtn.BackColor = System.Drawing.Color.LightGray;
+            this.DaThanhToanBtn.Location = new System.Drawing.Point(813, 523);
+            this.DaThanhToanBtn.Name = "DaThanhToanBtn";
+            this.DaThanhToanBtn.Size = new System.Drawing.Size(129, 35);
+            this.DaThanhToanBtn.TabIndex = 108;
+            this.DaThanhToanBtn.Text = "Đã thanh toán";
+            this.DaThanhToanBtn.UseVisualStyleBackColor = false;
+            this.DaThanhToanBtn.Click += new System.EventHandler(this.DaThanhToanBtn_Click);
+            // 
             // fThanhToan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(954, 570);
+            this.Controls.Add(this.DaThanhToanBtn);
             this.Controls.Add(this.chuyenKhoanTBox);
             this.Controls.Add(this.ChuYTBox);
             this.Controls.Add(this.label7);
@@ -192,5 +205,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox ChuYTBox;
         private System.Windows.Forms.TextBox chuyenKhoanTBox;
+        private System.Windows.Forms.Button DaThanhToanBtn;
     }
 }

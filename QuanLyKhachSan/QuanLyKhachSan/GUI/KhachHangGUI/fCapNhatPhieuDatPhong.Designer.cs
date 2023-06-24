@@ -43,6 +43,8 @@
             this.MaPDPTBox = new System.Windows.Forms.TextBox();
             this.LuuYTBox = new System.Windows.Forms.TextBox();
             this.NotiLabel = new System.Windows.Forms.Label();
+            this.PhuongThucThanhToanComboBox = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DsPhongDaDangKyDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,7 +93,7 @@
             // 
             // SoNguoiTrongDoanTBox
             // 
-            this.SoNguoiTrongDoanTBox.Location = new System.Drawing.Point(153, 222);
+            this.SoNguoiTrongDoanTBox.Location = new System.Drawing.Point(154, 257);
             this.SoNguoiTrongDoanTBox.Name = "SoNguoiTrongDoanTBox";
             this.SoNguoiTrongDoanTBox.Size = new System.Drawing.Size(108, 22);
             this.SoNguoiTrongDoanTBox.TabIndex = 97;
@@ -99,7 +101,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(20, 225);
+            this.label4.Location = new System.Drawing.Point(21, 260);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(127, 16);
             this.label4.TabIndex = 96;
@@ -110,7 +112,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.MistyRose;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(19, 258);
+            this.label5.Location = new System.Drawing.Point(20, 293);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(239, 16);
             this.label5.TabIndex = 98;
@@ -142,9 +144,9 @@
             // HoanThanhBtn
             // 
             this.HoanThanhBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.HoanThanhBtn.Location = new System.Drawing.Point(959, 387);
+            this.HoanThanhBtn.Location = new System.Drawing.Point(961, 387);
             this.HoanThanhBtn.Name = "HoanThanhBtn";
-            this.HoanThanhBtn.Size = new System.Drawing.Size(107, 29);
+            this.HoanThanhBtn.Size = new System.Drawing.Size(105, 43);
             this.HoanThanhBtn.TabIndex = 101;
             this.HoanThanhBtn.Text = "Cập nhật";
             this.HoanThanhBtn.UseVisualStyleBackColor = false;
@@ -188,12 +190,35 @@
             this.NotiLabel.TabIndex = 103;
             this.NotiLabel.Text = "Noti";
             // 
+            // PhuongThucThanhToanComboBox
+            // 
+            this.PhuongThucThanhToanComboBox.FormattingEnabled = true;
+            this.PhuongThucThanhToanComboBox.Items.AddRange(new object[] {
+            "Tiền mặt",
+            "Thẻ tín dụng",
+            "Chuyển khoản"});
+            this.PhuongThucThanhToanComboBox.Location = new System.Drawing.Point(183, 219);
+            this.PhuongThucThanhToanComboBox.Name = "PhuongThucThanhToanComboBox";
+            this.PhuongThucThanhToanComboBox.Size = new System.Drawing.Size(121, 24);
+            this.PhuongThucThanhToanComboBox.TabIndex = 105;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(21, 222);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(144, 16);
+            this.label7.TabIndex = 104;
+            this.label7.Text = "Phương thức thanh toán";
+            // 
             // fCapNhatPhieuDatPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1098, 487);
+            this.Controls.Add(this.PhuongThucThanhToanComboBox);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.NotiLabel);
             this.Controls.Add(this.LuuYTBox);
             this.Controls.Add(this.HoanThanhBtn);
@@ -235,5 +260,7 @@
         private System.Windows.Forms.TextBox MaPDPTBox;
         private System.Windows.Forms.TextBox LuuYTBox;
         private System.Windows.Forms.Label NotiLabel;
+        private System.Windows.Forms.ComboBox PhuongThucThanhToanComboBox;
+        private System.Windows.Forms.Label label7;
     }
 }

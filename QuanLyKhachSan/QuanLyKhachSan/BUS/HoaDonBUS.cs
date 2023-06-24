@@ -1,6 +1,7 @@
 ﻿using QuanLyKhachSan.DAO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -63,6 +64,22 @@ namespace QuanLyKhachSan.BUS
         public void KHAddInvoice(HoaDonBUS hoadon)
         {
             HoaDonDAO.Instance.KHAddInvoice(hoadon);
+        }
+
+        [Obsolete]
+        public void KHCapNhatTienCoc(int tienCoc)
+        {
+            HoaDonDAO.Instance.KHUpdateTienCoc(tienCoc);
+        }
+        [Obsolete]
+        public DataTable KHRetrieveInvoice()
+        {
+            return HoaDonDAO.Instance.KHRetrieveInvoice();
+        }
+        [Obsolete]
+        public void KHUpdatePTTToan(string ptttoan)
+        {
+            HoaDonDAO.Instance.KHUpdatePTTToan(ptttoan);
         }
     }
 }

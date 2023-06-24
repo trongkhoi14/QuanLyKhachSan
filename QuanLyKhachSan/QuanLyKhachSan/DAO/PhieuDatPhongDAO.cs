@@ -142,5 +142,14 @@ namespace QuanLyKhachSan.DAO
                                             $"where mapdp='{pdp.MAPDP}'");
             DataProvider.Instance.ExecuteNonQuery(query);
         }
+
+        [Obsolete]
+        public void KHCapNhatTinhTrangPDP(string tinhTrang)
+        {
+            string query = string.Format("update HOTELADMIN.phieudatphong " +
+                                        $"set tinhtrang = '{tinhTrang}' " +
+                                        $"where mapdp = '{PhieuDatPhongBUS.Instance.KHLayMaPDPGanNhat(PhieuDatPhongBUS.MAKH)}'");
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
     }
 }

@@ -16,7 +16,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
         {
             InitializeComponent();
         }
-        private void active_form(Form f)
+        public void active_form(Form f)
         {
             panel.Controls.Clear();
             f.TopLevel = false;

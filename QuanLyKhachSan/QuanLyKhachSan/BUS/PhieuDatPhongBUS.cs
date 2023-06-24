@@ -198,5 +198,22 @@ namespace QuanLyKhachSan.BUS
 
             return 0;
         }
+
+        [Obsolete]
+        public void KHCapNhatTinhTrangPDP(string tinhTrangPDP)
+        {
+            PhieuDatPhongDAO.Instance.KHCapNhatTinhTrangPDP(tinhTrangPDP);
+        }
+
+        [Obsolete]
+        public bool KHCheckDaCoc()
+        {
+            var temp = PhieuDatPhongBUS.Instance.KHLayPDP(PhieuDatPhongBUS.Instance.KHLayMaPDPGanNhat(PhieuDatPhongBUS.MAKH));
+            if (temp.Rows[0]["TINHTRANG"] == "Da coc")
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }

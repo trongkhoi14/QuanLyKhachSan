@@ -37,5 +37,28 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
                             "+ Sau khi nhận được thông báo từ ngân hàng, hệ thống sẽ tự động gửi mã thẻ sau 2-5 phút.\r\n" +
                             "+ Trong trường hợp bạn điền sai thông tin hoặc có bất kỳ sự cố gì khiến hệ thống không thể tự động kích hoạt, vui lòng liên hệ 0856253294 để được hỗ trợ sớm nhất.";
         }
+
+        [Obsolete]
+        private void DaThanhToanBtn_Click(object sender, EventArgs e)
+        {
+            if (String.Equals((string)HoaDonBUS.Instance.KHRetrieveInvoice().Rows[0]["PHUONGTHUCTT"], "Chuyen khoan", StringComparison.OrdinalIgnoreCase))
+            {
+                //Nếu đã đặt cọc
+                if (PhieuDatPhongBUS.Instance.KHCheckDaCoc())
+                {
+                    MessageBox.Show("Quí vui lòng đã đặt cọc\n Vui lòng đến quầy lễ tân để nhận lại\n số tiền vừa chuyển", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    fKiemTraThanhToan splashScreen = new fKiemTraThanhToan();
+                    splashScreen.Show();
+                }
+            }
+            //Nếu không chọn phương thức thanh toán là chuyển khoản
+            else
+            {
+                MessageBox.Show("Quí khách vui lòng cập nhật lại phương thức thanh\n toán để hệ thống có thể cập nhật thông tin", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }

@@ -31,6 +31,21 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             SoDemLuuTruTBox.Text = temp.Rows[0]["SODEMLUUTRU"].ToString();
             NgayDenDateTimePicker.Value = Convert.ToDateTime(temp.Rows[0]["NGAYDEN"]);
             SoNguoiTrongDoanTBox.Text = temp.Rows[0]["SONGUOI"].ToString();
+
+            var ptttoan = HoaDonBUS.Instance.KHRetrieveInvoice().Rows[0]["PHUONGTHUCTT"];
+            if (String.Equals((string)ptttoan, "Tien mat", StringComparison.OrdinalIgnoreCase))
+            {
+                PhuongThucThanhToanComboBox.SelectedIndex = 0;
+            }
+            else if (String.Equals((string)ptttoan, "The tin dung", StringComparison.OrdinalIgnoreCase))
+            {
+                PhuongThucThanhToanComboBox.SelectedIndex = 1;
+            }
+            else
+            {
+                PhuongThucThanhToanComboBox.SelectedIndex = 2;
+            }
+
             DsPhongDaDangKyDataGridView.DataSource = PhieuDatPhongBUS.Instance.KHLayThongTinPhongDaDatTheoMaPDP(maPDP);
             LuuYTBox.Text = "Nếu quí khách muốn thay đổi phòng đã đặt, xin vui lòng hủy phiếu đặt phòng và đặt lại phiếu khác";
         }
@@ -43,6 +58,20 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             newPDP.SODEMLUUTRU = SoDemLuuTruTBox.Text;
             newPDP.NGAYDEN = NgayDenDateTimePicker.Value;
             newPDP.SONGUOI = SoNguoiTrongDoanTBox.Text;
+
+            var ptttoan = "";
+            if (PhuongThucThanhToanComboBox.SelectedIndex == 0)
+            {
+                ptttoan = "Tien mat";
+            }
+            else if (PhuongThucThanhToanComboBox.SelectedIndex == 1)
+            {
+                ptttoan = "The tin dung";
+            }
+            else
+            {
+                ptttoan = "Chuyen khoan";
+            }
 
             //kiểm tra hợp lệ
             var check = PhieuDatPhongBUS.Instance.CheckValidNewPDP(newPDP);
@@ -78,6 +107,8 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             }
             else
             {
+                //cập nhật phương thức thanh toán trong hóa đơn
+                HoaDonBUS.Instance.KHUpdatePTTToan(ptttoan);
                 //cập nhật phiếu đặt phòng
                 PhieuDatPhongBUS.Instance.KHCapNhatPDP(newPDP);
                 MessageBox.Show("Cập nhật thành công\nVui lòng xem hướng dẫn thanh toán", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);

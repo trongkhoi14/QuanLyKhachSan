@@ -35,5 +35,37 @@ namespace QuanLyKhachSan.DAO
             string query = string.Format("select count(*) from HOTELADMIN.hoadon");
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        [Obsolete]
+        public void KHUpdateTienCoc(int tienCoc)
+        {
+            string query = string.Format("update HOTELADMIN.hoadon " +
+                                        $"set tiencoc = {tienCoc} " +
+                                        "where mapdp = (select mapdp from HOTELADMIN.phieudatphong " +
+                                                        $"where makh='{PhieuDatPhongBUS.MAKH}' and  " +
+                                                        $"ngaylap = (select max(ngaylap) " +
+                                                                   $"from HOTELADMIN.phieudatphong where makh='{PhieuDatPhongBUS.MAKH}'))");
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
+
+        [Obsolete]
+        public DataTable KHRetrieveInvoice()
+        {
+            string query = string.Format($"select * from HOTELADMIN.hoadon " +
+                                         $"where mapdp = '{PhieuDatPhongBUS.Instance.KHLayMaPDPGanNhat(PhieuDatPhongBUS.MAKH)}'");
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        [Obsolete]
+        public void KHUpdatePTTToan(string ptttoan)
+        {
+            string query = string.Format("update HOTELADMIN.hoadon " +
+                                        $"set phuongthuctt = '{ptttoan}' " +
+                                        "where mapdp = (select mapdp from HOTELADMIN.phieudatphong " +
+                                                        $"where makh='{PhieuDatPhongBUS.MAKH}' and  " +
+                                                        $"ngaylap = (select max(ngaylap) " +
+                                                                   $"from HOTELADMIN.phieudatphong where makh='{PhieuDatPhongBUS.MAKH}'))");
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
+
     }
 }

@@ -112,6 +112,12 @@
     <Compile Include="GUI\KhachHangGUI\fCapNhatPhieuDatPhong.Designer.cs">
       <DependentUpon>fCapNhatPhieuDatPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\KhachHangGUI\fKiemTraThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhachHangGUI\fKiemTraThanhToan.Designer.cs">
+      <DependentUpon>fKiemTraThanhToan.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\KhachHangGUI\fTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +183,9 @@
     <EmbeddedResource Include="GUI\KhachHangGUI\fCapNhatPhieuDatPhong.resx">
       <DependentUpon>fCapNhatPhieuDatPhong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhachHangGUI\fKiemTraThanhToan.resx">
+      <DependentUpon>fKiemTraThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhachHangGUI\fTaiKhoan.resx">
       <DependentUpon>fTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
@@ -230,10 +239,18 @@
     <Folder Include="DTO\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="GUI\Images\checka.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GUI\Images\ezgif.com-resize.gif" />
     <Content Include="GUI\Images\pencil.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="GUI\Images\profile.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GUI\Images\reset_password.ico" />
+    <Content Include="GUI\Images\success.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

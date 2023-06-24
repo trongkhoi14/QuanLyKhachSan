@@ -19,6 +19,10 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
         {
             InitializeComponent();
             NotiLabel.Text = null;
+            DoiMatKhauBtn.Visible = true;
+            label8.Visible = false;
+            MatKhauTBox.Visible = false;
+            ConfirmDoiMatKhauBtn.Visible = false;
         }
 
         [Obsolete]
@@ -31,11 +35,15 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             EmailTBox.Text = info.Rows[0]["EMAIL"].ToString();
             SoDtTBox.Text = info.Rows[0]["SODT"].ToString();
             SoFaxTBox.Text = info.Rows[0]["SOFAX"].ToString();
+
+            ToolTip myToolTip = new ToolTip();
+            myToolTip.SetToolTip(CapNhatThongTinBtn, "Cập nhật thông tin tài khoản");
+            myToolTip.SetToolTip(DoiMatKhauBtn, "Đổi mật khẩu");
+
         }
 
         private void EditBtn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Hãy thay đổi thông tin bạn muốn chỉnh sửa", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
             HoVaTenTBox.ReadOnly = false;
             NgaySinhPicker.Enabled = true;
             DiaChiTBox.ReadOnly = false;
@@ -43,9 +51,16 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             SoDtTBox.ReadOnly = false;
             SoFaxTBox.ReadOnly = false;
 
+            label8.Visible = false;
+            MatKhauTBox.Visible = false;
+            ConfirmDoiMatKhauBtn.Visible = false;
+            DoiMatKhauBtn.Visible = true;
+            MessageBox.Show("Hãy thay đổi thông tin bạn muốn chỉnh sửa", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
             HoVaTenTBox.Focus();
-            CapNhatBtn.Visible = true;
-            EditBtn.Visible = false;
+            ConfirmCapNhatTTBtn.Visible = true;
+            CapNhatThongTinBtn.Visible = false;
 
         }
 
@@ -71,10 +86,45 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             SoDtTBox.ReadOnly = true;
             SoFaxTBox.ReadOnly = true;
 
-            EditBtn.Focus();
+            CapNhatThongTinBtn.Focus();
+            
+            ConfirmCapNhatTTBtn.Visible = false;
+            CapNhatThongTinBtn.Visible = true;
+        }
 
-            CapNhatBtn.Visible = false;
-            EditBtn.Visible = true;
+        [Obsolete]
+        private async void ConfirmChangeBtn_Click(object sender, EventArgs e)
+        {
+            var newPW = MatKhauTBox.Text;
+            if (TaiKhoanBUS.Instance.KHKiemTraMatKhau(newPW) == 0)
+            {
+                NotiLabel.Visible = true;
+                await Task.Delay(300);
+                NotiLabel.Text = "Vui lòng nhập mật khẩu mới";
+            }
+            else
+            {
+                TaiKhoanBUS.Instance.KHDoiMatKhau(newPW);
+                MessageBox.Show("Đổi mật khẩu thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+                ConfirmDoiMatKhauBtn.Visible = false;
+                DoiMatKhauBtn.Visible = true;
+                //ConfirmCapNhatTTBtn.Visible = false;
+                //CapNhatThongTinBtn.Visible = true;
+            }
+        }
+
+        private void DoiMatKhauBtn_Click(object sender, EventArgs e)
+        {
+            label8.Visible = true;
+            MatKhauTBox.Visible = true;
+            MatKhauTBox.Focus();
+            ConfirmDoiMatKhauBtn.Visible = true;
+            DoiMatKhauBtn.Visible = false;
+            ConfirmCapNhatTTBtn.Visible = false;
+            CapNhatThongTinBtn.Visible = true;
+
+
         }
     }
 }

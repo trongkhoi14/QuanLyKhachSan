@@ -89,7 +89,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             // 
             // SoNgTrongDoanTBox
             // 
-            this.SoNgTrongDoanTBox.Location = new System.Drawing.Point(166, 267);
+            this.SoNgTrongDoanTBox.Location = new System.Drawing.Point(166, 281);
             this.SoNgTrongDoanTBox.Name = "SoNgTrongDoanTBox";
             this.SoNgTrongDoanTBox.Size = new System.Drawing.Size(100, 22);
             this.SoNgTrongDoanTBox.TabIndex = 86;
@@ -104,7 +104,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(28, 270);
+            this.label10.Location = new System.Drawing.Point(28, 284);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(127, 16);
             this.label10.TabIndex = 79;
@@ -169,7 +169,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.MistyRose;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(28, 306);
+            this.label1.Location = new System.Drawing.Point(28, 315);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(247, 16);
             this.label1.TabIndex = 93;
