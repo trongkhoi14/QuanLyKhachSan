@@ -151,5 +151,11 @@ namespace QuanLyKhachSan.DAO
                                         $"where mapdp = '{PhieuDatPhongBUS.Instance.KHLayMaPDPGanNhat(PhieuDatPhongBUS.MAKH)}'");
             DataProvider.Instance.ExecuteNonQuery(query);
         }
+        [Obsolete]
+        public void KHDeletePDP(string maPDP)
+        {
+            string query = string.Format($"delete from HOTELADMIN.phieudatphong where mapdp='{maPDP}'");
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
     }
 }

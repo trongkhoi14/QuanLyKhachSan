@@ -209,11 +209,16 @@ namespace QuanLyKhachSan.BUS
         public bool KHCheckDaCoc()
         {
             var temp = PhieuDatPhongBUS.Instance.KHLayPDP(PhieuDatPhongBUS.Instance.KHLayMaPDPGanNhat(PhieuDatPhongBUS.MAKH));
-            if (temp.Rows[0]["TINHTRANG"] == "Da coc")
+            if (String.Equals((string)temp.Rows[0]["TINHTRANG"], "Da coc", StringComparison.OrdinalIgnoreCase))
             {
                 return true;
             }
             return false;
+        }
+        [Obsolete]
+        public void KHDeletePDP(string maPDP)
+        {
+            PhieuDatPhongDAO.Instance.KHDeletePDP(maPDP);
         }
     }
 }

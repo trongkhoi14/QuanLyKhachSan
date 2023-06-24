@@ -35,6 +35,12 @@ namespace QuanLyKhachSan.DAO
                                         $"where ct.mapdp='{maPDP}'");
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        [Obsolete]
+        public void KHDeleteCtPDP(string maPDP)
+        {
+            string query = string.Format($"delete from HOTELADMIN.ct_phieudatphong where mapdp='{maPDP}'");
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
       
     }
 }

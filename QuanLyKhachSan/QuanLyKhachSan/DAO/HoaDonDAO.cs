@@ -66,6 +66,11 @@ namespace QuanLyKhachSan.DAO
                                                                    $"from HOTELADMIN.phieudatphong where makh='{PhieuDatPhongBUS.MAKH}'))");
             DataProvider.Instance.ExecuteNonQuery(query);
         }
-
+        [Obsolete]
+        public void KHDeleteInvoice(string maPDP)
+        {
+            string query = string.Format($"delete from HOTELADMIN.hoadon where mapdp='{maPDP}'");
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
     }
 }

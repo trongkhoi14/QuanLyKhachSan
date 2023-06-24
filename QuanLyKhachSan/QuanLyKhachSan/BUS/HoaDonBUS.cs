@@ -81,5 +81,10 @@ namespace QuanLyKhachSan.BUS
         {
             HoaDonDAO.Instance.KHUpdatePTTToan(ptttoan);
         }
+        [Obsolete]
+        public void KHDeleteInvoice(string maPDP)
+        {
+            HoaDonDAO.Instance.KHDeleteInvoice(maPDP);
+        }
     }
 }

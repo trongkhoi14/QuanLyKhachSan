@@ -22,5 +22,10 @@ namespace QuanLyKhachSan.BUS
         {
             CTPhieuDatPhongDAO.Instance.KHThemCTPhieuDatPhong(MAPDP, MAPHONG);
         }
+        [Obsolete]
+        public void KHDeleteCtPDP(string maPDP)
+        {
+            CTPhieuDatPhongDAO.Instance.KHDeleteCtPDP(maPDP);
+        }
     }
 }
