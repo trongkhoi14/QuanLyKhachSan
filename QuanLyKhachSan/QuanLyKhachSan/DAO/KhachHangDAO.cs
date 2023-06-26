@@ -33,6 +33,23 @@ namespace QuanLyKhachSan.DAO
                                         "AND DIACHI = '{2}'", tenkh, ngaysinh, diachi);
             return DataProvider.Instance.ExecuteQuery(query);
         }
-        public DataTable LTThemKhachHang(string makh, string tenkh)
+        [Obsolete]
+        public int LTThemKhachHang(string makh, string tenkh, string ngaysinh, string diachi, string email, string sodt, string sofax)
+        {
+            string query = string.Format("INSERT INTO HOTELADMIN.KHACHHANG (MAKH, TENKH, NGAYSINH, DIACHI, EMAIL, SODT, SOFAX) " +
+                "VALUES('{0}', '{1}', TO_DATE('{2}', 'DD/MM/YYYY'), " +
+                "'{3}', '{4}', '{5}', '{6}')",makh, tenkh, ngaysinh, diachi, email, sodt, sofax);
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        [Obsolete]
+        public int LTCapNhatKhachHang(string makh, string email, string sodt, string sofax)
+        {
+            string query = string.Format("UPDATE HOTELADMIN.KHACHHANG " +
+                                         "SET EMAIL = '{0}', " +
+                                         "SODT = '{1}', " +
+                                         "SOFAX = '{2}' " +
+                                         "WHERE MAKH = '{3}'", email, sodt, sofax, makh);
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
     }
 }

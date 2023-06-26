@@ -376,6 +376,7 @@
             this.btnCapNhatKH.TabIndex = 8;
             this.btnCapNhatKH.Text = "Cập nhật";
             this.btnCapNhatKH.UseVisualStyleBackColor = true;
+            this.btnCapNhatKH.Click += new System.EventHandler(this.btnCapNhatKH_Click);
             // 
             // button2
             // 

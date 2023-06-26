@@ -33,5 +33,38 @@ namespace QuanLyKhachSan.BUS
             }
             return true;
         }
+
+        [Obsolete]
+        public bool LTThemKhachHang(string tenkh, string ngaysinh, string diachi, string email, string sodt, string sofax)
+        {
+            //Lấy ds khách hàng
+            DataTable dsKhachHang = KhachHangDAO.Instance.LTLayDanhSach();
+            //Tạo mã khách hàng
+            int soKH = dsKhachHang.Rows.Count;
+            soKH = soKH + 1;
+            string maKH = $"KH00{soKH}";
+            try
+            {
+                int r = KhachHangDAO.Instance.LTThemKhachHang(maKH, tenkh, ngaysinh, diachi, email, sodt, sofax);
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            return true;
+        }
+        [Obsolete]
+        public bool LTCapNhatKhachHang(string makh, string email, string sodt, string sofax)
+        {
+            try
+            {
+                int r = KhachHangDAO.Instance.LTCapNhatKhachHang(makh, email, sodt, sofax);
+            }
+            catch(Exception)
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }

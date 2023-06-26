@@ -51,6 +51,10 @@ namespace QuanLyKhachSan.GUI.LeTanGUI
 
             dsKhachHang.DataSource = KhachHangBUS.Instance.LTLayDanhSachKhachHang();
 
+            AddBingding();
+        }
+        void AddBingding()
+        {
             txbMaKH.DataBindings.Add(new Binding("Text", dtgvDSKhachHang.DataSource, "MAKH", true, DataSourceUpdateMode.Never));
             txbHoTen.DataBindings.Add(new Binding("Text", dtgvDSKhachHang.DataSource, "TENKH", true, DataSourceUpdateMode.Never));
             txbNgaySinh.DataBindings.Add(new Binding("Text", dtgvDSKhachHang.DataSource, "NGAYSINH", true, DataSourceUpdateMode.Never, "", "dd/MM/yyyy"));
@@ -59,7 +63,16 @@ namespace QuanLyKhachSan.GUI.LeTanGUI
             txbSDT.DataBindings.Add(new Binding("Text", dtgvDSKhachHang.DataSource, "SODT", true, DataSourceUpdateMode.Never));
             txbSoFax.DataBindings.Add(new Binding("Text", dtgvDSKhachHang.DataSource, "SOFAX", true, DataSourceUpdateMode.Never));
         }
-
+        void ClearBinding()
+        {
+            txbMaKH.DataBindings.Clear();
+            txbHoTen.DataBindings.Clear();
+            txbNgaySinh.DataBindings.Clear();
+            txbDiaChi.DataBindings.Clear();
+            txbEmail.DataBindings.Clear();
+            txbSDT.DataBindings.Clear();
+            txbSoFax.DataBindings.Clear();
+        }
        
         #endregion
 
@@ -69,10 +82,6 @@ namespace QuanLyKhachSan.GUI.LeTanGUI
         {
             this.Close();
         }
-
-
-
-        #endregion
 
         private void btnTaoMoi_Click(object sender, EventArgs e)
         {
@@ -89,20 +98,70 @@ namespace QuanLyKhachSan.GUI.LeTanGUI
         private void btnThemKH_Click(object sender, EventArgs e)
         {
             //Kiểm tra đã điền đầy đủ thông tin hay chưa
-            if(txbHoTen.Text == "" || txbNgaySinh.Text == "" || txbDiaChi.Text == "")
+            if (txbHoTen.Text == "" || txbNgaySinh.Text == "" || txbDiaChi.Text == "")
             {
                 MessageBox.Show("Vui long điền đầy đủ thông tin bắc buộc");
-            }    
-            //Kiểm tra khách hàng này đã tồn tại hay chưa
-            if(KhachHangBUS.Instance.KiemTraTonTai(txbHoTen.Text, txbNgaySinh.Text, txbDiaChi.Text))
-            {
-                MessageBox.Show("Khách hàng đã tồn tại");
             }
             else
             {
+                //Kiểm tra khách hàng này đã tồn tại hay chưa
+                if (KhachHangBUS.Instance.KiemTraTonTai(txbHoTen.Text, txbNgaySinh.Text, txbDiaChi.Text))
+                {
+                    MessageBox.Show("Khách hàng đã tồn tại");
+                }
+                else
+                {
+                    if (KhachHangBUS.Instance.LTThemKhachHang(txbHoTen.Text, txbNgaySinh.Text, txbDiaChi.Text, txbEmail.Text,
+                        txbSDT.Text, txbSoFax.Text))
+                    {
+                        MessageBox.Show("Thêm thành công");
+                        ClearBinding();
+                        HienThiDSKhachHang();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thêm thất bại");
+                    }
 
-                MessageBox.Show("Thêm thành công");
-            } 
+                }
+            }
+
         }
+
+        [Obsolete]
+        private void btnCapNhatKH_Click(object sender, EventArgs e)
+        {
+            //Kiểm tra đã điền đầy đủ thông tin hay chưa
+            if (txbHoTen.Text == "" || txbNgaySinh.Text == "" || txbDiaChi.Text == "")
+            {
+                MessageBox.Show("Vui long điền đầy đủ thông tin bắc buộc");
+            }
+            else
+            {
+                //Kiểm tra khách hàng này đã tồn tại hay chưa
+                if (KhachHangBUS.Instance.KiemTraTonTai(txbHoTen.Text, txbNgaySinh.Text, txbDiaChi.Text))
+                {
+                    //Nếu tồn tại thì cập nhật
+                    if (KhachHangBUS.Instance.LTCapNhatKhachHang(txbMaKH.Text, txbEmail.Text, txbSDT.Text, txbSoFax.Text))
+                    {
+                        MessageBox.Show("Cập nhật thành công");
+                        ClearBinding();
+                        HienThiDSKhachHang();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cập nhật thất bại");
+                    }
+                   
+                }
+                else
+                {
+                    MessageBox.Show("Khách hàng không tồn tại");
+                }
+            }
+        }
+        #endregion
+
+
     }
 }
