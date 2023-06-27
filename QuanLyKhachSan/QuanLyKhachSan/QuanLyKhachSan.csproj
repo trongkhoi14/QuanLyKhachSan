@@ -73,6 +73,7 @@
     <Compile Include="BUS\CTPhieuDatPhongBUS.cs" />
     <Compile Include="BUS\CTPhieuNhanPhongBUS.cs" />
     <Compile Include="BUS\DichVuBUS.cs" />
+    <Compile Include="BUS\HoaDonBUS.cs" />
     <Compile Include="BUS\KhachHangBUS.cs" />
     <Compile Include="BUS\PDGTinhTrangPhongBUS.cs" />
     <Compile Include="BUS\PhieuDatPhongBUS.cs" />
@@ -84,6 +85,7 @@
     <Compile Include="DAO\CTPhieuNhanPhongDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\DichVuDAO.cs" />
+    <Compile Include="DAO\HoaDonDAO.cs" />
     <Compile Include="DAO\KhachHangDAO.cs" />
     <Compile Include="DAO\NhanVienDAO.cs" />
     <Compile Include="DAO\PDGTinhTrangPhongDAO.cs" />
@@ -134,6 +136,12 @@
     <Compile Include="GUI\LeTanGUI\CheckInGUI.Designer.cs">
       <DependentUpon>CheckInGUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\LeTanGUI\CheckOutGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LeTanGUI\CheckOutGUI.Designer.cs">
+      <DependentUpon>CheckOutGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\LeTanGUI\DKThongTinLuuTruGUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\LeTanGUI\CheckInGUI.resx">
       <DependentUpon>CheckInGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LeTanGUI\CheckOutGUI.resx">
+      <DependentUpon>CheckOutGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\LeTanGUI\DKThongTinLuuTruGUI.resx">
       <DependentUpon>DKThongTinLuuTruGUI.cs</DependentUpon>

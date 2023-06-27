@@ -30,5 +30,14 @@ namespace QuanLyKhachSan.BUS
             
             return PhongDAO.Instance.KHLayDSTheoPDP(MaPDP);
         }
+        //checkout
+        public DataTable PhongTraCuuCK(string MaPhong)
+        {
+            return PhongDAO.Instance.PhongTraCuuCK(MaPhong);
+        }
+        public DataTable PhongCapNhatCK(string MaPhong, string TrangThai)
+        {
+            return PhongDAO.Instance.PhongCapNhatCK(MaPhong, TrangThai);
+        }
     }
 }
