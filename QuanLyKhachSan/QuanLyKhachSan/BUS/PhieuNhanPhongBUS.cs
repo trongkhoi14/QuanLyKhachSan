@@ -40,8 +40,16 @@ namespace QuanLyKhachSan.BUS
         [Obsolete]
         public string LTLayMaPNP(string maPDP)
         {
-            DataTable pnp = PhieuNhanPhongDAO.Instance.LTLayPNP(maPDP);
-            return pnp.Rows[0]["MAPNP"].ToString();
+            try
+            {
+                DataTable pnp = PhieuNhanPhongDAO.Instance.LTLayPNP(maPDP);
+                return pnp.Rows[0]["MAPNP"].ToString();
+            }
+            catch (Exception)
+            {
+                return "";
+            }
+            
         }
     }
 }

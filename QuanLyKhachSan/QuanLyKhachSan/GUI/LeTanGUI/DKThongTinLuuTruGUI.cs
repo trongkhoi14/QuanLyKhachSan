@@ -160,6 +160,53 @@ namespace QuanLyKhachSan.GUI.LeTanGUI
                 }
             }
         }
+
+        [Obsolete]
+        private void btnDangKyLuuTru_Click(object sender, EventArgs e)
+        {
+            //Kiểm tra đã tồn tại chưa
+            if(CTPhieuNhanPhongBUS.Instance.LTKiemTraDaTonTai(maPNP, txbMaKH.Text))
+            {
+                MessageBox.Show("Khách hàng đã được đăng ký");
+            }
+            else
+            {
+                if(CTPhieuNhanPhongBUS.Instance.LTThemCTPhieuNhanPhong(maPNP, txbMaKH.Text))
+                {
+                    MessageBox.Show("Đăng ký lưu trú thành công");
+                    HienThiDSLuuTru(maPNP);
+                }
+                else
+                {
+                    MessageBox.Show("Đăng ký lưu trú thất bại");
+                }
+                
+            }
+
+        }
+
+        [Obsolete]
+        private void btnHuyDangKyLuuTru_Click(object sender, EventArgs e)
+        {
+            //Kiểm tra đã được đăng ký chưa
+            if(CTPhieuNhanPhongBUS.Instance.LTKiemTraDaTonTai(maPNP, txbMaKH.Text))
+            {
+                //Nếu đã đăng ký thì mới hủy được
+                if(CTPhieuNhanPhongBUS.Instance.LTXoaCTPhieuNhanPhong(maPNP, txbMaKH.Text))
+                {
+                    MessageBox.Show("Hủy đăng ký lưu trú thành công");
+                    HienThiDSLuuTru(maPNP);
+                }
+                else
+                {
+                    MessageBox.Show("Hủy đăng ký lưu trú thất bại");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Khách hàng chưa được đăng ký lưu trú");
+            }
+        }
         #endregion
 
 

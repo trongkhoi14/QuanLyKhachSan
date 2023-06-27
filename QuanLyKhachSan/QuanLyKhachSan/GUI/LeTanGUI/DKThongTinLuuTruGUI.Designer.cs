@@ -53,12 +53,11 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.btnTroLai = new System.Windows.Forms.Button();
-            this.btnHoanTat = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnThemKH = new System.Windows.Forms.Button();
             this.btnTaoMoi = new System.Windows.Forms.Button();
             this.btnCapNhatKH = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnHuyDangKyLuuTru = new System.Windows.Forms.Button();
             this.btnDangKyLuuTru = new System.Windows.Forms.Button();
             this.btnCapNhatKhachHang = new System.Windows.Forms.Button();
             this.btnThemKhachHang = new System.Windows.Forms.Button();
@@ -276,7 +275,6 @@
             this.panel14.Controls.Add(this.label15);
             this.panel14.Controls.Add(this.label16);
             this.panel14.Controls.Add(this.btnTroLai);
-            this.panel14.Controls.Add(this.btnHoanTat);
             this.panel14.Location = new System.Drawing.Point(821, 648);
             this.panel14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel14.Name = "panel14";
@@ -305,7 +303,7 @@
             // 
             // btnTroLai
             // 
-            this.btnTroLai.Location = new System.Drawing.Point(239, 11);
+            this.btnTroLai.Location = new System.Drawing.Point(349, 11);
             this.btnTroLai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTroLai.Name = "btnTroLai";
             this.btnTroLai.Size = new System.Drawing.Size(100, 28);
@@ -314,22 +312,12 @@
             this.btnTroLai.UseVisualStyleBackColor = true;
             this.btnTroLai.Click += new System.EventHandler(this.btnTroLai_Click);
             // 
-            // btnHoanTat
-            // 
-            this.btnHoanTat.Location = new System.Drawing.Point(345, 11);
-            this.btnHoanTat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnHoanTat.Name = "btnHoanTat";
-            this.btnHoanTat.Size = new System.Drawing.Size(100, 28);
-            this.btnHoanTat.TabIndex = 3;
-            this.btnHoanTat.Text = "Hoàn tất";
-            this.btnHoanTat.UseVisualStyleBackColor = true;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.btnThemKH);
             this.panel2.Controls.Add(this.btnTaoMoi);
             this.panel2.Controls.Add(this.btnCapNhatKH);
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.btnHuyDangKyLuuTru);
             this.panel2.Controls.Add(this.btnDangKyLuuTru);
             this.panel2.Controls.Add(this.btnCapNhatKhachHang);
             this.panel2.Controls.Add(this.btnThemKhachHang);
@@ -378,15 +366,16 @@
             this.btnCapNhatKH.UseVisualStyleBackColor = true;
             this.btnCapNhatKH.Click += new System.EventHandler(this.btnCapNhatKH_Click);
             // 
-            // button2
+            // btnHuyDangKyLuuTru
             // 
-            this.button2.Location = new System.Drawing.Point(137, 305);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(153, 28);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Hủy đăng ký";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnHuyDangKyLuuTru.Location = new System.Drawing.Point(137, 305);
+            this.btnHuyDangKyLuuTru.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnHuyDangKyLuuTru.Name = "btnHuyDangKyLuuTru";
+            this.btnHuyDangKyLuuTru.Size = new System.Drawing.Size(153, 28);
+            this.btnHuyDangKyLuuTru.TabIndex = 7;
+            this.btnHuyDangKyLuuTru.Text = "Hủy đăng ký";
+            this.btnHuyDangKyLuuTru.UseVisualStyleBackColor = true;
+            this.btnHuyDangKyLuuTru.Click += new System.EventHandler(this.btnHuyDangKyLuuTru_Click);
             // 
             // btnDangKyLuuTru
             // 
@@ -397,6 +386,7 @@
             this.btnDangKyLuuTru.TabIndex = 7;
             this.btnDangKyLuuTru.Text = "Đăng ký ";
             this.btnDangKyLuuTru.UseVisualStyleBackColor = true;
+            this.btnDangKyLuuTru.Click += new System.EventHandler(this.btnDangKyLuuTru_Click);
             // 
             // btnCapNhatKhachHang
             // 
@@ -542,7 +532,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button btnTroLai;
-        private System.Windows.Forms.Button btnHoanTat;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dtgvDanhSachDKLuuTru;
@@ -560,6 +549,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dtgvDSKhachHang;
         private System.Windows.Forms.Button btnThemKH;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnHuyDangKyLuuTru;
     }
 }

@@ -20,7 +20,7 @@ namespace QuanLyKhachSan.DAO
         [Obsolete]
         public DataTable LTLayDSTheoPDP(string MaPDP)
         {
-            string query = string.Format("SELECT P.MAPHONG, P.TRANGTHAI, L.HANGPHONG, L.GIAMOTDEM " +
+            string query = string.Format("SELECT P.MAPHONG, P.TRANGTHAI, L.HANGPHONG, L.GIAMOTDEM, L.LOAIGIUONG, L.SUCCHUA " +
                                          "FROM HOTELADMIN.PHONG P " +
                                          "JOIN HOTELADMIN.CT_PHIEUDATPHONG C ON C.MAPHONG = P.MAPHONG " +
                                          "JOIN HOTELADMIN.LOAIPHONG L ON L.MALP = P.LOAIPHONG " +
