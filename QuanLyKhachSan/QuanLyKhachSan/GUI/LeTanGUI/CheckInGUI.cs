@@ -19,7 +19,8 @@ namespace QuanLyKhachSan.GUI.LeTanGUI
         public CheckInGUI()
         {
             InitializeComponent();
-            HienThiDuLieu();
+           
+            
         }
 
 
@@ -110,6 +111,29 @@ namespace QuanLyKhachSan.GUI.LeTanGUI
 
         #region event
         [Obsolete]
+        private void CheckInGUI_Load(object sender, EventArgs e)
+        {
+            HienThiDuLieu();
+
+            foreach (DataGridViewRow row in dtgvDanhSachDP.Rows)
+            {
+                if (row != null && row.Cells["MAPDP"].Value != null)
+                {
+                    string maPNP = PhieuNhanPhongBUS.Instance.LTLayMaPNP(row.Cells["MAPDP"].Value.ToString());
+                    if(maPNP != "")
+                    {
+                        if (CTPhieuNhanPhongBUS.Instance.LTKiemTraDangKyLuuTru(maPNP))
+                        {
+                            // Thay đổi màu của dòng tìm thấy
+                            row.DefaultCellStyle.BackColor = Color.Green;
+                            row.DefaultCellStyle.ForeColor = Color.White;
+                        }
+                    } 
+                }
+            }  
+        }
+
+        [Obsolete]
         private void btnDangKyThongTinLuuTru_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có chắc chắn muốn đăng ký thông tin lưu trú cho phiếu đặt phòng này", "Thông báo", MessageBoxButtons.OKCancel)
@@ -131,7 +155,7 @@ namespace QuanLyKhachSan.GUI.LeTanGUI
             string maPNP = PhieuNhanPhongBUS.Instance.LTLayMaPNP(txbMaPDP.Text);
             if (maPNP != "")
             {
-                //Nếu đã check-in thành công thì đổi màu
+                //Nếu đã check-in thành công khóa các button lại
                 if (CTPhieuNhanPhongBUS.Instance.LTKiemTraDangKyLuuTru(maPNP))
                 {
                     this.btnDangKyThongTinLuuTru.Enabled = false;
@@ -161,67 +185,47 @@ namespace QuanLyKhachSan.GUI.LeTanGUI
         private void btnHoanTat_Click(object sender, EventArgs e)
         {
             string maPNP = PhieuNhanPhongBUS.Instance.LTLayMaPNP(txbMaPDP.Text);
-            if (CTPhieuNhanPhongBUS.Instance.LTKiemTraDangKyLuuTru(maPNP))
+            if(maPNP != "")
             {
-                MessageBox.Show("Check-in thành công");
-                //dtgvDanhSachDP.Rows[0].DefaultCellStyle.BackColor = Color.Yellow;
-                // Duyệt qua tất cả các dòng trong dtgvDanhSachDP
-                foreach (DataGridViewRow row in dtgvDanhSachDP.Rows)
+                if (CTPhieuNhanPhongBUS.Instance.LTKiemTraDangKyLuuTru(maPNP))
                 {
-                    if (row != null && row.Cells["MAPDP"].Value != null)
+                    MessageBox.Show("Check-in thành công");
+                    //dtgvDanhSachDP.Rows[0].DefaultCellStyle.BackColor = Color.Yellow;
+                    // Duyệt qua tất cả các dòng trong dtgvDanhSachDP
+                    foreach (DataGridViewRow row in dtgvDanhSachDP.Rows)
                     {
-                        // Kiểm tra giá trị MaPDP với giá trị của cột tương ứng trong dòng
-                        if (row.Cells["MAPDP"].Value.ToString() == txbMaPDP.Text)
+                        if (row != null && row.Cells["MAPDP"].Value != null)
                         {
-                            // Thay đổi màu của dòng tìm thấy
-                            row.DefaultCellStyle.BackColor = Color.Green;
-                            row.DefaultCellStyle.ForeColor = Color.White;
+                            // Kiểm tra giá trị MaPDP với giá trị của cột tương ứng trong dòng
+                            if (row.Cells["MAPDP"].Value.ToString() == txbMaPDP.Text)
+                            {
+                                // Thay đổi màu của dòng tìm thấy
+                                row.DefaultCellStyle.BackColor = Color.Yellow;
+                                row.DefaultCellStyle.ForeColor = Color.Black;
+                            }
                         }
-                    }
 
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Bạn chưa hoàn thành đăng ký lưu trú cho khách hàng");
                 }
             }
             else
             {
                 MessageBox.Show("Bạn chưa hoàn thành đăng ký lưu trú cho khách hàng");
             }
-        }
-
-
-        [Obsolete]
-        private void dtgvDanhSachDP_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            
-            
-            // Kiểm tra nếu đang xử lý các dòng dữ liệu
-            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
-            {
-                if (dtgvDanhSachDP.Rows[e.RowIndex].Cells["MAPDP"].Value != null)
-                {
-                    //Đối với mỗi dòng, kiểm tra xem đã check-in thành công chưa
-                    string maPNP = PhieuNhanPhongBUS.Instance.LTLayMaPNP(dtgvDanhSachDP.Rows[e.RowIndex].Cells["MAPDP"].Value.ToString());
-                    if (maPNP != "")
-                    {
-                        //Nếu đã check-in thành công thì đổi màu
-                        if (CTPhieuNhanPhongBUS.Instance.LTKiemTraDangKyLuuTru(maPNP))
-                        {
-                            // Thay đổi màu sắc cho dòng đã check-in
-                            dtgvDanhSachDP.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Green;
-                            dtgvDanhSachDP.Rows[e.RowIndex].DefaultCellStyle.ForeColor = Color.White;
-                        }
-
-                    }
-                }
-            }
-            
-           
 
         }
+
+
+        
 
 
 
         #endregion
 
-     
+       
     }
 }

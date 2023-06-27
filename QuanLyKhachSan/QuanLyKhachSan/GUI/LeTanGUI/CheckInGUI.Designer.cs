@@ -40,9 +40,23 @@
             this.txbHoTen = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lvDichVu = new System.Windows.Forms.ListView();
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label14 = new System.Windows.Forms.Label();
             this.txbDiaChi = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lvPhong = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label13 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
@@ -71,20 +85,6 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.dtgvDanhSachDP = new System.Windows.Forms.DataGridView();
-            this.lvPhong = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lvDichVu = new System.Windows.Forms.ListView();
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel13.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -212,6 +212,55 @@
             this.panel4.Size = new System.Drawing.Size(804, 210);
             this.panel4.TabIndex = 2;
             // 
+            // lvDichVu
+            // 
+            this.lvDichVu.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader9,
+            this.columnHeader10,
+            this.columnHeader11,
+            this.columnHeader12});
+            this.lvDichVu.GridLines = true;
+            this.lvDichVu.HideSelection = false;
+            this.lvDichVu.Location = new System.Drawing.Point(2, 37);
+            this.lvDichVu.Margin = new System.Windows.Forms.Padding(4);
+            this.lvDichVu.Name = "lvDichVu";
+            this.lvDichVu.Size = new System.Drawing.Size(798, 167);
+            this.lvDichVu.TabIndex = 6;
+            this.lvDichVu.UseCompatibleStateImageBehavior = false;
+            this.lvDichVu.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Tên dịch vụ";
+            this.columnHeader7.Width = 95;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Số lượng";
+            this.columnHeader8.Width = 95;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Đơn vị tính";
+            this.columnHeader9.Width = 95;
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "Lịch sử dụng";
+            this.columnHeader10.Width = 95;
+            // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Text = "Ghi chú";
+            this.columnHeader11.Width = 95;
+            // 
+            // columnHeader12
+            // 
+            this.columnHeader12.Text = "Giá dịch vụ";
+            this.columnHeader12.Width = 95;
+            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -238,6 +287,55 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(807, 210);
             this.panel3.TabIndex = 1;
+            // 
+            // lvPhong
+            // 
+            this.lvPhong.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6});
+            this.lvPhong.GridLines = true;
+            this.lvPhong.HideSelection = false;
+            this.lvPhong.Location = new System.Drawing.Point(1, 35);
+            this.lvPhong.Margin = new System.Windows.Forms.Padding(4);
+            this.lvPhong.Name = "lvPhong";
+            this.lvPhong.Size = new System.Drawing.Size(798, 167);
+            this.lvPhong.TabIndex = 5;
+            this.lvPhong.UseCompatibleStateImageBehavior = false;
+            this.lvPhong.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Mã phòng";
+            this.columnHeader1.Width = 95;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Trạng thái";
+            this.columnHeader2.Width = 95;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Hạng phòng";
+            this.columnHeader3.Width = 95;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Giá một đêm";
+            this.columnHeader4.Width = 95;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Loại giường";
+            this.columnHeader5.Width = 95;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Sức chứa";
+            this.columnHeader6.Width = 95;
             // 
             // label13
             // 
@@ -510,105 +608,7 @@
             this.dtgvDanhSachDP.RowTemplate.Height = 24;
             this.dtgvDanhSachDP.Size = new System.Drawing.Size(1285, 175);
             this.dtgvDanhSachDP.TabIndex = 4;
-            this.dtgvDanhSachDP.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dtgvDanhSachDP_CellFormatting);
-            // 
-            // lvPhong
-            // 
-            this.lvPhong.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6});
-            this.lvPhong.GridLines = true;
-            this.lvPhong.HideSelection = false;
-            this.lvPhong.Location = new System.Drawing.Point(1, 35);
-            this.lvPhong.Margin = new System.Windows.Forms.Padding(4);
-            this.lvPhong.Name = "lvPhong";
-            this.lvPhong.Size = new System.Drawing.Size(798, 167);
-            this.lvPhong.TabIndex = 5;
-            this.lvPhong.UseCompatibleStateImageBehavior = false;
-            this.lvPhong.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Mã phòng";
-            this.columnHeader1.Width = 95;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Trạng thái";
-            this.columnHeader2.Width = 95;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Hạng phòng";
-            this.columnHeader3.Width = 95;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Giá một đêm";
-            this.columnHeader4.Width = 95;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Loại giường";
-            this.columnHeader5.Width = 95;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Sức chứa";
-            this.columnHeader6.Width = 95;
-            // 
-            // lvDichVu
-            // 
-            this.lvDichVu.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader9,
-            this.columnHeader10,
-            this.columnHeader11,
-            this.columnHeader12});
-            this.lvDichVu.GridLines = true;
-            this.lvDichVu.HideSelection = false;
-            this.lvDichVu.Location = new System.Drawing.Point(2, 37);
-            this.lvDichVu.Margin = new System.Windows.Forms.Padding(4);
-            this.lvDichVu.Name = "lvDichVu";
-            this.lvDichVu.Size = new System.Drawing.Size(798, 167);
-            this.lvDichVu.TabIndex = 6;
-            this.lvDichVu.UseCompatibleStateImageBehavior = false;
-            this.lvDichVu.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Tên dịch vụ";
-            this.columnHeader7.Width = 95;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Số lượng";
-            this.columnHeader8.Width = 95;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Đơn vị tính";
-            this.columnHeader9.Width = 95;
-            // 
-            // columnHeader10
-            // 
-            this.columnHeader10.Text = "Lịch sử dụng";
-            this.columnHeader10.Width = 95;
-            // 
-            // columnHeader11
-            // 
-            this.columnHeader11.Text = "Ghi chú";
-            this.columnHeader11.Width = 95;
-            // 
-            // columnHeader12
-            // 
-            this.columnHeader12.Text = "Giá dịch vụ";
-            this.columnHeader12.Width = 95;
+           
             // 
             // CheckInGUI
             // 
@@ -622,6 +622,7 @@
             this.Name = "CheckInGUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CheckInGUI";
+            this.Load += new System.EventHandler(this.CheckInGUI_Load);
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
             this.panel4.ResumeLayout(false);
