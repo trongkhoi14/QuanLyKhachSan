@@ -16,7 +16,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
         {
             InitializeComponent();
         }
-        private void active_form(Form f)
+        public void active_form(Form f)
         {
             panel.Controls.Clear();
             f.TopLevel = false;
@@ -37,13 +37,26 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
 
         private void DoiMatKhauBtn_Click(object sender, EventArgs e)
         {
-
+            var tk = new fTaiKhoan();
+            active_form(tk);
         }
 
         private void ThongTinPhongDaDatBtn_Click(object sender, EventArgs e)
         {
             var pdp = new fThongTinDatPhong();
             active_form(pdp);
+        }
+
+        private void ThanhToanBtn_Click(object sender, EventArgs e)
+        {
+            var thanhtoan = new fThanhToan();
+            active_form(thanhtoan);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var capnhat = new fCapNhatPhieuDatPhong();
+            active_form(capnhat);
         }
     }
 }

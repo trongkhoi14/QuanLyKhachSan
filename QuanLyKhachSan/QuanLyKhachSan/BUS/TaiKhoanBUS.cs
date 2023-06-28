@@ -49,7 +49,19 @@ namespace QuanLyKhachSan.BUS
             }    
             return "";
         }
-
+        public int KHKiemTraMatKhau(string  matKhau)
+        {
+            if (matKhau == null)
+            {
+                return 0;
+            }
+            return 1;
+        }
+        [Obsolete]
+        public void KHDoiMatKhau(string matKhau)
+        {
+            TaiKhoanDAO.Instance.KHChangePassword(matKhau);
+        }
         #endregion
     }
 }

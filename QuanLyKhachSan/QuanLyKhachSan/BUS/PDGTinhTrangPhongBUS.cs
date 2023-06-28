@@ -27,6 +27,10 @@ namespace QuanLyKhachSan.BUS
         {
             var code = PDGTinhTrangPhongDAO.Instance.BPGetPDGCodeFromDB();
             int count = Convert.ToInt32(code.Rows[0][0]);
+            if (count < 10)
+            {
+                return $"PDG00{count + 1}";
+            }
 
             return $"PDG0{count+1}";
         }

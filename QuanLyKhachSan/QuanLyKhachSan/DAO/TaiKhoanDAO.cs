@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyKhachSan.BUS;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,12 @@ namespace QuanLyKhachSan.DAO
             set => instance = value;
         }
         private TaiKhoanDAO() { }
-       
 
+        [Obsolete]
+        public void KHChangePassword(string password)
+        {
+            string query = $"ALTER USER {PhieuDatPhongBUS.MAKH} IDENTIFIED BY {password}";
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
     }
 }

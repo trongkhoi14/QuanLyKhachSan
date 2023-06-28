@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,23 @@ namespace QuanLyKhachSan.DAO
             string query = string.Format($"insert into HOTELADMIN.ct_phieudatphong values('{MAPDP}','{MAPHONG}')");
             DataProvider.Instance.ExecuteNonQuery(query);
             return true;
+        }
+
+        [Obsolete]
+        public DataTable KHRetrieveRentalFee(string maPDP)
+        {
+            string query = string.Format($"select lp.giamotdem " +
+                                        $"from HOTELADMIN.ct_phieudatphong ct " +
+                                        $"join phong p on ct.maphong = p.maphong " +
+                                        $"join loaiphong lp on p.loaiphong = lp.malp " +
+                                        $"where ct.mapdp='{maPDP}'");
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        [Obsolete]
+        public void KHDeleteCtPDP(string maPDP)
+        {
+            string query = string.Format($"delete from HOTELADMIN.ct_phieudatphong where mapdp='{maPDP}'");
+            DataProvider.Instance.ExecuteNonQuery(query);
         }
       
     }

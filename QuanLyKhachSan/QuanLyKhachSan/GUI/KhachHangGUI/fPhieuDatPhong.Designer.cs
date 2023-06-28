@@ -43,13 +43,15 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             this.DsPhongDataGridView = new System.Windows.Forms.DataGridView();
             this.NotiLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.PhuongThucThanhToanComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.DsPhongDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // HoanThanhBtn
             // 
             this.HoanThanhBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.HoanThanhBtn.Location = new System.Drawing.Point(895, 483);
+            this.HoanThanhBtn.Location = new System.Drawing.Point(959, 502);
             this.HoanThanhBtn.Name = "HoanThanhBtn";
             this.HoanThanhBtn.Size = new System.Drawing.Size(107, 29);
             this.HoanThanhBtn.TabIndex = 90;
@@ -61,7 +63,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(352, 83);
+            this.label12.Location = new System.Drawing.Point(436, 80);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(270, 25);
             this.label12.TabIndex = 89;
@@ -72,7 +74,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label11.Location = new System.Drawing.Point(235, 18);
+            this.label11.Location = new System.Drawing.Point(393, 9);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(249, 36);
             this.label11.TabIndex = 88;
@@ -87,7 +89,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             // 
             // SoNgTrongDoanTBox
             // 
-            this.SoNgTrongDoanTBox.Location = new System.Drawing.Point(166, 233);
+            this.SoNgTrongDoanTBox.Location = new System.Drawing.Point(166, 281);
             this.SoNgTrongDoanTBox.Name = "SoNgTrongDoanTBox";
             this.SoNgTrongDoanTBox.Size = new System.Drawing.Size(100, 22);
             this.SoNgTrongDoanTBox.TabIndex = 86;
@@ -102,7 +104,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(28, 236);
+            this.label10.Location = new System.Drawing.Point(28, 284);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(127, 16);
             this.label10.TabIndex = 79;
@@ -112,7 +114,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             // 
             this.doanCheckBox.AutoSize = true;
             this.doanCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.doanCheckBox.Location = new System.Drawing.Point(31, 213);
+            this.doanCheckBox.Location = new System.Drawing.Point(31, 247);
             this.doanCheckBox.Name = "doanCheckBox";
             this.doanCheckBox.Size = new System.Drawing.Size(116, 20);
             this.doanCheckBox.TabIndex = 78;
@@ -142,21 +144,21 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             // 
             this.DsPhongDataGridView.AllowUserToAddRows = false;
             this.DsPhongDataGridView.AllowUserToDeleteRows = false;
-            this.DsPhongDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.DsPhongDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.DsPhongDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DsPhongDataGridView.Location = new System.Drawing.Point(357, 111);
+            this.DsPhongDataGridView.Location = new System.Drawing.Point(441, 111);
             this.DsPhongDataGridView.Name = "DsPhongDataGridView";
             this.DsPhongDataGridView.RowHeadersWidth = 51;
             this.DsPhongDataGridView.RowTemplate.Height = 24;
             this.DsPhongDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DsPhongDataGridView.Size = new System.Drawing.Size(645, 315);
+            this.DsPhongDataGridView.Size = new System.Drawing.Size(625, 367);
             this.DsPhongDataGridView.TabIndex = 91;
             // 
             // NotiLabel
             // 
             this.NotiLabel.AutoSize = true;
             this.NotiLabel.ForeColor = System.Drawing.Color.Red;
-            this.NotiLabel.Location = new System.Drawing.Point(354, 489);
+            this.NotiLabel.Location = new System.Drawing.Point(438, 508);
             this.NotiLabel.Name = "NotiLabel";
             this.NotiLabel.Size = new System.Drawing.Size(31, 16);
             this.NotiLabel.TabIndex = 92;
@@ -167,17 +169,41 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.MistyRose;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(28, 272);
+            this.label1.Location = new System.Drawing.Point(28, 315);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(247, 16);
             this.label1.TabIndex = 93;
             this.label1.Text = "Lưu ý: số người trong đoàn phải lớn hơn 1";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(28, 183);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(144, 16);
+            this.label2.TabIndex = 94;
+            this.label2.Text = "Phương thức thanh toán";
+            // 
+            // PhuongThucThanhToanComboBox
+            // 
+            this.PhuongThucThanhToanComboBox.FormattingEnabled = true;
+            this.PhuongThucThanhToanComboBox.Items.AddRange(new object[] {
+            "Tiền mặt",
+            "Thẻ tín dụng",
+            "Chuyển khoản"});
+            this.PhuongThucThanhToanComboBox.Location = new System.Drawing.Point(190, 180);
+            this.PhuongThucThanhToanComboBox.Name = "PhuongThucThanhToanComboBox";
+            this.PhuongThucThanhToanComboBox.Size = new System.Drawing.Size(121, 24);
+            this.PhuongThucThanhToanComboBox.TabIndex = 95;
+            // 
             // fPhieuDatPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1034, 537);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1093, 549);
+            this.Controls.Add(this.PhuongThucThanhToanComboBox);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.NotiLabel);
             this.Controls.Add(this.DsPhongDataGridView);
@@ -214,5 +240,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
         private System.Windows.Forms.DataGridView DsPhongDataGridView;
         private System.Windows.Forms.Label NotiLabel;
         private Label label1;
+        private Label label2;
+        private ComboBox PhuongThucThanhToanComboBox;
     }
 }

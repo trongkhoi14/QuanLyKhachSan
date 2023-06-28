@@ -35,6 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.HoanThanhBtn = new System.Windows.Forms.Button();
             this.NotiLabel = new System.Windows.Forms.Label();
+            this.HuongDanTBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label11
@@ -69,7 +70,7 @@
             this.MoTaTBox.Location = new System.Drawing.Point(103, 126);
             this.MoTaTBox.Multiline = true;
             this.MoTaTBox.Name = "MoTaTBox";
-            this.MoTaTBox.Size = new System.Drawing.Size(426, 233);
+            this.MoTaTBox.Size = new System.Drawing.Size(396, 283);
             this.MoTaTBox.TabIndex = 93;
             // 
             // label2
@@ -84,7 +85,7 @@
             // HoanThanhBtn
             // 
             this.HoanThanhBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.HoanThanhBtn.Location = new System.Drawing.Point(677, 409);
+            this.HoanThanhBtn.Location = new System.Drawing.Point(736, 417);
             this.HoanThanhBtn.Name = "HoanThanhBtn";
             this.HoanThanhBtn.Size = new System.Drawing.Size(103, 33);
             this.HoanThanhBtn.TabIndex = 94;
@@ -96,17 +97,29 @@
             // 
             this.NotiLabel.AutoSize = true;
             this.NotiLabel.ForeColor = System.Drawing.Color.Red;
-            this.NotiLabel.Location = new System.Drawing.Point(100, 396);
+            this.NotiLabel.Location = new System.Drawing.Point(100, 425);
             this.NotiLabel.Name = "NotiLabel";
             this.NotiLabel.Size = new System.Drawing.Size(31, 16);
             this.NotiLabel.TabIndex = 95;
             this.NotiLabel.Text = "Noti";
             // 
+            // HuongDanTBox
+            // 
+            this.HuongDanTBox.Font = new System.Drawing.Font("Consolas", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HuongDanTBox.Location = new System.Drawing.Point(533, 126);
+            this.HuongDanTBox.Multiline = true;
+            this.HuongDanTBox.Name = "HuongDanTBox";
+            this.HuongDanTBox.ReadOnly = true;
+            this.HuongDanTBox.Size = new System.Drawing.Size(294, 194);
+            this.HuongDanTBox.TabIndex = 96;
+            // 
             // BuongPhongGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(792, 454);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(861, 481);
+            this.Controls.Add(this.HuongDanTBox);
             this.Controls.Add(this.NotiLabel);
             this.Controls.Add(this.HoanThanhBtn);
             this.Controls.Add(this.MoTaTBox);
@@ -117,6 +130,7 @@
             this.Name = "BuongPhongGUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BuongPhongGUI";
+            this.Load += new System.EventHandler(this.BuongPhongGUI_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -131,5 +145,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button HoanThanhBtn;
         private System.Windows.Forms.Label NotiLabel;
+        private System.Windows.Forms.TextBox HuongDanTBox;
     }
 }

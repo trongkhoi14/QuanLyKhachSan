@@ -120,6 +120,7 @@
             this.txbTenDangNhap.Size = new System.Drawing.Size(417, 22);
             this.txbTenDangNhap.TabIndex = 0;
             this.txbTenDangNhap.Text = "NV001";
+            this.txbTenDangNhap.Text = "KH002";
             // 
             // label5
             // 

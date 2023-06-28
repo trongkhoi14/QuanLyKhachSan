@@ -32,6 +32,8 @@
             this.DoiMatKhauBtn = new System.Windows.Forms.Button();
             this.ThongTinPhongDaDatBtn = new System.Windows.Forms.Button();
             this.panel = new System.Windows.Forms.Panel();
+            this.ThanhToanBtn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // DatPhongBtn
@@ -47,12 +49,14 @@
             // 
             // DoiMatKhauBtn
             // 
-            this.DoiMatKhauBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.DoiMatKhauBtn.BackColor = System.Drawing.Color.White;
+            this.DoiMatKhauBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.DoiMatKhauBtn.FlatAppearance.BorderSize = 2;
             this.DoiMatKhauBtn.Location = new System.Drawing.Point(129, 12);
             this.DoiMatKhauBtn.Name = "DoiMatKhauBtn";
             this.DoiMatKhauBtn.Size = new System.Drawing.Size(111, 33);
             this.DoiMatKhauBtn.TabIndex = 1;
-            this.DoiMatKhauBtn.Text = "Đổi mật khẩu";
+            this.DoiMatKhauBtn.Text = "Tài khoản";
             this.DoiMatKhauBtn.UseVisualStyleBackColor = false;
             this.DoiMatKhauBtn.Click += new System.EventHandler(this.DoiMatKhauBtn_Click);
             // 
@@ -71,14 +75,38 @@
             // 
             this.panel.Location = new System.Drawing.Point(12, 51);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(1053, 542);
+            this.panel.Size = new System.Drawing.Size(1111, 577);
             this.panel.TabIndex = 3;
+            // 
+            // ThanhToanBtn
+            // 
+            this.ThanhToanBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ThanhToanBtn.Location = new System.Drawing.Point(364, 12);
+            this.ThanhToanBtn.Name = "ThanhToanBtn";
+            this.ThanhToanBtn.Size = new System.Drawing.Size(168, 33);
+            this.ThanhToanBtn.TabIndex = 4;
+            this.ThanhToanBtn.Text = "Hướng dẫn thanh toán";
+            this.ThanhToanBtn.UseVisualStyleBackColor = false;
+            this.ThanhToanBtn.Click += new System.EventHandler(this.ThanhToanBtn_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.Location = new System.Drawing.Point(538, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(224, 33);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Cập nhật thông tin đặt phòng";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // KhachHangGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1077, 613);
+            this.ClientSize = new System.Drawing.Size(1135, 640);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.ThanhToanBtn);
             this.Controls.Add(this.panel);
             this.Controls.Add(this.ThongTinPhongDaDatBtn);
             this.Controls.Add(this.DoiMatKhauBtn);
@@ -96,5 +124,7 @@
         private System.Windows.Forms.Button DoiMatKhauBtn;
         private System.Windows.Forms.Button ThongTinPhongDaDatBtn;
         private System.Windows.Forms.Panel panel;
+        private System.Windows.Forms.Button ThanhToanBtn;
+        private System.Windows.Forms.Button button1;
     }
 }

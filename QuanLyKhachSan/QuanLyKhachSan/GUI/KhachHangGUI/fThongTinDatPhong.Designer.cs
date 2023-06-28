@@ -33,6 +33,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             this.ThongTinDatPhongDataGridView = new System.Windows.Forms.DataGridView();
             this.LoaiPhongDaDatDataGridView = new System.Windows.Forms.DataGridView();
             this.label11 = new System.Windows.Forms.Label();
+            this.DaThanhToanBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ThongTinDatPhongDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoaiPhongDaDatDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -43,7 +44,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             this.ThongTinDatPhongDataGridView.AllowUserToDeleteRows = false;
             this.ThongTinDatPhongDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.ThongTinDatPhongDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
-            this.ThongTinDatPhongDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.ThongTinDatPhongDataGridView.BackgroundColor = System.Drawing.Color.White;
             this.ThongTinDatPhongDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ThongTinDatPhongDataGridView.Location = new System.Drawing.Point(12, 94);
             this.ThongTinDatPhongDataGridView.MultiSelect = false;
@@ -52,7 +53,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             this.ThongTinDatPhongDataGridView.RowHeadersWidth = 51;
             this.ThongTinDatPhongDataGridView.RowTemplate.Height = 24;
             this.ThongTinDatPhongDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ThongTinDatPhongDataGridView.Size = new System.Drawing.Size(904, 200);
+            this.ThongTinDatPhongDataGridView.Size = new System.Drawing.Size(904, 173);
             this.ThongTinDatPhongDataGridView.TabIndex = 1;
             // 
             // LoaiPhongDaDatDataGridView
@@ -61,16 +62,16 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             this.LoaiPhongDaDatDataGridView.AllowUserToDeleteRows = false;
             this.LoaiPhongDaDatDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.LoaiPhongDaDatDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
-            this.LoaiPhongDaDatDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.LoaiPhongDaDatDataGridView.BackgroundColor = System.Drawing.Color.White;
             this.LoaiPhongDaDatDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.LoaiPhongDaDatDataGridView.Location = new System.Drawing.Point(12, 313);
+            this.LoaiPhongDaDatDataGridView.Location = new System.Drawing.Point(12, 287);
             this.LoaiPhongDaDatDataGridView.MultiSelect = false;
             this.LoaiPhongDaDatDataGridView.Name = "LoaiPhongDaDatDataGridView";
             this.LoaiPhongDaDatDataGridView.ReadOnly = true;
             this.LoaiPhongDaDatDataGridView.RowHeadersWidth = 51;
             this.LoaiPhongDaDatDataGridView.RowTemplate.Height = 24;
             this.LoaiPhongDaDatDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.LoaiPhongDaDatDataGridView.Size = new System.Drawing.Size(1034, 200);
+            this.LoaiPhongDaDatDataGridView.Size = new System.Drawing.Size(904, 200);
             this.LoaiPhongDaDatDataGridView.TabIndex = 2;
             // 
             // label11
@@ -84,11 +85,24 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             this.label11.TabIndex = 89;
             this.label11.Text = "Thông tin phòng đã đặt";
             // 
+            // DaThanhToanBtn
+            // 
+            this.DaThanhToanBtn.BackColor = System.Drawing.Color.LightCoral;
+            this.DaThanhToanBtn.Location = new System.Drawing.Point(893, 503);
+            this.DaThanhToanBtn.Name = "DaThanhToanBtn";
+            this.DaThanhToanBtn.Size = new System.Drawing.Size(160, 35);
+            this.DaThanhToanBtn.TabIndex = 109;
+            this.DaThanhToanBtn.Text = "Xóa phiếu đặt phòng";
+            this.DaThanhToanBtn.UseVisualStyleBackColor = false;
+            this.DaThanhToanBtn.Click += new System.EventHandler(this.DaThanhToanBtn_Click);
+            // 
             // fThongTinDatPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1058, 525);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1065, 550);
+            this.Controls.Add(this.DaThanhToanBtn);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.LoaiPhongDaDatDataGridView);
             this.Controls.Add(this.ThongTinDatPhongDataGridView);
@@ -107,5 +121,6 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
         private System.Windows.Forms.DataGridView ThongTinDatPhongDataGridView;
         private System.Windows.Forms.DataGridView LoaiPhongDaDatDataGridView;
         private Label label11;
+        private Button DaThanhToanBtn;
     }
 }
