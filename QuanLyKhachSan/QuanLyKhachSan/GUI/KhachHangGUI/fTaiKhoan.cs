@@ -67,29 +67,29 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
         [Obsolete]
         private void CapNhatBtn_Click(object sender, EventArgs e)
         {
-            var newInfo = new KhachHangBUS();
-            newInfo.TENKH = HoVaTenTBox.Text;
-            newInfo.NGAYSINH = NgaySinhPicker.Value;
-            newInfo.DIACHI = DiaChiTBox.Text;
-            newInfo.EMAIL= EmailTBox.Text;
-            newInfo.SODT=SoDtTBox.Text;
-            newInfo.SOFAX= SoFaxTBox.Text;
+            //var newInfo = new KhachHangBUS();
+            //newInfo.TENKH = HoVaTenTBox.Text;
+            //newInfo.NGAYSINH = NgaySinhPicker.Value;
+            //newInfo.DIACHI = DiaChiTBox.Text;
+            //newInfo.EMAIL= EmailTBox.Text;
+            //newInfo.SODT=SoDtTBox.Text;
+            //newInfo.SOFAX= SoFaxTBox.Text;
 
-            KhachHangBUS.Instance.KhCapNhatThongTin(newInfo);
+            //KhachHangBUS.Instance.KhCapNhatThongTin(newInfo);
 
-            MessageBox.Show("Cập nhật thông tin thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //MessageBox.Show("Cập nhật thông tin thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            HoVaTenTBox.ReadOnly = true;
-            NgaySinhPicker.Enabled = false;
-            DiaChiTBox.ReadOnly = true;
-            EmailTBox.ReadOnly = true;
-            SoDtTBox.ReadOnly = true;
-            SoFaxTBox.ReadOnly = true;
+            //HoVaTenTBox.ReadOnly = true;
+            //NgaySinhPicker.Enabled = false;
+            //DiaChiTBox.ReadOnly = true;
+            //EmailTBox.ReadOnly = true;
+            //SoDtTBox.ReadOnly = true;
+            //SoFaxTBox.ReadOnly = true;
 
-            CapNhatThongTinBtn.Focus();
+            //CapNhatThongTinBtn.Focus();
             
-            ConfirmCapNhatTTBtn.Visible = false;
-            CapNhatThongTinBtn.Visible = true;
+            //ConfirmCapNhatTTBtn.Visible = false;
+            //CapNhatThongTinBtn.Visible = true;
         }
 
         [Obsolete]

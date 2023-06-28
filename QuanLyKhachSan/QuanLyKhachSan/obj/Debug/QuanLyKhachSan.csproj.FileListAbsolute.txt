@@ -31,7 +31,6 @@ D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanL
 D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.pdb
 D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fPhieuDatPhong.resources
 D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fThongTinDatPhong.resources
-C:\Users\PC\OneDrive - VNU-HCMUS\Documents\LuongTrongKhoi\Term6_HCMUS\Phân tích thiết kế hệ thống thông tin\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fDoiMatKhau.resources
 C:\Users\PC\OneDrive - VNU-HCMUS\Documents\LuongTrongKhoi\Term6_HCMUS\Phân tích thiết kế hệ thống thông tin\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fPhieuDatPhong.resources
 C:\Users\PC\OneDrive - VNU-HCMUS\Documents\LuongTrongKhoi\Term6_HCMUS\Phân tích thiết kế hệ thống thông tin\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fThongTinDatPhong.resources
 D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fThanhToan.resources
@@ -66,3 +65,16 @@ C:\Users\phamt\Desktop\hcmus\3-2\pttkhttt\doAn\QuanLyKhachSan\QuanLyKhachSan\Qua
 C:\Users\phamt\Desktop\hcmus\3-2\pttkhttt\doAn\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fDangKyTour.resources
 C:\Users\phamt\Desktop\hcmus\3-2\pttkhttt\doAn\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fTraCuuTour.resources
 C:\Users\phamt\Desktop\hcmus\3-2\pttkhttt\doAn\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fTraCuuDichVu.resources
+C:\Users\PC\OneDrive - VNU-HCMUS\Documents\LuongTrongKhoi\Term6_HCMUS\Phân tích thiết kế hệ thống thông tin\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fCapNhatPhieuDatPhong.resources
+C:\Users\PC\OneDrive - VNU-HCMUS\Documents\LuongTrongKhoi\Term6_HCMUS\Phân tích thiết kế hệ thống thông tin\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fKiemTraThanhToan.resources
+C:\Users\PC\OneDrive - VNU-HCMUS\Documents\LuongTrongKhoi\Term6_HCMUS\Phân tích thiết kế hệ thống thông tin\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fTaiKhoan.resources
+C:\Users\PC\OneDrive - VNU-HCMUS\Documents\LuongTrongKhoi\Term6_HCMUS\Phân tích thiết kế hệ thống thông tin\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fDangKyDichVu.resources
+C:\Users\PC\OneDrive - VNU-HCMUS\Documents\LuongTrongKhoi\Term6_HCMUS\Phân tích thiết kế hệ thống thông tin\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fDangKyTour.resources
+C:\Users\PC\OneDrive - VNU-HCMUS\Documents\LuongTrongKhoi\Term6_HCMUS\Phân tích thiết kế hệ thống thông tin\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fThanhToan.resources
+C:\Users\PC\OneDrive - VNU-HCMUS\Documents\LuongTrongKhoi\Term6_HCMUS\Phân tích thiết kế hệ thống thông tin\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fXacNhanPDP.resources
+C:\Users\PC\OneDrive - VNU-HCMUS\Documents\LuongTrongKhoi\Term6_HCMUS\Phân tích thiết kế hệ thống thông tin\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fTraCuuDichVu.resources
+C:\Users\PC\OneDrive - VNU-HCMUS\Documents\LuongTrongKhoi\Term6_HCMUS\Phân tích thiết kế hệ thống thông tin\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fTraCuuTour.resources
+C:\Users\PC\OneDrive - VNU-HCMUS\Documents\LuongTrongKhoi\Term6_HCMUS\Phân tích thiết kế hệ thống thông tin\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\GUI\Images\checka.png
+C:\Users\PC\OneDrive - VNU-HCMUS\Documents\LuongTrongKhoi\Term6_HCMUS\Phân tích thiết kế hệ thống thông tin\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\GUI\Images\pencil.ico
+C:\Users\PC\OneDrive - VNU-HCMUS\Documents\LuongTrongKhoi\Term6_HCMUS\Phân tích thiết kế hệ thống thông tin\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\GUI\Images\profile.png
+C:\Users\PC\OneDrive - VNU-HCMUS\Documents\LuongTrongKhoi\Term6_HCMUS\Phân tích thiết kế hệ thống thông tin\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\GUI\Images\success.ico

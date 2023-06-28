@@ -12,7 +12,7 @@ namespace QuanLyKhachSan.BUS
     {
         public string MAKH { get; set; }
         public string TENKH { get; set; }
-        public DateTime NGAYSINH {  get; set; }
+        public DateTime NGAYSINH { get; set; }
         public string DIACHI { get; set; }
         public string EMAIL { get; set; }
         public string SODT { get; set; }
@@ -38,7 +38,7 @@ namespace QuanLyKhachSan.BUS
         public bool KiemTraTonTai(string tenkh, string ngaysinh, string diachi)
         {
             DataTable kh = KhachHangDAO.Instance.LTLayKhachHang(tenkh, ngaysinh, diachi);
-            if(kh.Rows.Count == 0)
+            if (kh.Rows.Count == 0)
             {
                 return false;
             }
@@ -71,13 +71,15 @@ namespace QuanLyKhachSan.BUS
             {
                 int r = KhachHangDAO.Instance.LTCapNhatKhachHang(makh, email, sodt, sofax);
             }
-            catch(Exception)
+            catch (Exception)
             {
                 return false;
             }
             return true;
-        
 
+
+           
+        }
         [Obsolete]
         public DataTable KHLayThongTinBanThan()
         {
@@ -87,13 +89,13 @@ namespace QuanLyKhachSan.BUS
         [Obsolete]
         public int KHKiemTraThongTinCapNhat(KhachHangBUS newInfo)
         {
-            var oldInfo = KhachHangBUS.Instance.KHLayThongTinBanThan();
-            if (oldInfo.Rows[0]["TENKH"]==newInfo.TENKH &&
-                Convert.ToDateTime(oldInfo.Rows[0]["NGAYSINH"])== newInfo.NGAYSINH&&
-                oldInfo.Rows[0]["DIACHI"]== newInfo.DIACHI&&
-                oldInfo.Rows[0]["EMAIL"]==newInfo.EMAIL&&
-                oldInfo.Rows[0]["SODT"]== newInfo.SODT&&
-                oldInfo.Rows[0]["SOFAX"]== newInfo.SOFAX)
+            var oldInfo = KHLayThongTinBanThan();
+            if (oldInfo.Rows[0]["TENKH"] == newInfo.TENKH &&
+                Convert.ToDateTime(oldInfo.Rows[0]["NGAYSINH"]) == newInfo.NGAYSINH &&
+                oldInfo.Rows[0]["DIACHI"] == newInfo.DIACHI &&
+                oldInfo.Rows[0]["EMAIL"] == newInfo.EMAIL &&
+                oldInfo.Rows[0]["SODT"] == newInfo.SODT &&
+                oldInfo.Rows[0]["SOFAX"] == newInfo.SOFAX)
             {
                 return 2;
             }

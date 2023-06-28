@@ -107,6 +107,8 @@
       <DependentUpon>DangNhapGUI.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\KhachHangGUI\fCapNhatPhieuDatPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="GUI\KhachHangGUI\fDangKyDichVu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,9 +120,6 @@
     </Compile>
     <Compile Include="GUI\KhachHangGUI\fDangKyTour.Designer.cs">
       <DependentUpon>fDangKyTour.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\KhachHangGUI\fDoiMatKhau.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\KhachHangGUI\fCapNhatPhieuDatPhong.Designer.cs">
       <DependentUpon>fCapNhatPhieuDatPhong.cs</DependentUpon>
@@ -160,6 +159,7 @@
     </Compile>
     <Compile Include="GUI\KhachHangGUI\fXacNhanPDP.Designer.cs">
       <DependentUpon>fXacNhanPDP.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\KhachHangGUI\fTraCuuDichVu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,14 +212,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhachHangGUI\fTaiKhoan.resx">
       <DependentUpon>fTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhachHangGUI\fDangKyDichVu.resx">
       <DependentUpon>fDangKyDichVu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhachHangGUI\fDangKyTour.resx">
       <DependentUpon>fDangKyTour.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\KhachHangGUI\fDoiMatKhau.resx">
-      <DependentUpon>fDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhachHangGUI\fPhieuDatPhong.resx">
       <DependentUpon>fPhieuDatPhong.cs</DependentUpon>
@@ -232,6 +230,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhachHangGUI\fXacNhanPDP.resx">
       <DependentUpon>fXacNhanPDP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhachHangGUI\fTraCuuDichVu.resx">
       <DependentUpon>fTraCuuDichVu.cs</DependentUpon>
     </EmbeddedResource>
