@@ -83,7 +83,7 @@
             // ThanhToanBtn
             // 
             this.ThanhToanBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ThanhToanBtn.Location = new System.Drawing.Point(364, 12);
+            this.ThanhToanBtn.Location = new System.Drawing.Point(872, 12);
             this.ThanhToanBtn.Name = "ThanhToanBtn";
             this.ThanhToanBtn.Size = new System.Drawing.Size(168, 33);
             this.ThanhToanBtn.TabIndex = 4;
@@ -94,13 +94,14 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Location = new System.Drawing.Point(538, 12);
+            this.button1.Location = new System.Drawing.Point(642, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(224, 33);
             this.button1.TabIndex = 5;
             this.button1.Text = "Cập nhật thông tin đặt phòng";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // dangKyDVBtn
             // 
             this.dangKyDVBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -127,10 +128,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1135, 640);
+            this.ClientSize = new System.Drawing.Size(1077, 613);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.ThanhToanBtn);
-            this.ClientSize = new System.Drawing.Size(1077, 613);
             this.Controls.Add(this.dangKyTourBtn);
             this.Controls.Add(this.dangKyDVBtn);
             this.Controls.Add(this.panel);
