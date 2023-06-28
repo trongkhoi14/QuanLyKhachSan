@@ -19,13 +19,13 @@ namespace QuanLyKhachSan.DAO
         private KhachHangDAO() { }
 
         [Obsolete]
-        public DataTable KHGetSelfInformation()
+        public DataTable KHLayThongTinCaNhan(string maKH)
         {
-            string query = string.Format($"SELECT * FROM HOTELADMIN.khachhang WHERE makh = '{PhieuDatPhongBUS.MAKH}'");
+            string query = string.Format($"SELECT * FROM HOTELADMIN.khachhang WHERE makh = '{maKH}'");
             return DataProvider.Instance.ExecuteQuery(query);
         }
         [Obsolete]
-        public void KHUpdateSelfInformation(KhachHangBUS newInfo)
+        public void KHCapNhatThongTinCaNhan(KhachHangBUS newInfo,string maKH)
         {
             string query = string.Format($"update HOTELADMIN.khachhang " +
                                             $"set    " +
@@ -35,7 +35,7 @@ namespace QuanLyKhachSan.DAO
                                             $"email= '{newInfo.EMAIL}',  " +
                                             $"sodt= '{newInfo.SODT}',  " +
                                             $"sofax= '{newInfo.SOFAX}'  " +
-                                            $"where makh='{PhieuDatPhongBUS.MAKH}' ");
+                                            $"where makh='{maKH}' ");
             DataProvider.Instance.ExecuteNonQuery(query);
         }
     }

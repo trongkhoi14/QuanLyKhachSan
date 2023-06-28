@@ -30,15 +30,15 @@ namespace QuanLyKhachSan.BUS
         public KhachHangBUS() { }
 
         [Obsolete]
-        public DataTable KHLayThongTinBanThan()
+        public DataTable KHLayThongTinBanThan(string maKH)
         {
-            return KhachHangDAO.Instance.KHGetSelfInformation();
+            return KhachHangDAO.Instance.KHLayThongTinCaNhan(maKH);
         }
 
         [Obsolete]
         public int KHKiemTraThongTinCapNhat(KhachHangBUS newInfo)
         {
-            var oldInfo = KhachHangBUS.Instance.KHLayThongTinBanThan();
+            var oldInfo = KhachHangBUS.Instance.KHLayThongTinBanThan(PhieuDatPhongBUS.MAKH);
             if (oldInfo.Rows[0]["TENKH"]==newInfo.TENKH &&
                 Convert.ToDateTime(oldInfo.Rows[0]["NGAYSINH"])== newInfo.NGAYSINH&&
                 oldInfo.Rows[0]["DIACHI"]== newInfo.DIACHI&&
@@ -52,9 +52,9 @@ namespace QuanLyKhachSan.BUS
         }
 
         [Obsolete]
-        public void KhCapNhatThongTin(KhachHangBUS newInfo)
+        public void KhCapNhatThongTin(KhachHangBUS newInfo, string maKH)
         {
-            KhachHangDAO.Instance.KHUpdateSelfInformation(newInfo);
+            KhachHangDAO.Instance.KHCapNhatThongTinCaNhan(newInfo, maKH);
         }
     }
 }

@@ -37,11 +37,11 @@ namespace QuanLyKhachSan.BUS
         [Obsolete]
         public DataTable KHLayDanhSachPDP()
         {
-            return PhieuDatPhongDAO.Instance.KHLayDanhSach();
+            return PhieuDatPhongDAO.Instance.KHLayDanhSachPhongTrong();
         }
 
         [Obsolete]
-        public int KHKiemTraThongTinPDP(PhieuDatPhongBUS pdp, DataGridView dsPhong, bool isCheckDoan, ComboBox thanhtoan)
+        public int KHKiemTraThongTinPDP(PhieuDatPhongBUS pdp, DataGridView dsPhong, bool isCheckDoan, ComboBox PhuonThucThanhToan)
         {
             //kiểm tra có thông tin nào trống không
             foreach (PropertyInfo prop in pdp.GetType().GetProperties())
@@ -56,7 +56,7 @@ namespace QuanLyKhachSan.BUS
                 }
             }
             //kiểm tra xem có chọn phương thức thanh toán chưa
-            if(thanhtoan.SelectedIndex == -1)
+            if(PhuonThucThanhToan.SelectedIndex == -1)
             {
                 return 6;
             }
@@ -102,7 +102,7 @@ namespace QuanLyKhachSan.BUS
                 return 4;
             }
             //Hai lần đặt phòng phải cách nhau ít nhất 5 ngày
-            var latestDate = Convert.ToDateTime(PhieuDatPhongDAO.Instance.KHRetrieveNGAYLAP(PhieuDatPhongBUS.MAKH).Rows[0][0]);
+            var latestDate = Convert.ToDateTime(PhieuDatPhongDAO.Instance.KHLayNgayLap(PhieuDatPhongBUS.MAKH).Rows[0][0]);
             TimeSpan twoDateInterval = pdp.NGAYLAP - latestDate;
             if (twoDateInterval.Days<5)
             {
@@ -120,31 +120,36 @@ namespace QuanLyKhachSan.BUS
             return $"PDP0{count+1}";
         }
         [Obsolete]
-        public void KHThemPDP(PhieuDatPhongBUS pdp)
+        public void KHThemPDP(PhieuDatPhongBUS pdp, string maKH)
         {
-            PhieuDatPhongDAO.Instance.KHThemPhieuDatPhong(pdp);
+            PhieuDatPhongDAO.Instance.KHThemPhieuDatPhong(pdp, maKH);
         }
         [Obsolete]
-        public DataTable KHLayPhieuDatPhong()
+        public DataTable KHLayPhieuTatCaPDPDaDat(string maKH)
         {
-            return PhieuDatPhongDAO.Instance.KHRetrieveBookedPDP();
+            return PhieuDatPhongDAO.Instance.KHLayPhieuTatCaPDPDaDat(maKH);
         }
         [Obsolete]
-        public DataTable KHLayThongTinPhongDaDat()
+        public DataTable KHLayPDPMoiNhat(string maKH)
         {
-            return PhieuDatPhongDAO.Instance.KhRetrieveRoomType();
+            return PhieuDatPhongDAO.Instance.KHLayPDPMoiNhat(maKH);
+        }
+        [Obsolete]
+        public DataTable KHLayThongTinPhongDaDat(string maKH)
+        {
+            return PhieuDatPhongDAO.Instance.KHLayThongTinPhongDaDat(maKH);
         }
 
         [Obsolete]
-        public DataTable KHLayThongTinPhongDaDatTheoMaPDP(string maPDP)
+        public DataTable KHLayThongTinPhongDaDatTheoMaPDP(string maPDP, string maKH)
         {
-            return PhieuDatPhongDAO.Instance.KhRetrieveRoomTypeWithMaPDP(maPDP);
+            return PhieuDatPhongDAO.Instance.KHLayLoaiPhongVoiMaPDP(maPDP, maKH);
         }
         [Obsolete]
         public string KHLayMaPDPGanNhat(string maKH)
         {
-            var temp = PhieuDatPhongDAO.Instance.KHRetrieveLatestMAPDP(maKH);
-            string output = (temp.Rows[0][0]).ToString();
+            var temp = PhieuDatPhongDAO.Instance.KHLayPDPMoiNhat(maKH);
+            string output = (temp.Rows[0]["MAPDP"]).ToString();
 
             return output;
         }
@@ -152,7 +157,7 @@ namespace QuanLyKhachSan.BUS
         [Obsolete]
         public DataTable KHLayPDP(string maPDP)
         {
-            return PhieuDatPhongDAO.Instance.KHRetrievePDP(maPDP);
+            return PhieuDatPhongDAO.Instance.KHLayPhieuDatPhong(maPDP);
         }
 
         [Obsolete]
@@ -161,7 +166,7 @@ namespace QuanLyKhachSan.BUS
             PhieuDatPhongDAO.Instance.KHCapNhatPhieuDatPhong(pdp);
         }
         [Obsolete]
-        public int CheckValidNewPDP(PhieuDatPhongBUS newPDP)
+        public int KHKiemTraPDPHopLe(PhieuDatPhongBUS newPDP)
         {
             var oldPDP = PhieuDatPhongBUS.Instance.KHLayPDP(newPDP.MAPDP);
 
@@ -200,9 +205,9 @@ namespace QuanLyKhachSan.BUS
         }
 
         [Obsolete]
-        public void KHCapNhatTinhTrangPDP(string tinhTrangPDP)
+        public void KHCapNhatTinhTrangPDP(string tinhTrangPDP, string maPDP)
         {
-            PhieuDatPhongDAO.Instance.KHCapNhatTinhTrangPDP(tinhTrangPDP);
+            PhieuDatPhongDAO.Instance.KHCapNhatTinhTrangPDP(tinhTrangPDP, maPDP);
         }
 
         [Obsolete]

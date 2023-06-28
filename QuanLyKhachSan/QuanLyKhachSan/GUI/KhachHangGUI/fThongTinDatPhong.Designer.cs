@@ -53,7 +53,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             this.ThongTinDatPhongDataGridView.RowHeadersWidth = 51;
             this.ThongTinDatPhongDataGridView.RowTemplate.Height = 24;
             this.ThongTinDatPhongDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ThongTinDatPhongDataGridView.Size = new System.Drawing.Size(904, 173);
+            this.ThongTinDatPhongDataGridView.Size = new System.Drawing.Size(1024, 173);
             this.ThongTinDatPhongDataGridView.TabIndex = 1;
             // 
             // LoaiPhongDaDatDataGridView
@@ -71,7 +71,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             this.LoaiPhongDaDatDataGridView.RowHeadersWidth = 51;
             this.LoaiPhongDaDatDataGridView.RowTemplate.Height = 24;
             this.LoaiPhongDaDatDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.LoaiPhongDaDatDataGridView.Size = new System.Drawing.Size(904, 200);
+            this.LoaiPhongDaDatDataGridView.Size = new System.Drawing.Size(1024, 200);
             this.LoaiPhongDaDatDataGridView.TabIndex = 2;
             // 
             // label11

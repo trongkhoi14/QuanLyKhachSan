@@ -58,9 +58,9 @@ namespace QuanLyKhachSan.BUS
             return 1;
         }
         [Obsolete]
-        public void KHDoiMatKhau(string matKhau)
+        public void KHDoiMatKhau(string matKhau,string username)
         {
-            TaiKhoanDAO.Instance.KHChangePassword(matKhau);
+            TaiKhoanDAO.Instance.KHDoiMatKhau(matKhau, username);
         }
         #endregion
     }

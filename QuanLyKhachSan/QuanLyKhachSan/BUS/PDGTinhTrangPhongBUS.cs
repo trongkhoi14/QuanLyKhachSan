@@ -25,7 +25,7 @@ namespace QuanLyKhachSan.BUS
         [Obsolete]
         public string BPGetPDGCode()
         {
-            var code = PDGTinhTrangPhongDAO.Instance.BPGetPDGCodeFromDB();
+            var code = PDGTinhTrangPhongDAO.Instance.BPLayMaPdgttPhong();
             int count = Convert.ToInt32(code.Rows[0][0]);
             if (count < 10)
             {

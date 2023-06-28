@@ -1,8 +1,10 @@
 ﻿using QuanLyKhachSan.BUS;
+using QuanLyKhachSan.DAO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OracleClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -28,7 +30,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
         [Obsolete]
         private void fTaiKhoan_Load(object sender, EventArgs e)
         {
-            var info = KhachHangBUS.Instance.KHLayThongTinBanThan();
+            var info = KhachHangBUS.Instance.KHLayThongTinBanThan(PhieuDatPhongBUS.MAKH);
             HoVaTenTBox.Text = info.Rows[0]["TENKH"].ToString();
             NgaySinhPicker.Value = Convert.ToDateTime(info.Rows[0]["NGAYSINH"]);
             DiaChiTBox.Text= info.Rows[0]["DIACHI"].ToString();
@@ -75,7 +77,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             newInfo.SODT=SoDtTBox.Text;
             newInfo.SOFAX= SoFaxTBox.Text;
 
-            KhachHangBUS.Instance.KhCapNhatThongTin(newInfo);
+            KhachHangBUS.Instance.KhCapNhatThongTin(newInfo,PhieuDatPhongBUS.MAKH);
 
             MessageBox.Show("Cập nhật thông tin thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -104,7 +106,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             }
             else
             {
-                TaiKhoanBUS.Instance.KHDoiMatKhau(newPW);
+                TaiKhoanBUS.Instance.KHDoiMatKhau(newPW,PhieuDatPhongBUS.MAKH);
                 MessageBox.Show("Đổi mật khẩu thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 
                 ConfirmDoiMatKhauBtn.Visible = false;
@@ -123,7 +125,6 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             DoiMatKhauBtn.Visible = false;
             ConfirmCapNhatTTBtn.Visible = false;
             CapNhatThongTinBtn.Visible = true;
-
 
         }
     }

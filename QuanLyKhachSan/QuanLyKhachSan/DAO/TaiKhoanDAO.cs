@@ -18,10 +18,9 @@ namespace QuanLyKhachSan.DAO
         private TaiKhoanDAO() { }
 
         [Obsolete]
-        public void KHChangePassword(string password)
+        public void KHDoiMatKhau(string password,string username)
         {
-            string query = $"ALTER USER {PhieuDatPhongBUS.MAKH} IDENTIFIED BY {password}";
-            DataProvider.Instance.ExecuteNonQuery(query);
+                
         }
     }
 }

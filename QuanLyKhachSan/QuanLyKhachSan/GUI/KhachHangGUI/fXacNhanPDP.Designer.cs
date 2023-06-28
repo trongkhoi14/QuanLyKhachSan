@@ -58,15 +58,15 @@
             this.NgaydenTimePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NgaydenTimePicker.Enabled = false;
             this.NgaydenTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NgaydenTimePicker.Location = new System.Drawing.Point(296, 135);
+            this.NgaydenTimePicker.Location = new System.Drawing.Point(276, 135);
             this.NgaydenTimePicker.Name = "NgaydenTimePicker";
-            this.NgaydenTimePicker.Size = new System.Drawing.Size(162, 27);
+            this.NgaydenTimePicker.Size = new System.Drawing.Size(196, 27);
             this.NgaydenTimePicker.TabIndex = 102;
             // 
             // SoNgTrongDoanTBox
             // 
             this.SoNgTrongDoanTBox.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SoNgTrongDoanTBox.Location = new System.Drawing.Point(296, 274);
+            this.SoNgTrongDoanTBox.Location = new System.Drawing.Point(276, 274);
             this.SoNgTrongDoanTBox.Name = "SoNgTrongDoanTBox";
             this.SoNgTrongDoanTBox.ReadOnly = true;
             this.SoNgTrongDoanTBox.Size = new System.Drawing.Size(163, 27);
@@ -75,7 +75,7 @@
             // SoDemLuuTruTBox
             // 
             this.SoDemLuuTruTBox.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SoDemLuuTruTBox.Location = new System.Drawing.Point(296, 185);
+            this.SoDemLuuTruTBox.Location = new System.Drawing.Point(276, 185);
             this.SoDemLuuTruTBox.Name = "SoDemLuuTruTBox";
             this.SoDemLuuTruTBox.ReadOnly = true;
             this.SoDemLuuTruTBox.Size = new System.Drawing.Size(163, 27);
@@ -114,7 +114,7 @@
             // PhuongThucTTTBox
             // 
             this.PhuongThucTTTBox.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PhuongThucTTTBox.Location = new System.Drawing.Point(296, 228);
+            this.PhuongThucTTTBox.Location = new System.Drawing.Point(276, 228);
             this.PhuongThucTTTBox.Name = "PhuongThucTTTBox";
             this.PhuongThucTTTBox.ReadOnly = true;
             this.PhuongThucTTTBox.Size = new System.Drawing.Size(163, 27);
@@ -134,7 +134,7 @@
             // XacNhanBtn
             // 
             this.XacNhanBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.XacNhanBtn.Location = new System.Drawing.Point(550, 393);
+            this.XacNhanBtn.Location = new System.Drawing.Point(497, 393);
             this.XacNhanBtn.Name = "XacNhanBtn";
             this.XacNhanBtn.Size = new System.Drawing.Size(106, 31);
             this.XacNhanBtn.TabIndex = 106;
@@ -145,7 +145,7 @@
             // PhongTBox
             // 
             this.PhongTBox.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PhongTBox.Location = new System.Drawing.Point(298, 324);
+            this.PhongTBox.Location = new System.Drawing.Point(278, 324);
             this.PhongTBox.Name = "PhongTBox";
             this.PhongTBox.ReadOnly = true;
             this.PhongTBox.Size = new System.Drawing.Size(163, 27);
@@ -164,7 +164,7 @@
             // DatLaiBtn
             // 
             this.DatLaiBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DatLaiBtn.Location = new System.Drawing.Point(662, 393);
+            this.DatLaiBtn.Location = new System.Drawing.Point(609, 393);
             this.DatLaiBtn.Name = "DatLaiBtn";
             this.DatLaiBtn.Size = new System.Drawing.Size(85, 31);
             this.DatLaiBtn.TabIndex = 109;
@@ -177,7 +177,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(759, 436);
+            this.ClientSize = new System.Drawing.Size(716, 436);
             this.Controls.Add(this.DatLaiBtn);
             this.Controls.Add(this.PhongTBox);
             this.Controls.Add(this.label1);

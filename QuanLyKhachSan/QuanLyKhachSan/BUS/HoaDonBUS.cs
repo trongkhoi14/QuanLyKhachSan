@@ -33,7 +33,7 @@ namespace QuanLyKhachSan.BUS
         [Obsolete]
         public string KHGetInvoiceCode()
         {
-            var code = HoaDonDAO.Instance.KHRetrieveInvoiceCode();
+            var code = HoaDonDAO.Instance.KHLayMaHoaDon();
             int count = Convert.ToInt32(code.Rows[0][0]);
             if (count < 10)
             {
@@ -46,12 +46,12 @@ namespace QuanLyKhachSan.BUS
         public int KHCountRentalFee(string maPDP)
         {
             //lấy phòng ra
-            var pdp = PhieuDatPhongDAO.Instance.KHRetrievePDP(maPDP);
+            var pdp = PhieuDatPhongDAO.Instance.KHLayPhieuDatPhong(maPDP);
 
             int soDemLuuTru = Convert.ToInt32(pdp.Rows[0]["SODEMLUUTRU"]);
 
             //lấy số tiền 1 đêm ứng với từng phòng đã đặt
-            var giaTienMotDem = PhieuDatPhongDAO.Instance.KHRetrieveRentalFee(maPDP);
+            var giaTienMotDem = PhieuDatPhongDAO.Instance.KHLayGiaThue1DemCacPhongDaDat(maPDP);
             int giaCacPhong = 0;
             for(int i=0; i<giaTienMotDem.Rows.Count; i++)
             {
@@ -61,30 +61,30 @@ namespace QuanLyKhachSan.BUS
         }
 
         [Obsolete]
-        public void KHAddInvoice(HoaDonBUS hoadon)
+        public void KHAddInvoice(HoaDonBUS hoadon, string ptttoan)
         {
-            HoaDonDAO.Instance.KHAddInvoice(hoadon);
+            HoaDonDAO.Instance.KHThemHoaDon(hoadon, ptttoan);
         }
 
         [Obsolete]
-        public void KHCapNhatTienCoc(int tienCoc)
+        public void KHCapNhatTienCoc(int tienCoc, string maKH)
         {
-            HoaDonDAO.Instance.KHUpdateTienCoc(tienCoc);
+            HoaDonDAO.Instance.KHCapNhatTienCoc(tienCoc, maKH);
         }
         [Obsolete]
-        public DataTable KHRetrieveInvoice()
+        public DataTable KHRetrieveInvoice(string maPDP)
         {
-            return HoaDonDAO.Instance.KHRetrieveInvoice();
+            return HoaDonDAO.Instance.KHLayHoaDon(maPDP);
         }
         [Obsolete]
-        public void KHUpdatePTTToan(string ptttoan)
+        public void KHUpdatePTTToan(string ptttoan, string maKH)
         {
-            HoaDonDAO.Instance.KHUpdatePTTToan(ptttoan);
+            HoaDonDAO.Instance.KHCapNhatPttToan(ptttoan, maKH);
         }
         [Obsolete]
         public void KHDeleteInvoice(string maPDP)
         {
-            HoaDonDAO.Instance.KHDeleteInvoice(maPDP);
+            HoaDonDAO.Instance.KHXoaHoaDon(maPDP);
         }
     }
 }

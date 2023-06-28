@@ -18,7 +18,7 @@ namespace QuanLyKhachSan.DAO
         public PDGTinhTrangPhongDAO() { }
 
         [Obsolete]
-        public DataTable BPGetPDGCodeFromDB()
+        public DataTable BPLayMaPdgttPhong()
         {
             string query = string.Format($"select count(*) from HOTELADMIN.pdgtinhtrangphong");
             return DataProvider.Instance.ExecuteQuery(query);
