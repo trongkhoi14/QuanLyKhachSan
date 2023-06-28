@@ -57,6 +57,16 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
         {
             var capnhat = new fCapNhatPhieuDatPhong();
             active_form(capnhat);
+        private void dangKyDVBtn_Click(object sender, EventArgs e)
+        {
+            var dkdv = new fDangKyDichVu();
+            active_form(dkdv);  
+        }
+
+        private void dangKyTourBtn_Click(object sender, EventArgs e)
+        {
+            var dkt = new fDangKyTour();
+            active_form(dkt);
         }
     }
 }
