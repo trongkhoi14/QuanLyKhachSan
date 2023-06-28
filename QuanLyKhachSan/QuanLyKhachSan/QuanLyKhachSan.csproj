@@ -71,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS\CTPhieuDatPhongBUS.cs" />
+    <Compile Include="BUS\CTPhieuDichVuBUS.cs" />
     <Compile Include="BUS\CTPhieuNhanPhongBUS.cs" />
     <Compile Include="BUS\DichVuBUS.cs" />
     <Compile Include="BUS\KhachHangBUS.cs" />

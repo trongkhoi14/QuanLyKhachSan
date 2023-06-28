@@ -11,17 +11,38 @@ namespace QuanLyKhachSan.BUS
     public class DichVuBUS
     {
         private static DichVuBUS instance;
+
         public static DichVuBUS Instance
         {
             get { if (instance == null) instance = new DichVuBUS(); return instance; }
             set => instance = value;
         }
-        private DichVuBUS() { }
 
-        [Obsolete]
-        public DataTable LTLayDSDichVuTheoPDP(string MaPDP)
+        public DichVuBUS() { }
+
+        public DichVuBUS(string MaDV, string TenDV, string DonViTinh, double GiaDV, string LoaiDV)
         {
-            return DichVuDAO.Instance.LTLayDSTheoPDP(MaPDP);
+            this.MaDV = MaDV;
+            this.TenDV = TenDV;
+            this.DonViTinh = DonViTinh;
+            this.GiaDV = GiaDV;
+            this.LoaiDV = LoaiDV;
         }
+
+        public DataTable LayDSDV()
+        {
+            return DichVuDAO.Instance.LayDSDV();
+        }
+
+        public DataTable LayDVTheoMaDV(string MaDV)
+        {
+            return DichVuDAO.Instance.LayDVTheoMaDV(MaDV);
+        }
+
+        public string MaDV { get; set; }
+        public string TenDV { get; set; }
+        public string DonViTinh { get; set; }
+        public double GiaDV { get; set; }
+        public string LoaiDV { get; set; }
     }
 }

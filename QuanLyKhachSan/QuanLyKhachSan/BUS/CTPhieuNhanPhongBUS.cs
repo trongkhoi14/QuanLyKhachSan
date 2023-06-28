@@ -16,4 +16,7 @@ namespace QuanLyKhachSan.BUS
         }
         private CTPhieuNhanPhongBUS() { }
     }
+
+
+
 }
