@@ -18,9 +18,16 @@ namespace QuanLyKhachSan.DAO
         private DichVuDAO() { }
 
         [Obsolete]
-        public DataTable LTLayDSTheoPDP(string MaPDP)
+        public DataTable LayDSDV()
         {
-            string query = string.Format("SELECT * FROM HOTELADMIN.PHIEUDATPHONG");
+            string query = string.Format("SELECT * FROM HOTELADMIN.DICHVU");
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        [Obsolete]
+        public DataTable LayDVTheoMaDV(string MaDV)
+        {
+            string query = string.Format($"SELECT * FROM HOTELADMIN.DICHVU WHERE MADV = '{MaDV}'");
             return DataProvider.Instance.ExecuteQuery(query);
         }
     }
