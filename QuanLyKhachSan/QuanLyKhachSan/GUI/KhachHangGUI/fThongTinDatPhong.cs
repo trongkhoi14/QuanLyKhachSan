@@ -31,7 +31,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
         }
 
         [Obsolete]
-        private void DaThanhToanBtn_Click(object sender, EventArgs e)
+        private void XoaPDPBtn_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Quí khách muốn xóa phiếu đặt phòng gần nhất", "Notice",MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (result == DialogResult.OK)

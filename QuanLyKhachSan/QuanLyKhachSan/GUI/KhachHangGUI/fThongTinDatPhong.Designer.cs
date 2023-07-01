@@ -33,7 +33,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             this.ThongTinDatPhongDataGridView = new System.Windows.Forms.DataGridView();
             this.LoaiPhongDaDatDataGridView = new System.Windows.Forms.DataGridView();
             this.label11 = new System.Windows.Forms.Label();
-            this.DaThanhToanBtn = new System.Windows.Forms.Button();
+            this.XoaPDPBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ThongTinDatPhongDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoaiPhongDaDatDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -87,14 +87,14 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             // 
             // DaThanhToanBtn
             // 
-            this.DaThanhToanBtn.BackColor = System.Drawing.Color.LightCoral;
-            this.DaThanhToanBtn.Location = new System.Drawing.Point(893, 503);
-            this.DaThanhToanBtn.Name = "DaThanhToanBtn";
-            this.DaThanhToanBtn.Size = new System.Drawing.Size(160, 35);
-            this.DaThanhToanBtn.TabIndex = 109;
-            this.DaThanhToanBtn.Text = "Xóa phiếu đặt phòng";
-            this.DaThanhToanBtn.UseVisualStyleBackColor = false;
-            this.DaThanhToanBtn.Click += new System.EventHandler(this.DaThanhToanBtn_Click);
+            this.XoaPDPBtn.BackColor = System.Drawing.Color.LightCoral;
+            this.XoaPDPBtn.Location = new System.Drawing.Point(893, 503);
+            this.XoaPDPBtn.Name = "DaThanhToanBtn";
+            this.XoaPDPBtn.Size = new System.Drawing.Size(160, 35);
+            this.XoaPDPBtn.TabIndex = 109;
+            this.XoaPDPBtn.Text = "Xóa phiếu đặt phòng";
+            this.XoaPDPBtn.UseVisualStyleBackColor = false;
+            this.XoaPDPBtn.Click += new System.EventHandler(this.XoaPDPBtn_Click);
             // 
             // fThongTinDatPhong
             // 
@@ -102,7 +102,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1065, 550);
-            this.Controls.Add(this.DaThanhToanBtn);
+            this.Controls.Add(this.XoaPDPBtn);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.LoaiPhongDaDatDataGridView);
             this.Controls.Add(this.ThongTinDatPhongDataGridView);
@@ -121,6 +121,6 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
         private System.Windows.Forms.DataGridView ThongTinDatPhongDataGridView;
         private System.Windows.Forms.DataGridView LoaiPhongDaDatDataGridView;
         private Label label11;
-        private Button DaThanhToanBtn;
+        private Button XoaPDPBtn;
     }
 }
