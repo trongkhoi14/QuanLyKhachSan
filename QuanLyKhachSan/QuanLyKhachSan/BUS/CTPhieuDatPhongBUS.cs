@@ -27,5 +27,12 @@ namespace QuanLyKhachSan.BUS
         {
             CTPhieuDatPhongDAO.Instance.KHXoaCTPhieuDatPhong(maPDP);
         }
+
+        [Obsolete]
+        public string BPLayMaPDP(string MAPHONG)
+        {
+            string maPDP = (string)CTPhieuDatPhongDAO.Instance.BPLayMaPDP(MAPHONG).Rows[0][0];
+            return maPDP;
+        }
     }
 }

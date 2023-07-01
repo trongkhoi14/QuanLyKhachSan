@@ -53,7 +53,6 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             HoVaTenTBox.Focus();
             ConfirmCapNhatTTBtn.Visible = true;
             CapNhatThongTinBtn.Visible = false;
-
         }
 
         [Obsolete]

@@ -39,5 +39,14 @@ namespace QuanLyKhachSan.DAO
             string query = string.Format($"delete from HOTELADMIN.ct_phieudatphong where mapdp='{maPDP}'");
             DataProvider.Instance.ExecuteNonQuery(query);
         }
+
+        [Obsolete]
+        public DataTable BPLayMaPDP(string maPhong)
+        {
+            string query = string.Format($"select mapdp from HOTELADMIN.ct_phieudatphong where maphong='{maPhong}'");
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+
     }
 }
