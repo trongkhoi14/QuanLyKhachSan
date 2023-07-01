@@ -53,6 +53,7 @@ namespace QuanLyKhachSan.GUI.BuongPhongGUI
             {
                 MessageBox.Show("Đánh giá tình trạng phòng thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 //Thêm phiếu đánh giá tình trạng phòng.
+                PDGTinhTrangPhongBUS.Instance.BPThemPDPTTPhong(pdgttp);
 
                 NotiLabel.Text = null;
                 MaPhongTBox.Text = null;
