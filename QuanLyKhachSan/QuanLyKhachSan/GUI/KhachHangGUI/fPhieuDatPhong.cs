@@ -31,7 +31,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
         [Obsolete]
         private void fPhieuDatPhong_Load(object sender, EventArgs e)
         {
-            DsPhongDataGridView.DataSource = PhieuDatPhongBUS.Instance.KHLayDanhSachPDP();
+            DsPhongDataGridView.DataSource = PhieuDatPhongBUS.Instance.KHLayDanhSachPhongTrong();
             label10.Visible = false;
             SoNgTrongDoanTBox.Visible = false;
             NotiLabel.Text = null;
@@ -166,7 +166,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
 
 
                     //set các textbox về null
-                    DsPhongDataGridView.DataSource = PhieuDatPhongBUS.Instance.KHLayDanhSachPDP();
+                    DsPhongDataGridView.DataSource = PhieuDatPhongBUS.Instance.KHLayDanhSachPhongTrong();
                     SoDemLuuTruTBox.Text = "";
                     if (doanCheckBox.Checked)
                     {

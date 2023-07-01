@@ -35,7 +35,7 @@ namespace QuanLyKhachSan.BUS
         }
 
         [Obsolete]
-        public DataTable KHLayDanhSachPDP()
+        public DataTable KHLayDanhSachPhongTrong()
         {
             return PhieuDatPhongDAO.Instance.KHLayDanhSachPhongTrong();
         }
