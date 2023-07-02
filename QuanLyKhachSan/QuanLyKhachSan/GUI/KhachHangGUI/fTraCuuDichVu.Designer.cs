@@ -30,7 +30,18 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.maPDVLb = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.nhanXetTxb = new System.Windows.Forms.TextBox();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.ghiChuTxb = new System.Windows.Forms.TextBox();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.lichSuDungDTP = new System.Windows.Forms.DateTimePicker();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.giaDVTxb = new System.Windows.Forms.TextBox();
@@ -43,9 +54,9 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.soLuongTxb = new System.Windows.Forms.TextBox();
-            this.xoaBtn = new System.Windows.Forms.Button();
             this.themBtn = new System.Windows.Forms.Button();
             this.timKiemBtn = new System.Windows.Forms.Button();
+            this.xoaBtn = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.maDVTxb = new System.Windows.Forms.TextBox();
@@ -57,17 +68,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dsDVDtgv = new System.Windows.Forms.DataGridView();
             this.xacNhanBtn = new System.Windows.Forms.Button();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.ghiChuTxb = new System.Windows.Forms.TextBox();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.nhanXetTxb = new System.Windows.Forms.TextBox();
-            this.lichSuDungDTP = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
+            this.panel12.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -76,9 +82,6 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvDaChonDtgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsDVDtgv)).BeginInit();
-            this.panel9.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.panel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -95,6 +98,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panel12);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.dvDaChonDtgv);
             this.panel1.Controls.Add(this.label5);
@@ -104,6 +108,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1035, 482);
             this.panel1.TabIndex = 94;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.maPDVLb);
+            this.panel12.Location = new System.Drawing.Point(717, 23);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(313, 27);
+            this.panel12.TabIndex = 11;
+            // 
+            // maPDVLb
+            // 
+            this.maPDVLb.AutoSize = true;
+            this.maPDVLb.Location = new System.Drawing.Point(4, 4);
+            this.maPDVLb.Name = "maPDVLb";
+            this.maPDVLb.Size = new System.Drawing.Size(110, 16);
+            this.maPDVLb.TabIndex = 0;
+            this.maPDVLb.Text = "Mã phiếu dịch vụ:";
             // 
             // panel2
             // 
@@ -119,10 +141,86 @@
             this.panel2.Controls.Add(this.xoaBtn);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Location = new System.Drawing.Point(714, 23);
+            this.panel2.Location = new System.Drawing.Point(714, 52);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(318, 325);
+            this.panel2.Size = new System.Drawing.Size(318, 331);
             this.panel2.TabIndex = 11;
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.label12);
+            this.panel11.Controls.Add(this.nhanXetTxb);
+            this.panel11.Location = new System.Drawing.Point(3, 263);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(316, 27);
+            this.panel11.TabIndex = 20;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(5, 4);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(62, 16);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Nhận xét:";
+            // 
+            // nhanXetTxb
+            // 
+            this.nhanXetTxb.Location = new System.Drawing.Point(116, 1);
+            this.nhanXetTxb.Name = "nhanXetTxb";
+            this.nhanXetTxb.Size = new System.Drawing.Size(193, 22);
+            this.nhanXetTxb.TabIndex = 0;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.label11);
+            this.panel10.Controls.Add(this.ghiChuTxb);
+            this.panel10.Location = new System.Drawing.Point(3, 234);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(316, 27);
+            this.panel10.TabIndex = 16;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(5, 4);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(56, 16);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Ghi Chú:";
+            // 
+            // ghiChuTxb
+            // 
+            this.ghiChuTxb.Location = new System.Drawing.Point(116, 1);
+            this.ghiChuTxb.Name = "ghiChuTxb";
+            this.ghiChuTxb.Size = new System.Drawing.Size(193, 22);
+            this.ghiChuTxb.TabIndex = 0;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.lichSuDungDTP);
+            this.panel9.Controls.Add(this.label10);
+            this.panel9.Location = new System.Drawing.Point(3, 201);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(316, 28);
+            this.panel9.TabIndex = 19;
+            // 
+            // lichSuDungDTP
+            // 
+            this.lichSuDungDTP.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lichSuDungDTP.Location = new System.Drawing.Point(116, 4);
+            this.lichSuDungDTP.Name = "lichSuDungDTP";
+            this.lichSuDungDTP.Size = new System.Drawing.Size(193, 22);
+            this.lichSuDungDTP.TabIndex = 1;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(5, 4);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(84, 16);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Lịch sử dụng:";
             // 
             // panel8
             // 
@@ -224,16 +322,6 @@
             this.soLuongTxb.Size = new System.Drawing.Size(193, 22);
             this.soLuongTxb.TabIndex = 0;
             // 
-            // xoaBtn
-            // 
-            this.xoaBtn.Location = new System.Drawing.Point(219, 296);
-            this.xoaBtn.Name = "xoaBtn";
-            this.xoaBtn.Size = new System.Drawing.Size(90, 23);
-            this.xoaBtn.TabIndex = 14;
-            this.xoaBtn.Text = "Xóa";
-            this.xoaBtn.UseVisualStyleBackColor = true;
-            this.xoaBtn.Click += new System.EventHandler(this.xoaBtn_Click);
-            // 
             // themBtn
             // 
             this.themBtn.Location = new System.Drawing.Point(123, 296);
@@ -253,6 +341,16 @@
             this.timKiemBtn.Text = "Tìm kiếm";
             this.timKiemBtn.UseVisualStyleBackColor = true;
             this.timKiemBtn.Click += new System.EventHandler(this.timKiemBtn_Click);
+            // 
+            // xoaBtn
+            // 
+            this.xoaBtn.Location = new System.Drawing.Point(219, 296);
+            this.xoaBtn.Name = "xoaBtn";
+            this.xoaBtn.Size = new System.Drawing.Size(90, 23);
+            this.xoaBtn.TabIndex = 14;
+            this.xoaBtn.Text = "Xóa";
+            this.xoaBtn.UseVisualStyleBackColor = true;
+            this.xoaBtn.Click += new System.EventHandler(this.xoaBtn_Click);
             // 
             // panel4
             // 
@@ -318,18 +416,20 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(6, 260);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 16);
+            this.label5.Size = new System.Drawing.Size(121, 16);
             this.label5.TabIndex = 9;
             this.label5.Text = "Dịch vụ đã chọn:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(6, 3);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 16);
+            this.label2.Size = new System.Drawing.Size(137, 16);
             this.label2.TabIndex = 10;
             this.label2.Text = "Danh sách dịch vụ:";
             // 
@@ -354,82 +454,6 @@
             this.xacNhanBtn.UseVisualStyleBackColor = true;
             this.xacNhanBtn.Click += new System.EventHandler(this.xacNhanBtn_Click);
             // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.lichSuDungDTP);
-            this.panel9.Controls.Add(this.label10);
-            this.panel9.Location = new System.Drawing.Point(3, 201);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(316, 28);
-            this.panel9.TabIndex = 19;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(5, 4);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(84, 16);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Lịch sử dụng:";
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.label11);
-            this.panel10.Controls.Add(this.ghiChuTxb);
-            this.panel10.Location = new System.Drawing.Point(3, 234);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(316, 27);
-            this.panel10.TabIndex = 16;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(5, 4);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(56, 16);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Ghi Chú:";
-            // 
-            // ghiChuTxb
-            // 
-            this.ghiChuTxb.Location = new System.Drawing.Point(116, 1);
-            this.ghiChuTxb.Name = "ghiChuTxb";
-            this.ghiChuTxb.Size = new System.Drawing.Size(193, 22);
-            this.ghiChuTxb.TabIndex = 0;
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.label12);
-            this.panel11.Controls.Add(this.nhanXetTxb);
-            this.panel11.Location = new System.Drawing.Point(3, 263);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(316, 27);
-            this.panel11.TabIndex = 20;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(5, 4);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(62, 16);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Nhận xét:";
-            // 
-            // nhanXetTxb
-            // 
-            this.nhanXetTxb.Location = new System.Drawing.Point(116, 1);
-            this.nhanXetTxb.Name = "nhanXetTxb";
-            this.nhanXetTxb.Size = new System.Drawing.Size(193, 22);
-            this.nhanXetTxb.TabIndex = 0;
-            // 
-            // lichSuDungDTP
-            // 
-            this.lichSuDungDTP.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lichSuDungDTP.Location = new System.Drawing.Point(116, 4);
-            this.lichSuDungDTP.Name = "lichSuDungDTP";
-            this.lichSuDungDTP.Size = new System.Drawing.Size(193, 22);
-            this.lichSuDungDTP.TabIndex = 1;
-            // 
             // fTraCuuDichVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -442,7 +466,15 @@
             this.Text = "fTraCuuDichVu";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel7.ResumeLayout(false);
@@ -457,12 +489,6 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvDaChonDtgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsDVDtgv)).EndInit();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -480,13 +506,10 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox giaDVTxb;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox donViTinhTxb;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox loaiDVTxb;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox soLuongTxb;
@@ -495,10 +518,8 @@
         private System.Windows.Forms.Button timKiemBtn;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox maDVTxb;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tenDVTxb;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel11;
@@ -508,5 +529,12 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox ghiChuTxb;
         private System.Windows.Forms.DateTimePicker lichSuDungDTP;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Label maPDVLb;
+        private System.Windows.Forms.TextBox giaDVTxb;
+        private System.Windows.Forms.TextBox donViTinhTxb;
+        private System.Windows.Forms.TextBox loaiDVTxb;
+        private System.Windows.Forms.TextBox maDVTxb;
+        private System.Windows.Forms.TextBox tenDVTxb;
     }
 }

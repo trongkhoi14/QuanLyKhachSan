@@ -77,12 +77,15 @@
     <Compile Include="BUS\HoaDonBUS.cs" />
     <Compile Include="BUS\KhachHangBUS.cs" />
     <Compile Include="BUS\PDGTinhTrangPhongBUS.cs" />
+    <Compile Include="BUS\PDKTourBUS.cs" />
     <Compile Include="BUS\PhieuDatPhongBUS.cs" />
     <Compile Include="BUS\PhieuDichVuBUS.cs" />
     <Compile Include="BUS\PhieuNhanPhongBUS.cs" />
     <Compile Include="BUS\PhongBUS.cs" />
     <Compile Include="BUS\TaiKhoanBUS.cs" />
+    <Compile Include="BUS\TourDuLichBUS.cs" />
     <Compile Include="DAO\CTPhieuDatPhongDAO.cs" />
+    <Compile Include="DAO\CTPhieuDichVuDAO.cs" />
     <Compile Include="DAO\CTPhieuNhanPhongDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\DichVuDAO.cs" />
@@ -90,11 +93,13 @@
     <Compile Include="DAO\KhachHangDAO.cs" />
     <Compile Include="DAO\NhanVienDAO.cs" />
     <Compile Include="DAO\PDGTinhTrangPhongDAO.cs" />
+    <Compile Include="DAO\PDKTourDAO.cs" />
     <Compile Include="DAO\PhieuDatPhongDAO.cs" />
     <Compile Include="DAO\PhieuDichVuDAO.cs" />
     <Compile Include="DAO\PhieuNhanPhongDAO.cs" />
     <Compile Include="DAO\PhongDAO.cs" />
     <Compile Include="DAO\TaiKhoanDAO.cs" />
+    <Compile Include="DAO\TourDuLichDAO.cs" />
     <Compile Include="GUI\BuongPhongGUI\BuongPhongGUI.cs">
       <SubType>Form</SubType>
     </Compile>

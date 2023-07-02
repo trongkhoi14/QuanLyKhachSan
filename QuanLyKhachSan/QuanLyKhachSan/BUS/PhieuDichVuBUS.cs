@@ -24,6 +24,10 @@ namespace QuanLyKhachSan.BUS
             return PhieuDichVuDAO.Instance.LTLayPhieuDichVuTheoPDP(MaPDP);
         }
 
-        
+        [Obsolete]
+        public string LayMaPhieuDichVu(string MaPDP)
+        {
+            return PhieuDichVuDAO.Instance.LayMaPhieuDichVu(MaPDP).Rows[0][0].ToString();
+        }
     }
 }

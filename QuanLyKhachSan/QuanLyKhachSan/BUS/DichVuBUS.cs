@@ -29,11 +29,13 @@ namespace QuanLyKhachSan.BUS
             this.LoaiDV = LoaiDV;
         }
 
+        [Obsolete]
         public DataTable LayDSDV()
         {
             return DichVuDAO.Instance.LayDSDV();
         }
 
+        [Obsolete]
         public DataTable LayDVTheoMaDV(string MaDV)
         {
             return DichVuDAO.Instance.LayDVTheoMaDV(MaDV);

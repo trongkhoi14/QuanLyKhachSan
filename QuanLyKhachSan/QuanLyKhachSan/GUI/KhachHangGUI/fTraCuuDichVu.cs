@@ -14,26 +14,36 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
 {
     public partial class fTraCuuDichVu : Form
     {
+        fDangKyDichVu f = new fDangKyDichVu();
         BindingSource dsdv = new BindingSource();
-        BindingList<DichVuBUS> dsdvdc = new BindingList<DichVuBUS>();
+        public BindingList<CTPhieuDichVuBUS> dsdvdc = new BindingList<CTPhieuDichVuBUS>();
 
-        public fTraCuuDichVu()
+        public fTraCuuDichVu(fDangKyDichVu fDKDV)
         {
             InitializeComponent();
-            HienThi();
+            f = fDKDV;
         }
 
-        void HienThi()
+        [Obsolete]
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
             dsDVDtgv.DataSource = dsdv;
             dvDaChonDtgv.DataSource = dsdvdc;
+            maPDVLb.Text = maPDVLb.Text + " " + LayMaPDV();
             LayDSDV();
             HienThiTTDVDangChon();
         }
 
+        [Obsolete]
         void LayDSDV()
         {
             dsdv.DataSource = DichVuBUS.Instance.LayDSDV();
+        }
+
+        [Obsolete]
+        string LayMaPDV()
+        {
+            return PhieuDichVuBUS.Instance.LayMaPhieuDichVu(PhieuDatPhongBUS.Instance.KHLayMaPDPGanNhat(PhieuDatPhongBUS.MAKH));
         }
 
         void HienThiTTDVDangChon()
@@ -44,8 +54,11 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             giaDVTxb.DataBindings.Add(new Binding("Text", dsDVDtgv.DataSource, "GIADV", true, DataSourceUpdateMode.Never));
             loaiDVTxb.DataBindings.Add(new Binding("Text", dsDVDtgv.DataSource, "LOAIDV", true, DataSourceUpdateMode.Never));
             soLuongTxb.Text = "1";
+            ghiChuTxb.Text = "không";
+            nhanXetTxb.Text = "không";
         }
 
+        [Obsolete]
         private void timKiemBtn_Click(object sender, EventArgs e)
         {
             if (maDVTxb.Text != "")
@@ -58,9 +71,19 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             }
         }
 
+        [Obsolete]
         private void themBtn_Click(object sender, EventArgs e)
         {
-            dsdvdc.Add(new DichVuBUS(tenDVTxb.Text, maDVTxb.Text, donViTinhTxb.Text, Convert.ToDouble(giaDVTxb.Text), loaiDVTxb.Text));
+            foreach (CTPhieuDichVuBUS i in dsdvdc)
+            {
+                if (i.MaDV == maDVTxb.Text && i.LichSuDung == lichSuDungDTP.Value && i.GhiChu == ghiChuTxb.Text )
+                {
+                    i.SoLuong = 0 + i.SoLuong + Convert.ToInt32(soLuongTxb.Text);
+                    dvDaChonDtgv.Refresh();
+                    return;
+                }
+            }
+            dsdvdc.Add(new CTPhieuDichVuBUS(LayMaPDV(), maDVTxb.Text, Convert.ToInt32(soLuongTxb.Text), lichSuDungDTP.Value, ghiChuTxb.Text, nhanXetTxb.Text));
         }
 
         private void xoaBtn_Click(object sender, EventArgs e)
@@ -71,9 +94,12 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             }
         }
 
+        [Obsolete]
         private void xacNhanBtn_Click(object sender, EventArgs e)
         {
-            this.Close();
+            f.dsdvdc = dsdvdc;
+            f.refesh();
+            this.Hide();
         }
     }
 }
