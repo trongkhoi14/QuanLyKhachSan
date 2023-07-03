@@ -78,3 +78,8 @@ C:\Users\PC\OneDrive - VNU-HCMUS\Documents\LuongTrongKhoi\Term6_HCMUS\Phân tíc
 C:\Users\PC\OneDrive - VNU-HCMUS\Documents\LuongTrongKhoi\Term6_HCMUS\Phân tích thiết kế hệ thống thông tin\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\GUI\Images\pencil.ico
 C:\Users\PC\OneDrive - VNU-HCMUS\Documents\LuongTrongKhoi\Term6_HCMUS\Phân tích thiết kế hệ thống thông tin\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\GUI\Images\profile.png
 C:\Users\PC\OneDrive - VNU-HCMUS\Documents\LuongTrongKhoi\Term6_HCMUS\Phân tích thiết kế hệ thống thông tin\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\GUI\Images\success.ico
+D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fDangKyDichVu.resources
+D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fDangKyTour.resources
+D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fTraCuuDichVu.resources
+D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fTraCuuTour.resources
+D:\subjects\Learning\phan tich thiet ke HTTT\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.LeTanGUI.CheckOutGUI.resources
