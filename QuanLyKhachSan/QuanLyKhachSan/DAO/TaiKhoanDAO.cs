@@ -22,5 +22,12 @@ namespace QuanLyKhachSan.DAO
         {
                 
         }
+
+        [Obsolete]
+        public string LayTenTaiKhoanLogin()
+        {
+            string query = string.Format("SELECT SYS_CONTEXT ('USERENV', 'SESSION_USER') FROM DUAL");
+            return DataProvider.Instance.ExecuteQuery(query).Rows[0][0].ToString();
+        }
     }
 }

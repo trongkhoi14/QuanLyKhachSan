@@ -41,7 +41,7 @@
             // DatPhongBtn
             // 
             this.DatPhongBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.DatPhongBtn.Location = new System.Drawing.Point(12, 12);
+            this.DatPhongBtn.Location = new System.Drawing.Point(129, 12);
             this.DatPhongBtn.Name = "DatPhongBtn";
             this.DatPhongBtn.Size = new System.Drawing.Size(111, 33);
             this.DatPhongBtn.TabIndex = 0;
@@ -54,7 +54,7 @@
             this.DoiMatKhauBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.DoiMatKhauBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.DoiMatKhauBtn.FlatAppearance.BorderSize = 2;
-            this.DoiMatKhauBtn.Location = new System.Drawing.Point(129, 12);
+            this.DoiMatKhauBtn.Location = new System.Drawing.Point(12, 12);
             this.DoiMatKhauBtn.Name = "DoiMatKhauBtn";
             this.DoiMatKhauBtn.Size = new System.Drawing.Size(111, 33);
             this.DoiMatKhauBtn.TabIndex = 1;
@@ -83,7 +83,7 @@
             // ThanhToanBtn
             // 
             this.ThanhToanBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ThanhToanBtn.Location = new System.Drawing.Point(364, 12);
+            this.ThanhToanBtn.Location = new System.Drawing.Point(872, 12);
             this.ThanhToanBtn.Name = "ThanhToanBtn";
             this.ThanhToanBtn.Size = new System.Drawing.Size(153, 33);
             this.ThanhToanBtn.TabIndex = 4;
@@ -94,7 +94,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Location = new System.Drawing.Point(779, 12);
+            this.button1.Location = new System.Drawing.Point(642, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(196, 33);
             this.button1.TabIndex = 5;
@@ -128,15 +128,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1131, 635);
-            this.Controls.Add(this.ThanhToanBtn);
+            this.ClientSize = new System.Drawing.Size(1077, 613);
+            this.Controls.Add(this.DatPhongBtn);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.ThanhToanBtn);
             this.Controls.Add(this.dangKyTourBtn);
             this.Controls.Add(this.dangKyDVBtn);
             this.Controls.Add(this.panel);
             this.Controls.Add(this.ThongTinPhongDaDatBtn);
             this.Controls.Add(this.DoiMatKhauBtn);
-            this.Controls.Add(this.DatPhongBtn);
             this.Name = "KhachHangGUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KhachHangGUI";

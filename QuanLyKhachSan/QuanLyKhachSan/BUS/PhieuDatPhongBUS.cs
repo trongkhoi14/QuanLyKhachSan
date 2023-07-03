@@ -145,12 +145,25 @@ namespace QuanLyKhachSan.BUS
         {
             return PhieuDatPhongDAO.Instance.KHLayLoaiPhongVoiMaPDP(maPDP, maKH);
         }
+
+        [Obsolete]
+        public bool ktTonTaiPDP(string maKH)
+        {
+            return PhieuDatPhongDAO.Instance.ktTonTaiPDP(maKH);
+        }
+
         [Obsolete]
         public string KHLayMaPDPGanNhat(string maKH)
         {
             var temp = PhieuDatPhongDAO.Instance.KHLayPDPMoiNhat(maKH);
             string output = (temp.Rows[0]["MAPDP"]).ToString();
 
+            string output = "";
+            if (ktTonTaiPDP(maKH))
+            {
+                var temp = PhieuDatPhongDAO.Instance.KHRetrieveLatestMAPDP(maKH);
+                output = (temp.Rows[0][0]).ToString();
+            }
             return output;
         }
 

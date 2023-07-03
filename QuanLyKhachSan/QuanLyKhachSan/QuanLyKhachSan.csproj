@@ -71,17 +71,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS\CTPhieuDatPhongBUS.cs" />
+    <Compile Include="BUS\CTPhieuDichVuBUS.cs" />
     <Compile Include="BUS\CTPhieuNhanPhongBUS.cs" />
     <Compile Include="BUS\DichVuBUS.cs" />
     <Compile Include="BUS\HoaDonBUS.cs" />
     <Compile Include="BUS\KhachHangBUS.cs" />
     <Compile Include="BUS\PDGTinhTrangPhongBUS.cs" />
+    <Compile Include="BUS\PDKTourBUS.cs" />
     <Compile Include="BUS\PhieuDatPhongBUS.cs" />
     <Compile Include="BUS\PhieuDichVuBUS.cs" />
     <Compile Include="BUS\PhieuNhanPhongBUS.cs" />
     <Compile Include="BUS\PhongBUS.cs" />
     <Compile Include="BUS\TaiKhoanBUS.cs" />
+    <Compile Include="BUS\TourDuLichBUS.cs" />
     <Compile Include="DAO\CTPhieuDatPhongDAO.cs" />
+    <Compile Include="DAO\CTPhieuDichVuDAO.cs" />
     <Compile Include="DAO\CTPhieuNhanPhongDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\DichVuDAO.cs" />
@@ -89,11 +93,13 @@
     <Compile Include="DAO\KhachHangDAO.cs" />
     <Compile Include="DAO\NhanVienDAO.cs" />
     <Compile Include="DAO\PDGTinhTrangPhongDAO.cs" />
+    <Compile Include="DAO\PDKTourDAO.cs" />
     <Compile Include="DAO\PhieuDatPhongDAO.cs" />
     <Compile Include="DAO\PhieuDichVuDAO.cs" />
     <Compile Include="DAO\PhieuNhanPhongDAO.cs" />
     <Compile Include="DAO\PhongDAO.cs" />
     <Compile Include="DAO\TaiKhoanDAO.cs" />
+    <Compile Include="DAO\TourDuLichDAO.cs" />
     <Compile Include="GUI\BuongPhongGUI\BuongPhongGUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,12 +195,23 @@
     </Compile>
     <Compile Include="GUI\LeTanGUI\CheckOutGUI.Designer.cs">
       <DependentUpon>CheckOutGUI.cs</DependentUpon>
+    <Compile Include="GUI\LeTanGUI\ChiTietPhieuDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LeTanGUI\ChiTietPhieuDichVu.Designer.cs">
+      <DependentUpon>ChiTietPhieuDichVu.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\LeTanGUI\DKThongTinLuuTruGUI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\LeTanGUI\DKThongTinLuuTruGUI.Designer.cs">
       <DependentUpon>DKThongTinLuuTruGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LeTanGUI\LapPhieuDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LeTanGUI\LapPhieuDichVu.Designer.cs">
+      <DependentUpon>LapPhieuDichVu.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\LeTanGUI\LeTanGUI.cs">
       <SubType>Form</SubType>
@@ -251,9 +268,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\LeTanGUI\CheckOutGUI.resx">
       <DependentUpon>CheckOutGUI.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\LeTanGUI\ChiTietPhieuDichVu.resx">
+      <DependentUpon>ChiTietPhieuDichVu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\LeTanGUI\DKThongTinLuuTruGUI.resx">
       <DependentUpon>DKThongTinLuuTruGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LeTanGUI\LapPhieuDichVu.resx">
+      <DependentUpon>LapPhieuDichVu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\LeTanGUI\LeTanGUI.resx">
       <DependentUpon>LeTanGUI.cs</DependentUpon>

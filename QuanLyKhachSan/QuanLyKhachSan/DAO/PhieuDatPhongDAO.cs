@@ -171,5 +171,12 @@ namespace QuanLyKhachSan.DAO
             string query = string.Format($"delete from HOTELADMIN.phieudatphong where mapdp='{maPDP}'");
             DataProvider.Instance.ExecuteNonQuery(query);
         }
+
+        [Obsolete]
+        public bool ktTonTaiPDP(string maKH)
+        {
+            string query = string.Format($"SELECT COUNT(*) FROM HOTELADMIN.PHIEUDATPHONG WHERE MAKH = '{maKH}'");
+            return (Convert.ToInt32(DataProvider.Instance.ExecuteQuery(query).Rows[0][0].ToString()) > 0);
+        }
     }
 }

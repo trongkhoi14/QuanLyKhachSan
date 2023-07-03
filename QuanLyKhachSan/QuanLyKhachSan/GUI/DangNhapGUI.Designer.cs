@@ -120,6 +120,7 @@
             this.txbTenDangNhap.Size = new System.Drawing.Size(469, 26);
             this.txbTenDangNhap.TabIndex = 0;
             this.txbTenDangNhap.Text = "NV002";
+            this.txbTenDangNhap.Text = "NV001";
             // 
             // label5
             // 
@@ -127,6 +128,7 @@
             this.label5.Location = new System.Drawing.Point(4, 91);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 20);
+            this.label5.Size = new System.Drawing.Size(64, 16);
             this.label5.TabIndex = 1;
             this.label5.Text = "Mật khẩu:";
             // 
@@ -135,7 +137,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(4, 38);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 20);
+            this.label4.Size = new System.Drawing.Size(101, 16);
             this.label4.TabIndex = 0;
             this.label4.Text = "Tên đăng nhập:";
             // 

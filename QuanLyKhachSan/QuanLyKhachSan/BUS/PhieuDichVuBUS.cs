@@ -23,5 +23,34 @@ namespace QuanLyKhachSan.BUS
         {
             return PhieuDichVuDAO.Instance.LTLayPhieuDichVuTheoPDP(MaPDP);
         }
+
+        [Obsolete]
+        public string LayMaPhieuDichVu(string MaPDP)
+        {
+            return PhieuDichVuDAO.Instance.LayMaPhieuDichVu(MaPDP).Rows[0][0].ToString();
+        }
+
+        [Obsolete]
+        public DataTable LayPhieuDichVuChuaCapNhat()
+        {
+            return PhieuDichVuDAO.Instance.LayPhieuDichVuChuaCapNhat();
+        }
+
+        [Obsolete]
+        public DataTable LayPhieuDichVuHienCo()
+        {
+            return PhieuDichVuDAO.Instance.LayPhieuDichVuHienCo();
+        }
+
+        [Obsolete]
+        public void CapNhatPDV(string MaNV, DateTime NgayCapNhat, string MaPDV)
+        {
+            PhieuDichVuDAO.Instance.CapNhatPDV(MaNV, NgayCapNhat, MaPDV);
+        }
+
+        public string MaPDV { get; set; }
+        public string MaNV { get; set; }
+        public DateTime NgayCapNhat { get; set; }
+        public string MaPDP { get; set; }
     }
 }
