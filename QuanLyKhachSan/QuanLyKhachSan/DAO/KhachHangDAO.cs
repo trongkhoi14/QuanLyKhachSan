@@ -16,7 +16,7 @@ namespace QuanLyKhachSan.DAO
             get { if (instance == null) instance = new KhachHangDAO(); return instance; }
             set => instance = value;
         }
-        private KhachHangDAO() { }
+        public KhachHangDAO() { }
 
         [Obsolete]
         public DataTable LTLayDanhSach()
@@ -53,7 +53,6 @@ namespace QuanLyKhachSan.DAO
             return DataProvider.Instance.ExecuteNonQuery(query);
             
         }
-        public DataTable KHGetSelfInformation()
         public DataTable KHLayThongTinCaNhan(string maKH)
         {
             string query = string.Format($"SELECT * FROM HOTELADMIN.khachhang WHERE makh = '{maKH}'");
