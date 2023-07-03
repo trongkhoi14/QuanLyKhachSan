@@ -41,12 +41,13 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
         [Obsolete]
         private void DaThanhToanBtn_Click(object sender, EventArgs e)
         {
-            if (String.Equals((string)HoaDonBUS.Instance.KHRetrieveInvoice().Rows[0]["PHUONGTHUCTT"], "Chuyen khoan", StringComparison.OrdinalIgnoreCase))
+            var pdp = PhieuDatPhongBUS.Instance.KHLayMaPDPGanNhat(PhieuDatPhongBUS.MAKH);
+            if (String.Equals((string)HoaDonBUS.Instance.KHRetrieveInvoice(pdp).Rows[0]["PHUONGTHUCTT"], "Chuyen khoan", StringComparison.OrdinalIgnoreCase))
             {
                 //Nếu đã đặt cọc
                 if (PhieuDatPhongBUS.Instance.KHCheckDaCoc())
                 {
-                    MessageBox.Show("Quí vui lòng đã đặt cọc\n Vui lòng đến quầy lễ tân để nhận lại\n số tiền vừa chuyển", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Hệ thống đã cập nhật tiền cọc", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {

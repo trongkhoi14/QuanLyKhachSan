@@ -36,8 +36,8 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             label1.Text = null;
             label1.Text = "Hệ thống đã cập nhật hóa\nđơn của bạn";
             var maPDP = PhieuDatPhongBUS.Instance.KHLayMaPDPGanNhat(PhieuDatPhongBUS.MAKH);
-            HoaDonBUS.Instance.KHCapNhatTienCoc(Convert.ToInt32(HoaDonBUS.Instance.KHCountRentalFee(maPDP) * 0.3));
-            PhieuDatPhongBUS.Instance.KHCapNhatTinhTrangPDP("Da coc");
+            HoaDonBUS.Instance.KHCapNhatTienCoc(Convert.ToInt32(HoaDonBUS.Instance.KHCountRentalFee(maPDP) * 0.3),PhieuDatPhongBUS.MAKH);
+            PhieuDatPhongBUS.Instance.KHCapNhatTinhTrangPDP("Da coc", maPDP);
             OkBtn.Visible = true;
         }
 

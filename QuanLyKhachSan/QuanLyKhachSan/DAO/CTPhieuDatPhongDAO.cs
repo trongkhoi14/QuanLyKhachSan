@@ -16,7 +16,6 @@ namespace QuanLyKhachSan.DAO
             set => instance = value;
         }
         private CTPhieuDatPhongDAO() { }
-
         [Obsolete]
         public bool KHThemCTPhieuDatPhong(string MAPDP, string MAPHONG)
         {
@@ -24,9 +23,8 @@ namespace QuanLyKhachSan.DAO
             DataProvider.Instance.ExecuteNonQuery(query);
             return true;
         }
-
         [Obsolete]
-        public DataTable KHRetrieveRentalFee(string maPDP)
+        public DataTable KHTinhTongTienThuePhong(string maPDP)
         {
             string query = string.Format($"select lp.giamotdem " +
                                         $"from HOTELADMIN.ct_phieudatphong ct " +
@@ -36,11 +34,19 @@ namespace QuanLyKhachSan.DAO
             return DataProvider.Instance.ExecuteQuery(query);
         }
         [Obsolete]
-        public void KHDeleteCtPDP(string maPDP)
+        public void KHXoaCTPhieuDatPhong(string maPDP)
         {
             string query = string.Format($"delete from HOTELADMIN.ct_phieudatphong where mapdp='{maPDP}'");
             DataProvider.Instance.ExecuteNonQuery(query);
         }
-      
+
+        [Obsolete]
+        public DataTable BPLayMaPDP(string maPhong)
+        {
+            string query = string.Format($"select mapdp from HOTELADMIN.ct_phieudatphong where maphong='{maPhong}'");
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+
     }
 }

@@ -10,6 +10,7 @@ namespace QuanLyKhachSan.BUS
     public class PDGTinhTrangPhongBUS
     {
         public string MAPDG { get; set; }
+        public string MAPDP { get; set; }
         public string MAPHONG { get; set; }
         public DateTime NGAYLAP { get; set; }
         public string MOTA { get; set; }
@@ -25,7 +26,7 @@ namespace QuanLyKhachSan.BUS
         [Obsolete]
         public string BPGetPDGCode()
         {
-            var code = PDGTinhTrangPhongDAO.Instance.BPGetPDGCodeFromDB();
+            var code = PDGTinhTrangPhongDAO.Instance.BPLayMaPdgttPhong();
             int count = Convert.ToInt32(code.Rows[0][0]);
             if (count < 10)
             {
@@ -66,6 +67,10 @@ namespace QuanLyKhachSan.BUS
                 return true;
             }
             return false;
+        }
+        public void BPThemPDPTTPhong(PDGTinhTrangPhongBUS pdgttp)
+        {
+            PDGTinhTrangPhongDAO.Instance.BPThemPDPTTPhong(pdgttp);
         }
     }
 }

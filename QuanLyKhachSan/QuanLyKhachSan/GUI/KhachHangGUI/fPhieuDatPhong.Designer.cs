@@ -63,7 +63,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(436, 80);
+            this.label12.Location = new System.Drawing.Point(326, 83);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(270, 25);
             this.label12.TabIndex = 89;
@@ -146,12 +146,12 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             this.DsPhongDataGridView.AllowUserToDeleteRows = false;
             this.DsPhongDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.DsPhongDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DsPhongDataGridView.Location = new System.Drawing.Point(441, 111);
+            this.DsPhongDataGridView.Location = new System.Drawing.Point(331, 111);
             this.DsPhongDataGridView.Name = "DsPhongDataGridView";
             this.DsPhongDataGridView.RowHeadersWidth = 51;
             this.DsPhongDataGridView.RowTemplate.Height = 24;
             this.DsPhongDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DsPhongDataGridView.Size = new System.Drawing.Size(625, 367);
+            this.DsPhongDataGridView.Size = new System.Drawing.Size(750, 367);
             this.DsPhongDataGridView.TabIndex = 91;
             // 
             // NotiLabel

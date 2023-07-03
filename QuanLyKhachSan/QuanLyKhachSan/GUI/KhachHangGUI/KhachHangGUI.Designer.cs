@@ -51,7 +51,7 @@
             // 
             // DoiMatKhauBtn
             // 
-            this.DoiMatKhauBtn.BackColor = System.Drawing.Color.White;
+            this.DoiMatKhauBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.DoiMatKhauBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.DoiMatKhauBtn.FlatAppearance.BorderSize = 2;
             this.DoiMatKhauBtn.Location = new System.Drawing.Point(129, 12);

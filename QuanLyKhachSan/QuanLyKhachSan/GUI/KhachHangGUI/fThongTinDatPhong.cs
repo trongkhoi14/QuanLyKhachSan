@@ -26,22 +26,22 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
         [Obsolete]
         private void fThongTinDatPhong_Load(object sender, EventArgs e)
         {
-            ThongTinDatPhongDataGridView.DataSource = PhieuDatPhongBUS.Instance.KHLayPhieuDatPhong();
-            LoaiPhongDaDatDataGridView.DataSource = PhieuDatPhongBUS.Instance.KHLayThongTinPhongDaDat();
+            ThongTinDatPhongDataGridView.DataSource = PhieuDatPhongBUS.Instance.KHLayPhieuTatCaPDPDaDat(PhieuDatPhongBUS.MAKH);
+            LoaiPhongDaDatDataGridView.DataSource = PhieuDatPhongBUS.Instance.KHLayThongTinPhongDaDat(PhieuDatPhongBUS.MAKH);
         }
 
         [Obsolete]
-        private void DaThanhToanBtn_Click(object sender, EventArgs e)
+        private void XoaPDPBtn_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Quí khách muốn xóa phiếu đặt phòng gần nhất", "Notice",MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (result == DialogResult.OK)
             {
-                var pdp = PhieuDatPhongBUS.Instance.KHLayPhieuDatPhong();
-                bool isDaDatCoc = String.Equals((string)pdp.Rows[0]["tinhtrang"], "Da coc", StringComparison.OrdinalIgnoreCase);
+                var pdp = PhieuDatPhongBUS.Instance.KHLayPDPMoiNhat(PhieuDatPhongBUS.MAKH);
+                bool isDaDatCoc = String.Equals((string)pdp.Rows[0]["TINHTRANG"], "Da coc", StringComparison.OrdinalIgnoreCase);
                 //thông báo nếu đã đặt cọc
                 if (isDaDatCoc)
                 {
-                    MessageBox.Show("Quí khách đã đặt cọc, vui lòng đến quầy lễ tân đễ được hỗ trợ nhận lại tiền cọc", "Notice", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                    MessageBox.Show("Nếu quí khách muốn xóa phòng đã đặt cọc, vui lòng liên hệ lễ tân", "Notice", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                 }
                 //xóa phiếu đặt phòng gần nhất nếu chưa đặt cọc
                 else
@@ -53,6 +53,11 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
                     HoaDonBUS.Instance.KHDeleteInvoice(mapdp);
                     //xóa pdp
                     PhieuDatPhongBUS.Instance.KHDeletePDP(mapdp);
+
+                    //thông báo cho khách hàng
+                    MessageBox.Show("Đã xóa phiếu đặt phòng gần nhất", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ThongTinDatPhongDataGridView.DataSource = PhieuDatPhongBUS.Instance.KHLayPhieuTatCaPDPDaDat(PhieuDatPhongBUS.MAKH);
+                    LoaiPhongDaDatDataGridView.DataSource = PhieuDatPhongBUS.Instance.KHLayThongTinPhongDaDat(PhieuDatPhongBUS.MAKH);
                 }
             }
             else

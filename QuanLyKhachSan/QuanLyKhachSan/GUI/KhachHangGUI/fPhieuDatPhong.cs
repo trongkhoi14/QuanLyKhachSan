@@ -31,23 +31,11 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
         [Obsolete]
         private void fPhieuDatPhong_Load(object sender, EventArgs e)
         {
-            DsPhongDataGridView.DataSource = PhieuDatPhongBUS.Instance.KHLayDanhSachPDP();
+            DsPhongDataGridView.DataSource = PhieuDatPhongBUS.Instance.KHLayDanhSachPhongTrong();
             label10.Visible = false;
             SoNgTrongDoanTBox.Visible = false;
             NotiLabel.Text = null;
             label1.Visible = false;
-        }
-        private void DsPhongDataGridView_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
-        {
-            int checkedColumnIndex = DsPhongDataGridView.Columns["Select"].Index;
-            foreach (DataGridViewRow row in this.DsPhongDataGridView.Rows)
-            {
-                if (row.Cells[checkedColumnIndex].Value == null)
-                {
-                    bool isChecked = (bool)row.Cells[checkedColumnIndex].FormattedValue;
-                    row.Cells[checkedColumnIndex].Value = isChecked;
-                }
-            }
         }
         [Obsolete]
         private async void HoanThanhBtn_Click(object sender, EventArgs e)
@@ -137,7 +125,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
                     }
                 }
 
-                //xác nhận lại hóa đơn
+                //xác nhận lại phiếu đặt phòng
                 var xacnhan = new fXacNhanPDP(pdp, ptttoan, MaPhongChecked);
                 this.Hide();
                 xacnhan.ShowDialog();
@@ -151,7 +139,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
                     NotiLabel.Text = null;
 
                     //Lưu phiếu đặt phòng
-                    PhieuDatPhongBUS.Instance.KHThemPDP(pdp);
+                    PhieuDatPhongBUS.Instance.KHThemPDP(pdp, PhieuDatPhongBUS.MAKH);
 
                     //Lưu chi tiết phiếu đặt phòng
                     for (int i = 0; i < MaPhongChecked.Count(); i++)
@@ -174,11 +162,11 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
                     HoaDonBUS.PHUONGTHUCTHANHTOAN = ptttoan;
 
                     //lưu hóa đơn
-                    HoaDonBUS.Instance.KHAddInvoice(hoadon);
+                    HoaDonBUS.Instance.KHAddInvoice(hoadon,HoaDonBUS.PHUONGTHUCTHANHTOAN);
 
 
                     //set các textbox về null
-                    DsPhongDataGridView.DataSource = PhieuDatPhongBUS.Instance.KHLayDanhSachPDP();
+                    DsPhongDataGridView.DataSource = PhieuDatPhongBUS.Instance.KHLayDanhSachPhongTrong();
                     SoDemLuuTruTBox.Text = "";
                     if (doanCheckBox.Checked)
                     {

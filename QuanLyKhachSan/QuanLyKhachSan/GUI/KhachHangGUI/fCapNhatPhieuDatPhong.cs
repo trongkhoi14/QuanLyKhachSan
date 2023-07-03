@@ -32,7 +32,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             NgayDenDateTimePicker.Value = Convert.ToDateTime(temp.Rows[0]["NGAYDEN"]);
             SoNguoiTrongDoanTBox.Text = temp.Rows[0]["SONGUOI"].ToString();
 
-            var ptttoan = HoaDonBUS.Instance.KHRetrieveInvoice().Rows[0]["PHUONGTHUCTT"];
+            var ptttoan = HoaDonBUS.Instance.KHRetrieveInvoice(maPDP).Rows[0]["PHUONGTHUCTT"];
             if (String.Equals((string)ptttoan, "Tien mat", StringComparison.OrdinalIgnoreCase))
             {
                 PhuongThucThanhToanComboBox.SelectedIndex = 0;
@@ -46,7 +46,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
                 PhuongThucThanhToanComboBox.SelectedIndex = 2;
             }
 
-            DsPhongDaDangKyDataGridView.DataSource = PhieuDatPhongBUS.Instance.KHLayThongTinPhongDaDatTheoMaPDP(maPDP);
+            DsPhongDaDangKyDataGridView.DataSource = PhieuDatPhongBUS.Instance.KHLayThongTinPhongDaDatTheoMaPDP(maPDP,PhieuDatPhongBUS.MAKH);
             LuuYTBox.Text = "Nếu quí khách muốn thay đổi phòng đã đặt, xin vui lòng hủy phiếu đặt phòng và đặt lại phiếu khác";
         }
 
@@ -74,7 +74,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             }
 
             //kiểm tra hợp lệ
-            var check = PhieuDatPhongBUS.Instance.CheckValidNewPDP(newPDP);
+            var check = PhieuDatPhongBUS.Instance.KHKiemTraPDPHopLe(newPDP);
             if (check == 1)
             {
                 NotiLabel.Text = null;
@@ -108,7 +108,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
             else
             {
                 //cập nhật phương thức thanh toán trong hóa đơn
-                HoaDonBUS.Instance.KHUpdatePTTToan(ptttoan);
+                HoaDonBUS.Instance.KHUpdatePTTToan(ptttoan,PhieuDatPhongBUS.MAKH);
                 //cập nhật phiếu đặt phòng
                 PhieuDatPhongBUS.Instance.KHCapNhatPDP(newPDP);
                 MessageBox.Show("Cập nhật thành công\nVui lòng xem hướng dẫn thanh toán", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);

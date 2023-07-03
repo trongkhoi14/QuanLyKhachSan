@@ -25,6 +25,7 @@ namespace QuanLyKhachSan.GUI.BuongPhongGUI
         {
             var pdgttp = new PDGTinhTrangPhongBUS();
             pdgttp.MAPDG = PDGTinhTrangPhongBUS.Instance.BPGetPDGCode();
+            pdgttp.MAPDP = CTPhieuDatPhongBUS.Instance.BPLayMaPDP(MaPhongTBox.Text);
             pdgttp.MAPHONG = MaPhongTBox.Text;
             pdgttp.NGAYLAP = DateTime.Today;
             pdgttp.MOTA=MoTaTBox.Text;
@@ -51,6 +52,9 @@ namespace QuanLyKhachSan.GUI.BuongPhongGUI
             else 
             {
                 MessageBox.Show("Đánh giá tình trạng phòng thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //Thêm phiếu đánh giá tình trạng phòng.
+                PDGTinhTrangPhongBUS.Instance.BPThemPDPTTPhong(pdgttp);
+
                 NotiLabel.Text = null;
                 MaPhongTBox.Text = null;
                 MoTaTBox.Text = null;

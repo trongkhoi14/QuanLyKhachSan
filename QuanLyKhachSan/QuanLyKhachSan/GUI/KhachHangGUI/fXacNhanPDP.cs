@@ -17,6 +17,7 @@ namespace QuanLyKhachSan.GUI.KhachHangGUI
         public fXacNhanPDP(PhieuDatPhongBUS pdp, string ptttoan, List<string> MaPhongChecked)
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
             NgaydenTimePicker.Value = Convert.ToDateTime(pdp.NGAYDEN);
             SoDemLuuTruTBox.Text = pdp.SODEMLUUTRU;
             PhuongThucTTTBox.Text = ptttoan;

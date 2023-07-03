@@ -10,8 +10,7 @@ using System.Threading.Tasks;
 namespace QuanLyKhachSan.DAO
 {
     public class DataProvider
-    {
-                
+    {        
         private static DataProvider instance;
 
         private string connectionSTR = "";

@@ -21,53 +21,53 @@ namespace QuanLyKhachSan.DAO
         private HoaDonDAO() { }
 
         [Obsolete] 
-        public void KHAddInvoice(HoaDonBUS hoadon)
+        public void KHThemHoaDon(HoaDonBUS hoadon, string ptttoan)
         {
             string query = string.Format($"insert into HOTELADMIN.hoadon values('{hoadon.MAHD}','{hoadon.MAPDP}'," +
                 $"TO_DATE('{hoadon.NGAYCAPNHAT.ToString("dd/MM/yyyy")}', 'DD/MM/YYYY'),'{hoadon.TRANGTHAI}','{hoadon.TIENCOC}'," +
-                $"'{hoadon.PHUTHU}','{hoadon.TIENNHAN}','{hoadon.TIENHOAN}','{HoaDonBUS.PHUONGTHUCTHANHTOAN}')");
+                $"'{hoadon.PHUTHU}','{hoadon.TIENNHAN}','{hoadon.TIENHOAN}','{ptttoan}')");
             DataProvider.Instance.ExecuteNonQuery(query);
         }
 
         [Obsolete]
-        public DataTable KHRetrieveInvoiceCode()
+        public DataTable KHLayMaHoaDon()
         {
             string query = string.Format("select count(*) from HOTELADMIN.hoadon");
             return DataProvider.Instance.ExecuteQuery(query);
         }
         [Obsolete]
-        public void KHUpdateTienCoc(int tienCoc)
+        public void KHCapNhatTienCoc(int tienCoc, string maKH)
         {
             string query = string.Format("update HOTELADMIN.hoadon " +
                                         $"set tiencoc = {tienCoc} " +
                                         "where mapdp = (select mapdp from HOTELADMIN.phieudatphong " +
-                                                        $"where makh='{PhieuDatPhongBUS.MAKH}' and  " +
+                                                        $"where makh='{maKH}' and  " +
                                                         $"ngaylap = (select max(ngaylap) " +
-                                                                   $"from HOTELADMIN.phieudatphong where makh='{PhieuDatPhongBUS.MAKH}'))");
+                                                                   $"from HOTELADMIN.phieudatphong where makh='{maKH}'))");
             DataProvider.Instance.ExecuteNonQuery(query);
         }
 
         [Obsolete]
-        public DataTable KHRetrieveInvoice()
+        public DataTable KHLayHoaDon(string maPDP)
         {
             string query = string.Format($"select * from HOTELADMIN.hoadon " +
-                                         $"where mapdp = '{PhieuDatPhongBUS.Instance.KHLayMaPDPGanNhat(PhieuDatPhongBUS.MAKH)}'");
+                                         $"where mapdp = '{maPDP}'");
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
         [Obsolete]
-        public void KHUpdatePTTToan(string ptttoan)
+        public void KHCapNhatPttToan(string ptttoan, string maKH)
         {
             string query = string.Format("update HOTELADMIN.hoadon " +
                                         $"set phuongthuctt = '{ptttoan}' " +
                                         "where mapdp = (select mapdp from HOTELADMIN.phieudatphong " +
-                                                        $"where makh='{PhieuDatPhongBUS.MAKH}' and  " +
+                                                        $"where makh='{maKH}' and  " +
                                                         $"ngaylap = (select max(ngaylap) " +
-                                                                   $"from HOTELADMIN.phieudatphong where makh='{PhieuDatPhongBUS.MAKH}'))");
+                                                                   $"from HOTELADMIN.phieudatphong where makh='{maKH}'))");
             DataProvider.Instance.ExecuteNonQuery(query);
         }
         [Obsolete]
-        public void KHDeleteInvoice(string maPDP)
+        public void KHXoaHoaDon(string maPDP)
         {
             string query = string.Format($"delete from HOTELADMIN.hoadon where mapdp='{maPDP}'");
             DataProvider.Instance.ExecuteNonQuery(query);
