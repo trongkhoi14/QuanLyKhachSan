@@ -85,7 +85,7 @@
             this.ThanhToanBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ThanhToanBtn.Location = new System.Drawing.Point(364, 12);
             this.ThanhToanBtn.Name = "ThanhToanBtn";
-            this.ThanhToanBtn.Size = new System.Drawing.Size(168, 33);
+            this.ThanhToanBtn.Size = new System.Drawing.Size(153, 33);
             this.ThanhToanBtn.TabIndex = 4;
             this.ThanhToanBtn.Text = "Hướng dẫn thanh toán";
             this.ThanhToanBtn.UseVisualStyleBackColor = false;
@@ -94,19 +94,20 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Location = new System.Drawing.Point(538, 12);
+            this.button1.Location = new System.Drawing.Point(779, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(224, 33);
+            this.button1.Size = new System.Drawing.Size(196, 33);
             this.button1.TabIndex = 5;
             this.button1.Text = "Cập nhật thông tin đặt phòng";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // dangKyDVBtn
             // 
             this.dangKyDVBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dangKyDVBtn.Location = new System.Drawing.Point(364, 12);
+            this.dangKyDVBtn.Location = new System.Drawing.Point(523, 12);
             this.dangKyDVBtn.Name = "dangKyDVBtn";
-            this.dangKyDVBtn.Size = new System.Drawing.Size(133, 33);
+            this.dangKyDVBtn.Size = new System.Drawing.Size(118, 33);
             this.dangKyDVBtn.TabIndex = 4;
             this.dangKyDVBtn.Text = "Đăng ký dịch vụ";
             this.dangKyDVBtn.UseVisualStyleBackColor = false;
@@ -115,9 +116,9 @@
             // dangKyTourBtn
             // 
             this.dangKyTourBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dangKyTourBtn.Location = new System.Drawing.Point(503, 12);
+            this.dangKyTourBtn.Location = new System.Drawing.Point(647, 12);
             this.dangKyTourBtn.Name = "dangKyTourBtn";
-            this.dangKyTourBtn.Size = new System.Drawing.Size(133, 33);
+            this.dangKyTourBtn.Size = new System.Drawing.Size(110, 33);
             this.dangKyTourBtn.TabIndex = 5;
             this.dangKyTourBtn.Text = "Đăng ký tour";
             this.dangKyTourBtn.UseVisualStyleBackColor = false;
@@ -127,10 +128,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1135, 640);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1131, 635);
             this.Controls.Add(this.ThanhToanBtn);
-            this.ClientSize = new System.Drawing.Size(1077, 613);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dangKyTourBtn);
             this.Controls.Add(this.dangKyDVBtn);
             this.Controls.Add(this.panel);

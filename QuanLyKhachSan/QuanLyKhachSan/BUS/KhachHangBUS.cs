@@ -27,7 +27,7 @@ namespace QuanLyKhachSan.BUS
             get { if (instance == null) instance = new KhachHangBUS(); return instance; }
             set => instance = value;
         }
-        private KhachHangBUS() { }
+        public KhachHangBUS() { }
 
         [Obsolete]
         public DataTable LTLayDanhSachKhachHang()
@@ -80,6 +80,7 @@ namespace QuanLyKhachSan.BUS
             return true;
         }
 
+        [Obsolete]
         public DataTable KHLayThongTinBanThan(string maKH)
         {
             return KhachHangDAO.Instance.KHLayThongTinCaNhan(maKH);

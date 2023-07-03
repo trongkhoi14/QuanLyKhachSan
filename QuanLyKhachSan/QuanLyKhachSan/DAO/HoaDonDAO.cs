@@ -72,7 +72,6 @@ namespace QuanLyKhachSan.DAO
             string query = string.Format($"delete from HOTELADMIN.hoadon where mapdp='{maPDP}'");
             DataProvider.Instance.ExecuteNonQuery(query);
         }
-        private HoaDonDAO() { }
         public DataTable TongTienThanhToan(string MaPhong, string PhuThu)
         {
            try

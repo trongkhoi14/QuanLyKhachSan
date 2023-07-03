@@ -16,7 +16,7 @@ namespace QuanLyKhachSan.DAO
             get { if (instance == null) instance = new KhachHangDAO(); return instance; }
             set => instance = value;
         }
-        private KhachHangDAO() { }
+        public KhachHangDAO() { }
 
         [Obsolete]
         public DataTable LTLayDanhSach()
