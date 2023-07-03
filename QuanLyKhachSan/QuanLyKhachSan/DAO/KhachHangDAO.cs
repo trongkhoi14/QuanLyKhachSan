@@ -53,7 +53,7 @@ namespace QuanLyKhachSan.DAO
             return DataProvider.Instance.ExecuteNonQuery(query);
             
         }
-        public DataTable KHGetSelfInformation()
+        //public DataTable KHGetSelfInformation();
         public DataTable KHLayThongTinCaNhan(string maKH)
         {
             string query = string.Format($"SELECT * FROM HOTELADMIN.khachhang WHERE makh = '{maKH}'");

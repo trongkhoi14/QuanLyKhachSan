@@ -34,6 +34,7 @@ namespace QuanLyKhachSan.BUS
         {
             return KhachHangDAO.Instance.LTLayDanhSach();
         }
+
         [Obsolete]
         public bool KiemTraTonTai(string tenkh, string ngaysinh, string diachi)
         {
@@ -64,6 +65,7 @@ namespace QuanLyKhachSan.BUS
             }
             return true;
         }
+
         [Obsolete]
         public bool LTCapNhatKhachHang(string makh, string email, string sodt, string sofax)
         {
@@ -76,12 +78,8 @@ namespace QuanLyKhachSan.BUS
                 return false;
             }
             return true;
-
-
-           
         }
-        [Obsolete]
-        public DataTable KHLayThongTinBanThan()
+
         public DataTable KHLayThongTinBanThan(string maKH)
         {
             return KhachHangDAO.Instance.KHLayThongTinCaNhan(maKH);
