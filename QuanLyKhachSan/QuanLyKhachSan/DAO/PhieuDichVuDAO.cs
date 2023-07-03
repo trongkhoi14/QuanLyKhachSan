@@ -35,5 +35,26 @@ namespace QuanLyKhachSan.DAO
             string query = string.Format($"SELECT MAPDV FROM HOTELADMIN.PHIEUDICHVU WHERE MAPDP = '{MaPDP}'");
             return DataProvider.Instance.ExecuteQuery(query);
         }
+
+        [Obsolete]
+        public DataTable LayPhieuDichVuChuaCapNhat()
+        {
+            string query = string.Format("SELECT A.MAPDV, A.MADV, A.SOLUONG, A.LICHSUDUNG, A.GHICHU, A.NHANXET, B.NGAYCAPNHAT, B.MANV, B.MAPDP FROM HOTELADMIN.CT_PHIEUDICHVU A, HOTELADMIN.PHIEUDICHVU B WHERE A.MAPDV = B.MAPDV AND A.LICHSUDUNG > B.NGAYCAPNHAT");
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        [Obsolete]
+        public DataTable LayPhieuDichVuHienCo()
+        {
+            string query = string.Format("SELECT * FROM HOTELADMIN.PHIEUDICHVU");
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        [Obsolete]
+        public void CapNhatPDV(string MaNV, DateTime NgayCapNhat, string MaPDV)
+        {
+            string query = string.Format($"UPDATE HOTELADMIN.PHIEUDICHVU SET MANV = '{MaNV}', NGAYCAPNHAT = TO_DATE('{NgayCapNhat.ToString("dd/MM/yyyy")}', 'DD/MM/YYYY') WHERE MAPDV = '{MaPDV}'");
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
     }
 }

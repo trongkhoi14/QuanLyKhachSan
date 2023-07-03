@@ -38,13 +38,13 @@ namespace QuanLyKhachSan.DAO
         }
 
         [Obsolete]
-        public bool KiemTraTonTaiDVTrongPDV(string MaPDV, string MaDV, DateTime LichSuDung, string GhiChu)
+        public int DemDVTrongPDV(string MaPDV, string MaDV, DateTime LichSuDung, string GhiChu)
         {
             string query = string.Format(
                 "SELECT COUNT(*) " + 
                 "FROM HOTELADMIN.CT_PHIEUDICHVU " + 
                 $"WHERE MAPDV = '{MaPDV}' AND MADV = '{MaDV}' AND LICHSUDUNG = TO_DATE('{LichSuDung.ToString("dd/MM/yyyy")}', 'DD/MM/YYYY') AND GHICHU = '{GhiChu}'");
-            return (Convert.ToInt32(DataProvider.Instance.ExecuteQuery(query).Rows[0][0].ToString()) > 0);
+            return Convert.ToInt32(DataProvider.Instance.ExecuteQuery(query).Rows[0][0].ToString());
         }
 
         [Obsolete]
@@ -65,6 +65,13 @@ namespace QuanLyKhachSan.DAO
                 "FROM HOTELADMIN.CT_PHIEUDICHVU " +
                 $"WHERE MAPDV = '{MaPDV}' AND MADV = '{MaDV}' AND LICHSUDUNG = TO_DATE('{LichSuDung.ToString("dd/MM/yyyy")}', 'DD/MM/YYYY') AND GHICHU = '{GhiChu}'");
             return Convert.ToInt32(DataProvider.Instance.ExecuteQuery(query).Rows[0][0].ToString());
+        }
+
+        [Obsolete]
+        public double TinhPhiDVTamThoi(string MaPDV)
+        {
+            string query = string.Format($"SELECT SUM(B.GIADV * A.SOLUONG) FROM HOTELADMIN.CT_PHIEUDICHVU A, HOTELADMIN.DICHVU B WHERE A.MAPDV = '{MaPDV}' AND A.MADV = B.MADV");
+            return Convert.ToDouble(DataProvider.Instance.ExecuteQuery(query).Rows[0][0].ToString());
         }
     }
 }

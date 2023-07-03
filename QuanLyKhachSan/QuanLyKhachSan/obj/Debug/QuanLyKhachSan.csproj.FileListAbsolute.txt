@@ -109,3 +109,5 @@ C:\Users\phamt\Desktop\New folder\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\o
 C:\Users\phamt\Desktop\New folder\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.CoreCompileInputs.cache
 C:\Users\phamt\Desktop\New folder\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.exe
 C:\Users\phamt\Desktop\New folder\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.pdb
+C:\Users\phamt\Desktop\New folder\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.LeTanGUI.LapPhieuDichVu.resources
+C:\Users\phamt\Desktop\New folder\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.LeTanGUI.ChiTietPhieuDichVu.resources

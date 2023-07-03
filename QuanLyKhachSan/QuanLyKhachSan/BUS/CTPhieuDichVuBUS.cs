@@ -52,7 +52,13 @@ namespace QuanLyKhachSan.BUS
         [Obsolete]
         public bool KiemTraTonTaiDVTrongPDV(string MaPDV, string MaDV, DateTime LichSuDung, string GhiChu)
         {
-            return CTPhieuDichVuDAO.Instance.KiemTraTonTaiDVTrongPDV(MaPDV, MaDV, LichSuDung, GhiChu);
+            return (CTPhieuDichVuDAO.Instance.DemDVTrongPDV(MaPDV, MaDV, LichSuDung, GhiChu)>0);
+        }
+
+        [Obsolete]
+        public double TinhPhiDVTamThoi(string MaPDV)
+        {
+            return CTPhieuDichVuDAO.Instance.TinhPhiDVTamThoi(MaPDV);
         }
 
         public string MaPDV { get; set; }

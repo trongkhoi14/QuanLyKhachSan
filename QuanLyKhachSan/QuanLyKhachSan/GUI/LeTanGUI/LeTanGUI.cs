@@ -29,5 +29,13 @@ namespace QuanLyKhachSan.GUI.LeTanGUI
         {
             this.Close();
         }
+
+        private void lậpPhiếuDịchVụToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LapPhieuDichVu f = new LapPhieuDichVu();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
     }
 }

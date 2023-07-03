@@ -19,12 +19,18 @@ namespace QuanLyKhachSan.BUS
         }
         private TaiKhoanBUS() { }
 
+        [Obsolete]
+        public string LayTenTaiKhoanLogin()
+        {
+            return TaiKhoanDAO.Instance.LayTenTaiKhoanLogin();
+        }
+
         #region method
 
         [Obsolete]
         public bool KiemTraThongTinDangNhap(string tenDangNhap, string matKhau)
         {
-            if(tenDangNhap == "" || matKhau == "")
+            if (tenDangNhap == "" || matKhau == "")
             {
                 return false;
             }
@@ -42,14 +48,14 @@ namespace QuanLyKhachSan.BUS
         public string LayVaiTro(string tenDangNhap, string matKhau)
         {
             DataTable NhanVien = NhanVienDAO.Instance.LayNhanVien(tenDangNhap);
-            if(NhanVien.Rows.Count>0)
+            if (NhanVien.Rows.Count > 0)
             {
                 return NhanVien.Rows[0]["VAITRO"].ToString();
-                
-            }    
+
+            }
             return "";
         }
-        public int KHKiemTraMatKhau(string  matKhau)
+        public int KHKiemTraMatKhau(string matKhau)
         {
             if (matKhau == null)
             {
@@ -65,3 +71,4 @@ namespace QuanLyKhachSan.BUS
         #endregion
     }
 }
+
