@@ -128,7 +128,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1077, 613);
+            this.ClientSize = new System.Drawing.Size(1131, 635);
             this.Controls.Add(this.ThanhToanBtn);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dangKyTourBtn);
