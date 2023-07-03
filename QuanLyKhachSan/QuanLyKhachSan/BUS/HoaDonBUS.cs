@@ -86,5 +86,15 @@ namespace QuanLyKhachSan.BUS
         {
             HoaDonDAO.Instance.KHXoaHoaDon(maPDP);
         }
+        private HoaDonBUS() { }
+        public DataTable TongTienThanhToan(string MaPhong, string PhuThu)
+        {
+            return HoaDonDAO.Instance.TongTienThanhToan(MaPhong, PhuThu);
+        }
+        public DataTable TienHoanLai(string MaPhong, string TienNhan)
+        {
+            return HoaDonDAO.Instance.TienHoanLai(MaPhong, TienNhan);
+        }
+        
     }
 }

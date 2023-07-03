@@ -184,6 +184,12 @@
     <Compile Include="GUI\LeTanGUI\CheckInGUI.Designer.cs">
       <DependentUpon>CheckInGUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\LeTanGUI\CheckOutGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LeTanGUI\CheckOutGUI.Designer.cs">
+      <DependentUpon>CheckOutGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\LeTanGUI\DKThongTinLuuTruGUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -242,6 +248,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\LeTanGUI\CheckInGUI.resx">
       <DependentUpon>CheckInGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LeTanGUI\CheckOutGUI.resx">
+      <DependentUpon>CheckOutGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\LeTanGUI\DKThongTinLuuTruGUI.resx">
       <DependentUpon>DKThongTinLuuTruGUI.cs</DependentUpon>
