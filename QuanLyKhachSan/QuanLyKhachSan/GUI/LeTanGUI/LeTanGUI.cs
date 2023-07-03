@@ -34,6 +34,11 @@ namespace QuanLyKhachSan.GUI.LeTanGUI
         private void checkoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CheckOutGUI f = new CheckOutGUI();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
         private void lậpPhiếuDịchVụToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LapPhieuDichVu f = new LapPhieuDichVu();

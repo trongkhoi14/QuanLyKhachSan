@@ -155,8 +155,8 @@ namespace QuanLyKhachSan.BUS
         [Obsolete]
         public string KHLayMaPDPGanNhat(string maKH)
         {
-            var temp = PhieuDatPhongDAO.Instance.KHLayPDPMoiNhat(maKH);
-            string output = (temp.Rows[0]["MAPDP"]).ToString();
+            //var temp = PhieuDatPhongDAO.Instance.KHLayPDPMoiNhat(maKH);
+            //string output = (temp.Rows[0]["MAPDP"]).ToString();
 
             string output = "";
             if (ktTonTaiPDP(maKH))
