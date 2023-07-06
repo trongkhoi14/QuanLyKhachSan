@@ -35,6 +35,12 @@ namespace QuanLyKhachSan.BUS
         }
 
         [Obsolete]
+        public DataTable LTLayDanhSachPDPTheoNgay()
+        {
+            return PhieuDatPhongDAO.Instance.LTLayDanhSachTheoNgay();
+        }
+
+        [Obsolete]
         public DataTable KHLayDanhSachPhongTrong()
         {
             return PhieuDatPhongDAO.Instance.KHLayDanhSachPhongTrong();

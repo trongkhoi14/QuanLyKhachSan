@@ -85,6 +85,8 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.dtgvDanhSachDP = new System.Windows.Forms.DataGridView();
+            this.btnTatCaPDP = new System.Windows.Forms.Button();
+            this.btnLocPDP = new System.Windows.Forms.Button();
             this.panel13.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -393,7 +395,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(576, 11);
+            this.label1.Location = new System.Drawing.Point(576, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(175, 17);
             this.label1.TabIndex = 6;
@@ -602,26 +604,49 @@
             // dtgvDanhSachDP
             // 
             this.dtgvDanhSachDP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvDanhSachDP.Location = new System.Drawing.Point(13, 31);
+            this.dtgvDanhSachDP.Location = new System.Drawing.Point(13, 44);
             this.dtgvDanhSachDP.Name = "dtgvDanhSachDP";
             this.dtgvDanhSachDP.RowHeadersWidth = 51;
             this.dtgvDanhSachDP.RowTemplate.Height = 24;
-            this.dtgvDanhSachDP.Size = new System.Drawing.Size(1285, 175);
+            this.dtgvDanhSachDP.Size = new System.Drawing.Size(1285, 162);
             this.dtgvDanhSachDP.TabIndex = 4;
-           
+            // 
+            // btnTatCaPDP
+            // 
+            this.btnTatCaPDP.Location = new System.Drawing.Point(1198, 11);
+            this.btnTatCaPDP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnTatCaPDP.Name = "btnTatCaPDP";
+            this.btnTatCaPDP.Size = new System.Drawing.Size(100, 28);
+            this.btnTatCaPDP.TabIndex = 8;
+            this.btnTatCaPDP.Text = "Tất cả";
+            this.btnTatCaPDP.UseVisualStyleBackColor = true;
+            this.btnTatCaPDP.Click += new System.EventHandler(this.btnTatCaPDP_Click);
+            // 
+            // btnLocPDP
+            // 
+            this.btnLocPDP.Location = new System.Drawing.Point(1092, 11);
+            this.btnLocPDP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLocPDP.Name = "btnLocPDP";
+            this.btnLocPDP.Size = new System.Drawing.Size(100, 28);
+            this.btnLocPDP.TabIndex = 8;
+            this.btnLocPDP.Text = "Hôm nay";
+            this.btnLocPDP.UseVisualStyleBackColor = true;
+            this.btnLocPDP.Click += new System.EventHandler(this.btnLocPDP_Click);
             // 
             // CheckInGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1310, 728);
+            this.Controls.Add(this.btnLocPDP);
+            this.Controls.Add(this.btnTatCaPDP);
             this.Controls.Add(this.panel14);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dtgvDanhSachDP);
             this.Name = "CheckInGUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CheckInGUI";
+            this.Text = "Check-in";
             this.Load += new System.EventHandler(this.CheckInGUI_Load);
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
@@ -714,5 +739,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.ColumnHeader columnHeader12;
+        private System.Windows.Forms.Button btnTatCaPDP;
+        private System.Windows.Forms.Button btnLocPDP;
     }
 }

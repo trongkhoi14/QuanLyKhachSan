@@ -45,28 +45,37 @@ namespace QuanLyKhachSan.BUS
         public bool LTThemCTPhieuNhanPhong(string mapnp, string makh)
         {
             //Lấy số khách khi đặt phòng
-            DataTable pdp = CTPhieuNhanPhongDAO.Instance.LTLayThongTinDatPhong(mapnp);
-            int soKhach = 0;
-            Int32.TryParse(pdp.Rows[0]["SONGUOI"].ToString(), out soKhach);
-            //Lấy số khách đã đăng ký lưu trú
-            DataTable dslt = CTPhieuNhanPhongDAO.Instance.LTLayDSKhachHangNhanPhong(mapnp);
-            int soKhachDaDangKy = dslt.Rows.Count;
-            if(soKhach > soKhachDaDangKy)
+            try
             {
-                try
+                DataTable pdp = CTPhieuNhanPhongDAO.Instance.LTLayThongTinDatPhong(mapnp);
+                int soKhach = 0;
+
+                Int32.TryParse(pdp.Rows[0]["SONGUOI"].ToString(), out soKhach);
+                //Lấy số khách đã đăng ký lưu trú
+                DataTable dslt = CTPhieuNhanPhongDAO.Instance.LTLayDSKhachHangNhanPhong(mapnp);
+                int soKhachDaDangKy = dslt.Rows.Count;
+                if (soKhach > soKhachDaDangKy)
                 {
-                    CTPhieuNhanPhongDAO.Instance.LTThem(mapnp, makh);
+                    try
+                    {
+                        CTPhieuNhanPhongDAO.Instance.LTThem(mapnp, makh);
+                    }
+                    catch (Exception)
+                    {
+                        return false;
+                    }
+                    return true;
                 }
-                catch (Exception)
+                else
                 {
                     return false;
                 }
-                return true;
             }
-            else
+            catch (Exception)
             {
                 return false;
             }
+            
            
         }
 

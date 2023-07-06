@@ -25,6 +25,15 @@ namespace QuanLyKhachSan.DAO
                                          "JOIN HOTELADMIN.KHACHHANG K ON K.MAKH = P.MAKH");
             return DataProvider.Instance.ExecuteQuery(query);
         }
+
+        public DataTable LTLayDanhSachTheoNgay()
+        {
+            string query = string.Format("SELECT P.MAPDP, K.TENKH, K.NGAYSINH, K.DIACHI, K.EMAIL, K.SODT, K.SOFAX, P.NGAYDEN, P.SODEMLUUTRU, P.SONGUOI, P.TINHTRANG AS THANHTOAN " +
+                                         "FROM HOTELADMIN.PHIEUDATPHONG P " +
+                                         "JOIN HOTELADMIN.KHACHHANG K ON K.MAKH = P.MAKH" +
+                                         "WHERE P.NGAYDEN = TRUNC(SYSDATE)");
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
         //Lấy danh sách phòng trống để khách hàng đặt
         [Obsolete]
         public DataTable KHLayDanhSachPhongTrong()

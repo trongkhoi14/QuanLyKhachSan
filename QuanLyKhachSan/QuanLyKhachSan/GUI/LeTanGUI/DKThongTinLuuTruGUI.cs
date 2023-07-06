@@ -41,7 +41,28 @@ namespace QuanLyKhachSan.GUI.LeTanGUI
         [Obsolete]
         void HienThiDSLuuTru(string maPNP)
         {
-            dtgvDanhSachDKLuuTru.DataSource = CTPhieuNhanPhongBUS.Instance.LTLayDSKhachHangNhanPhong(maPNP);
+            //dtgvDanhSachDKLuuTru.DataSource = CTPhieuNhanPhongBUS.Instance.LTLayDSKhachHangNhanPhong(maPNP);
+
+            DataTable dsLuuTru = CTPhieuNhanPhongBUS.Instance.LTLayDSKhachHangNhanPhong(maPNP);
+            lvDSLuuTru.Items.Clear();
+            foreach (DataRow row in dsLuuTru.Rows)
+            {
+                ListViewItem item = new ListViewItem(row["TENKH"].ToString());
+                item.SubItems.Add(DateTime.Parse(row["NGAYSINH"].ToString()).ToString("dd/MM/yyyy"));
+                item.SubItems.Add(row["DIACHI"].ToString());
+                item.SubItems.Add(row["EMAIL"].ToString());
+                item.SubItems.Add(row["SODT"].ToString());
+                item.SubItems.Add(row["SOFAX"].ToString());
+
+                lvDSLuuTru.Items.Add(item);
+
+
+            }
+            foreach (ColumnHeader column in lvDSLuuTru.Columns)
+            {
+                column.Width = (lvDSLuuTru.Width - 6) / 6;
+                column.AutoResize(ColumnHeaderAutoResizeStyle.None);
+            }
         }
 
         [Obsolete]
@@ -207,8 +228,18 @@ namespace QuanLyKhachSan.GUI.LeTanGUI
                 MessageBox.Show("Khách hàng chưa được đăng ký lưu trú");
             }
         }
+
+        [Obsolete]
+        private void btnHuongDan_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("1. Cập nhật: làm trống ô nhập như mặt định\n" +
+                 "2. Thêm: ghi nhận thông tin khách hàng mới\n" +
+                 "3. Cập nhật: cập nhật thông tin khách hàng\n" +
+                 "4. Đăng ký: đăng ký lưu trú cho khách hàng đang chọn\n" +
+                 "5. Hủy đăng ký: hủy đăng ký lưu trú cho khách hàng đang chọn", "Hướng dẫn");
+        }
         #endregion
 
-
+       
     }
 }

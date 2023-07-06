@@ -67,7 +67,14 @@
             this.label8 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.dtgvDanhSachDKLuuTru = new System.Windows.Forms.DataGridView();
+            this.lvDSLuuTru = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnHuongDan = new System.Windows.Forms.Button();
             this.panel7.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -81,7 +88,6 @@
             this.panel9.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvDanhSachDKLuuTru)).BeginInit();
             this.SuspendLayout();
             // 
             // txbSoFax
@@ -273,6 +279,7 @@
             // panel14
             // 
             this.panel14.Controls.Add(this.label15);
+            this.panel14.Controls.Add(this.btnHuongDan);
             this.panel14.Controls.Add(this.label16);
             this.panel14.Controls.Add(this.btnTroLai);
             this.panel14.Location = new System.Drawing.Point(821, 648);
@@ -330,7 +337,7 @@
             this.panel2.Controls.Add(this.panel6);
             this.panel2.Location = new System.Drawing.Point(821, 45);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(462, 419);
+            this.panel2.Size = new System.Drawing.Size(462, 598);
             this.panel2.TabIndex = 1;
             // 
             // btnThemKH
@@ -446,8 +453,8 @@
             // 
             // panel10
             // 
+            this.panel10.Controls.Add(this.lvDSLuuTru);
             this.panel10.Controls.Add(this.label7);
-            this.panel10.Controls.Add(this.dtgvDanhSachDKLuuTru);
             this.panel10.Location = new System.Drawing.Point(3, 337);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(812, 325);
@@ -462,15 +469,65 @@
             this.label7.TabIndex = 3;
             this.label7.Text = "DANH SÁCH ĐĂNG KÝ LƯU TRÚ";
             // 
-            // dtgvDanhSachDKLuuTru
+            // lvDSLuuTru
             // 
-            this.dtgvDanhSachDKLuuTru.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvDanhSachDKLuuTru.Location = new System.Drawing.Point(3, 39);
-            this.dtgvDanhSachDKLuuTru.Name = "dtgvDanhSachDKLuuTru";
-            this.dtgvDanhSachDKLuuTru.RowHeadersWidth = 51;
-            this.dtgvDanhSachDKLuuTru.RowTemplate.Height = 24;
-            this.dtgvDanhSachDKLuuTru.Size = new System.Drawing.Size(806, 280);
-            this.dtgvDanhSachDKLuuTru.TabIndex = 0;
+            this.lvDSLuuTru.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6});
+            this.lvDSLuuTru.GridLines = true;
+            this.lvDSLuuTru.HideSelection = false;
+            this.lvDSLuuTru.Location = new System.Drawing.Point(6, 40);
+            this.lvDSLuuTru.Margin = new System.Windows.Forms.Padding(4);
+            this.lvDSLuuTru.Name = "lvDSLuuTru";
+            this.lvDSLuuTru.Size = new System.Drawing.Size(802, 281);
+            this.lvDSLuuTru.TabIndex = 6;
+            this.lvDSLuuTru.UseCompatibleStateImageBehavior = false;
+            this.lvDSLuuTru.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Họ tên";
+            this.columnHeader1.Width = 95;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Ngày sinh";
+            this.columnHeader2.Width = 95;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Địa chỉ";
+            this.columnHeader3.Width = 95;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Email";
+            this.columnHeader4.Width = 95;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "SĐT";
+            this.columnHeader5.Width = 95;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Số Fax";
+            this.columnHeader6.Width = 95;
+            // 
+            // btnHuongDan
+            // 
+            this.btnHuongDan.Location = new System.Drawing.Point(219, 11);
+            this.btnHuongDan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnHuongDan.Name = "btnHuongDan";
+            this.btnHuongDan.Size = new System.Drawing.Size(124, 28);
+            this.btnHuongDan.TabIndex = 9;
+            this.btnHuongDan.Text = "Hướng dẫn >>";
+            this.btnHuongDan.UseVisualStyleBackColor = true;
+            this.btnHuongDan.Click += new System.EventHandler(this.btnHuongDan_Click);
             // 
             // DKThongTinLuuTruGUI
             // 
@@ -503,7 +560,6 @@
             this.panel11.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvDanhSachDKLuuTru)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -534,7 +590,6 @@
         private System.Windows.Forms.Button btnTroLai;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DataGridView dtgvDanhSachDKLuuTru;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnCapNhatKhachHang;
         private System.Windows.Forms.Button btnThemKhachHang;
@@ -550,5 +605,13 @@
         private System.Windows.Forms.DataGridView dtgvDSKhachHang;
         private System.Windows.Forms.Button btnThemKH;
         private System.Windows.Forms.Button btnHuyDangKyLuuTru;
+        private System.Windows.Forms.ListView lvDSLuuTru;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.Button btnHuongDan;
     }
 }

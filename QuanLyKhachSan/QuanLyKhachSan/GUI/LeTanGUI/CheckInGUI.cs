@@ -40,18 +40,38 @@ namespace QuanLyKhachSan.GUI.LeTanGUI
             dtgvDanhSachDP.DataSource = dsPhieuDatPhong;
             //Lấy danh sách
             dsPhieuDatPhong.DataSource = PhieuDatPhongBUS.Instance.LTLayDanhSachPDP();
+            ClearBinding();
+            if (dsPhieuDatPhong.DataSource is DataTable dt && dt.Rows.Count > 0)
+            {
+                txbMaPDP.DataBindings.Add(new Binding("Text", dtgvDanhSachDP.DataSource, "MAPDP", true, DataSourceUpdateMode.Never));
+                txbNgayDen.DataBindings.Add(new Binding("Text", dtgvDanhSachDP.DataSource, "NGAYDEN", true, DataSourceUpdateMode.Never));
+                txbSoDem.DataBindings.Add(new Binding("Text", dtgvDanhSachDP.DataSource, "SODEMLUUTRU", true, DataSourceUpdateMode.Never));
+                txbSoNguoi.DataBindings.Add(new Binding("Text", dtgvDanhSachDP.DataSource, "SONGUOI", true, DataSourceUpdateMode.Never));
+                txbHoTen.DataBindings.Add(new Binding("Text", dtgvDanhSachDP.DataSource, "TENKH", true, DataSourceUpdateMode.Never));
+                txbNgaySinh.DataBindings.Add(new Binding("Text", dtgvDanhSachDP.DataSource, "NGAYSINH", true, DataSourceUpdateMode.Never));
+                txbDiaChi.DataBindings.Add(new Binding("Text", dtgvDanhSachDP.DataSource, "DIACHI", true, DataSourceUpdateMode.Never));
+                txbSDT.DataBindings.Add(new Binding("Text", dtgvDanhSachDP.DataSource, "SODT", true, DataSourceUpdateMode.Never));
+            }    
+        }
+        void ClearBinding()
+        {
+            txbMaPDP.DataBindings.Clear();
+            txbNgayDen.DataBindings.Clear();
+            txbSoDem.DataBindings.Clear();
+            txbSoNguoi.DataBindings.Clear();
+            txbHoTen.DataBindings.Clear();
+            txbNgaySinh.DataBindings.Clear();
+            txbDiaChi.DataBindings.Clear();
+            txbSDT.DataBindings.Clear();
 
-            //Ràng buộc với textbox
-            txbMaPDP.DataBindings.Add(new Binding("Text", dtgvDanhSachDP.DataSource, "MAPDP", true, DataSourceUpdateMode.Never));
-            txbNgayDen.DataBindings.Add(new Binding("Text", dtgvDanhSachDP.DataSource, "NGAYDEN", true, DataSourceUpdateMode.Never));
-            txbSoDem.DataBindings.Add(new Binding("Text", dtgvDanhSachDP.DataSource, "SODEMLUUTRU", true, DataSourceUpdateMode.Never));
-            txbSoNguoi.DataBindings.Add(new Binding("Text", dtgvDanhSachDP.DataSource, "SONGUOI", true, DataSourceUpdateMode.Never));
-            txbHoTen.DataBindings.Add(new Binding("Text", dtgvDanhSachDP.DataSource, "TENKH", true, DataSourceUpdateMode.Never));
-            txbNgaySinh.DataBindings.Add(new Binding("Text", dtgvDanhSachDP.DataSource, "NGAYSINH", true, DataSourceUpdateMode.Never));
-            txbDiaChi.DataBindings.Add(new Binding("Text", dtgvDanhSachDP.DataSource, "DIACHI", true, DataSourceUpdateMode.Never));
-            txbSDT.DataBindings.Add(new Binding("Text", dtgvDanhSachDP.DataSource, "SODT", true, DataSourceUpdateMode.Never));
-
-           
+            txbMaPDP.Text = "";
+            txbNgayDen.Text = "";
+            txbSoDem.Text = "";
+            txbSoNguoi.Text = "";
+            txbHoTen.Text = "";
+            txbNgaySinh.Text = "";
+            txbDiaChi.Text = "";
+            txbSDT.Text = "";
         }
 
         [Obsolete]
@@ -106,7 +126,25 @@ namespace QuanLyKhachSan.GUI.LeTanGUI
             }
         }
 
-
+        void DoiMauPDP()
+        {
+            foreach (DataGridViewRow row in dtgvDanhSachDP.Rows)
+            {
+                if (row != null && row.Cells["MAPDP"].Value != null)
+                {
+                    string maPNP = PhieuNhanPhongBUS.Instance.LTLayMaPNP(row.Cells["MAPDP"].Value.ToString());
+                    if (maPNP != "")
+                    {
+                        if (CTPhieuNhanPhongBUS.Instance.LTKiemTraDangKyLuuTru(maPNP))
+                        {
+                            // Thay đổi màu của dòng tìm thấy
+                            row.DefaultCellStyle.BackColor = Color.Green;
+                            row.DefaultCellStyle.ForeColor = Color.White;
+                        }
+                    }
+                }
+            }
+        }
         #endregion
 
         #region event
@@ -115,22 +153,7 @@ namespace QuanLyKhachSan.GUI.LeTanGUI
         {
             HienThiDuLieu();
 
-            foreach (DataGridViewRow row in dtgvDanhSachDP.Rows)
-            {
-                if (row != null && row.Cells["MAPDP"].Value != null)
-                {
-                    string maPNP = PhieuNhanPhongBUS.Instance.LTLayMaPNP(row.Cells["MAPDP"].Value.ToString());
-                    if(maPNP != "")
-                    {
-                        if (CTPhieuNhanPhongBUS.Instance.LTKiemTraDangKyLuuTru(maPNP))
-                        {
-                            // Thay đổi màu của dòng tìm thấy
-                            row.DefaultCellStyle.BackColor = Color.Green;
-                            row.DefaultCellStyle.ForeColor = Color.White;
-                        }
-                    } 
-                }
-            }  
+            DoiMauPDP();
         }
 
         [Obsolete]
@@ -220,12 +243,39 @@ namespace QuanLyKhachSan.GUI.LeTanGUI
         }
 
 
-        
+
+
 
 
 
         #endregion
+        [Obsolete]
+        private void btnLocPDP_Click(object sender, EventArgs e)
+        {
+            dtgvDanhSachDP.DataSource = dsPhieuDatPhong;
+            ClearBinding();
+            //Lấy danh sách
+            dsPhieuDatPhong.DataSource = PhieuDatPhongBUS.Instance.LTLayDanhSachPDPTheoNgay();
+            
+            if (dsPhieuDatPhong.DataSource is DataTable dt && dt.Rows.Count > 0)
+            {
+                txbMaPDP.DataBindings.Add(new Binding("Text", dtgvDanhSachDP.DataSource, "MAPDP", true, DataSourceUpdateMode.Never));
+                txbNgayDen.DataBindings.Add(new Binding("Text", dtgvDanhSachDP.DataSource, "NGAYDEN", true, DataSourceUpdateMode.Never));
+                txbSoDem.DataBindings.Add(new Binding("Text", dtgvDanhSachDP.DataSource, "SODEMLUUTRU", true, DataSourceUpdateMode.Never));
+                txbSoNguoi.DataBindings.Add(new Binding("Text", dtgvDanhSachDP.DataSource, "SONGUOI", true, DataSourceUpdateMode.Never));
+                txbHoTen.DataBindings.Add(new Binding("Text", dtgvDanhSachDP.DataSource, "TENKH", true, DataSourceUpdateMode.Never));
+                txbNgaySinh.DataBindings.Add(new Binding("Text", dtgvDanhSachDP.DataSource, "NGAYSINH", true, DataSourceUpdateMode.Never));
+                txbDiaChi.DataBindings.Add(new Binding("Text", dtgvDanhSachDP.DataSource, "DIACHI", true, DataSourceUpdateMode.Never));
+                txbSDT.DataBindings.Add(new Binding("Text", dtgvDanhSachDP.DataSource, "SODT", true, DataSourceUpdateMode.Never));
+            }
+            DoiMauPDP();
+        }
 
-       
+        [Obsolete]
+        private void btnTatCaPDP_Click(object sender, EventArgs e)
+        {
+            HienThiDuLieu();
+            DoiMauPDP();
+        }
     }
 }
