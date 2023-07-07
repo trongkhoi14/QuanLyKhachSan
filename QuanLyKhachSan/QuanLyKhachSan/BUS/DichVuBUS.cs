@@ -46,5 +46,55 @@ namespace QuanLyKhachSan.BUS
         public string DonViTinh { get; set; }
         public double GiaDV { get; set; }
         public string LoaiDV { get; set; }
+
+        public bool ThemDV(string madv, string tendv, string donvitinh, string gia, string loai)
+        {
+            try
+            {
+                if (DichVuDAO.Instance.ThemDV(madv, tendv, donvitinh, gia, loai) > 0)
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        [Obsolete]
+        public bool XoaDV(string madv)
+        {
+            try
+            {
+                if (DichVuDAO.Instance.XoaDV(madv) > 0)
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        [Obsolete]
+        public bool CapNhatDV(string madv, string tendv, string donvitinh, string gia, string loai)
+        {
+            try
+            {
+                if (DichVuDAO.Instance.CapNhatDV(madv, tendv, donvitinh, gia, loai) > 0)
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
     }
 }
