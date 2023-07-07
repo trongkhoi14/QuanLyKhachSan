@@ -82,3 +82,38 @@ C:\Users\PC\OneDrive - VNU-HCMUS\Documents\LuongTrongKhoi\Term6_HCMUS\Phân tíc
 C:\Users\PC\OneDrive - VNU-HCMUS\Documents\LuongTrongKhoi\Term6_HCMUS\Phân tích thiết kế hệ thống thông tin\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.LeTanGUI.ChiTietPhieuDichVu.resources
 C:\Users\PC\OneDrive - VNU-HCMUS\Documents\LuongTrongKhoi\Term6_HCMUS\Phân tích thiết kế hệ thống thông tin\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.LeTanGUI.LapPhieuDichVu.resources
 C:\Users\PC\OneDrive - VNU-HCMUS\Documents\LuongTrongKhoi\Term6_HCMUS\Phân tích thiết kế hệ thống thông tin\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.LeTanGUI.QuanLyTourGUI.resources
+C:\Users\phamt\Desktop\New folder\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\GUI\Images\checka.png
+C:\Users\phamt\Desktop\New folder\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\GUI\Images\pencil.ico
+C:\Users\phamt\Desktop\New folder\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\GUI\Images\profile.png
+C:\Users\phamt\Desktop\New folder\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\GUI\Images\success.ico
+C:\Users\phamt\Desktop\New folder\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe.config
+C:\Users\phamt\Desktop\New folder\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe
+C:\Users\phamt\Desktop\New folder\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.pdb
+C:\Users\phamt\Desktop\New folder\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.AssemblyReference.cache
+C:\Users\phamt\Desktop\New folder\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.SuggestedBindingRedirects.cache
+C:\Users\phamt\Desktop\New folder\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.BuongPhongGUI.BuongPhongGUI.resources
+C:\Users\phamt\Desktop\New folder\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.DangNhapGUI.resources
+C:\Users\phamt\Desktop\New folder\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fCapNhatPhieuDatPhong.resources
+C:\Users\phamt\Desktop\New folder\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fKiemTraThanhToan.resources
+C:\Users\phamt\Desktop\New folder\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fTaiKhoan.resources
+C:\Users\phamt\Desktop\New folder\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fDangKyDichVu.resources
+C:\Users\phamt\Desktop\New folder\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fDangKyTour.resources
+C:\Users\phamt\Desktop\New folder\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fPhieuDatPhong.resources
+C:\Users\phamt\Desktop\New folder\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fThanhToan.resources
+C:\Users\phamt\Desktop\New folder\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fThongTinDatPhong.resources
+C:\Users\phamt\Desktop\New folder\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fXacNhanPDP.resources
+C:\Users\phamt\Desktop\New folder\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fTraCuuDichVu.resources
+C:\Users\phamt\Desktop\New folder\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.fTraCuuTour.resources
+C:\Users\phamt\Desktop\New folder\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.KhachHangGUI.KhachHangGUI.resources
+C:\Users\phamt\Desktop\New folder\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.LeTanGUI.CheckInGUI.resources
+C:\Users\phamt\Desktop\New folder\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.LeTanGUI.CheckOutGUI.resources
+C:\Users\phamt\Desktop\New folder\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.LeTanGUI.ChiTietPhieuDichVu.resources
+C:\Users\phamt\Desktop\New folder\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.LeTanGUI.DKThongTinLuuTruGUI.resources
+C:\Users\phamt\Desktop\New folder\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.LeTanGUI.LapPhieuDichVu.resources
+C:\Users\phamt\Desktop\New folder\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.LeTanGUI.LeTanGUI.resources
+C:\Users\phamt\Desktop\New folder\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.GUI.LeTanGUI.QuanLyTourGUI.resources
+C:\Users\phamt\Desktop\New folder\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.Properties.Resources.resources
+C:\Users\phamt\Desktop\New folder\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.GenerateResource.cache
+C:\Users\phamt\Desktop\New folder\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.CoreCompileInputs.cache
+C:\Users\phamt\Desktop\New folder\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.exe
+C:\Users\phamt\Desktop\New folder\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.pdb

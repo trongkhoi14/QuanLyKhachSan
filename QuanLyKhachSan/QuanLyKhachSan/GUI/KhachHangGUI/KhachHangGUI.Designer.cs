@@ -83,7 +83,7 @@
             // ThanhToanBtn
             // 
             this.ThanhToanBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ThanhToanBtn.Location = new System.Drawing.Point(872, 12);
+            this.ThanhToanBtn.Location = new System.Drawing.Point(829, 12);
             this.ThanhToanBtn.Name = "ThanhToanBtn";
             this.ThanhToanBtn.Size = new System.Drawing.Size(153, 33);
             this.ThanhToanBtn.TabIndex = 4;
@@ -94,7 +94,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Location = new System.Drawing.Point(642, 12);
+            this.button1.Location = new System.Drawing.Point(627, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(196, 33);
             this.button1.TabIndex = 5;
@@ -105,9 +105,9 @@
             // dangKyDVBtn
             // 
             this.dangKyDVBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dangKyDVBtn.Location = new System.Drawing.Point(523, 12);
+            this.dangKyDVBtn.Location = new System.Drawing.Point(364, 12);
             this.dangKyDVBtn.Name = "dangKyDVBtn";
-            this.dangKyDVBtn.Size = new System.Drawing.Size(118, 33);
+            this.dangKyDVBtn.Size = new System.Drawing.Size(141, 33);
             this.dangKyDVBtn.TabIndex = 4;
             this.dangKyDVBtn.Text = "Đăng ký dịch vụ";
             this.dangKyDVBtn.UseVisualStyleBackColor = false;
@@ -116,7 +116,7 @@
             // dangKyTourBtn
             // 
             this.dangKyTourBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dangKyTourBtn.Location = new System.Drawing.Point(647, 12);
+            this.dangKyTourBtn.Location = new System.Drawing.Point(511, 12);
             this.dangKyTourBtn.Name = "dangKyTourBtn";
             this.dangKyTourBtn.Size = new System.Drawing.Size(110, 33);
             this.dangKyTourBtn.TabIndex = 5;
@@ -129,8 +129,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1077, 613);
-            this.Controls.Add(this.DatPhongBtn);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.DatPhongBtn);
             this.Controls.Add(this.ThanhToanBtn);
             this.Controls.Add(this.dangKyTourBtn);
             this.Controls.Add(this.dangKyDVBtn);
