@@ -18,9 +18,7 @@ namespace QuanLyKhachSan.GUI.LeTanGUI
         [Obsolete]
         public CheckInGUI()
         {
-            InitializeComponent();
-           
-            
+            InitializeComponent();    
         }
 
 

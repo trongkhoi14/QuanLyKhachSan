@@ -46,5 +46,13 @@ namespace QuanLyKhachSan.GUI.LeTanGUI
             f.ShowDialog();
             this.Show();
         }
+
+        private void quảnLýTourToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QuanLyTourGUI f = new QuanLyTourGUI();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
     }
 }
